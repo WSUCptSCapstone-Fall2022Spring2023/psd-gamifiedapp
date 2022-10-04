@@ -121,6 +121,13 @@
 -define:ROSLYN_ANALYZER_FIX
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/DLLs/IronPython.SQLite.dll"
+-r:"Assets/Plugins/DLLs/IronPython.Wpf.dll"
+-r:"Assets/Plugins/IKVM.Reflection.dll"
+-r:"Assets/Plugins/IronPython.dll"
+-r:"Assets/Plugins/IronPython.Modules.dll"
+-r:"Assets/Plugins/Microsoft.Dynamic.dll"
+-r:"Assets/Plugins/Microsoft.Scripting.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.18f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
