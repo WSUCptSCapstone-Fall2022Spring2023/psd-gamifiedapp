@@ -220,6 +220,10 @@ PrefabInstance:
       value: IronPythonTestUI
       objectReference: {fileID: 0}
     - target: {fileID: 5856417005223124392, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: IPContainer
+      value: 
+      objectReference: {fileID: 1853952314}
+    - target: {fileID: 5856417005223124392, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
       propertyPath: mIPContainer
       value: 
       objectReference: {fileID: 1853952314}

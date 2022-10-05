@@ -15,7 +15,20 @@ public class IronPythonContainer : MonoBehaviour
     /// </summary>
     private ScriptEngine mEngine { get; set; }
 
+    /// <summary>
+    /// Stores a private internal reference to the scope object used to provide bindings to IronPython
+    /// </summary>
     private ScriptScope mScope { get; set; }
+
+    /// <summary>
+    /// Stores a private internal cache of the initialized level.
+    /// </summary>
+    private LevelDefinition mCachedLevel { get; set; }
+
+    /// <summary>
+    /// Stores the private internal cached user code for the simulation.
+    /// </summary>
+    public string CachedUserCode { private get; set; }
 
     /// <summary>
     /// Initializes Unity object before the first Update loop.
@@ -26,27 +39,41 @@ public class IronPythonContainer : MonoBehaviour
 
         mScope = mEngine.CreateScope();
         mScope.SetVariable("parent", this);
-
-        ICollection<string> searchPaths = mEngine.GetSearchPaths();
-
-        //Path to the Python standard library
-        searchPaths.Add(Application.dataPath + @"\Plugins\Lib\");
-        mEngine.SetSearchPaths(searchPaths);
     }
 
     /// <summary>
-    /// Executes the provided code as python in the running engine. 
+    /// Uses a LevelDefinition script to initialize a level's unique simulation code and scope elements.
     /// </summary>
-    /// <param name="input">The Python string to be executed.</param>
-    /// <returns>The evaluation of the Python string.</returns>
-    public dynamic ExecutePython(string input) 
+    public void InitializeLevel(LevelDefinition level) 
     {
-        ScriptSource source = mEngine.CreateScriptSourceFromString(input);
+        mCachedLevel = level;
+
+        //Have to re-initialize scope to clear old code
+        mScope = mEngine.CreateScope();
+        mScope.SetVariable("parent", this);
+        mScope.SetVariable("environment", level);
+        ScriptSource source = mEngine.CreateScriptSourceFromFile(Application.dataPath + level.TestFile);
+        source.Execute(mScope);
+    }
+
+    /// <summary>
+    /// Simulates the cached user code by running the simulate() function in the level python
+    /// </summary>
+    public dynamic Simulate() 
+    {
+        //Exit early if level has not been initialized.
+        if (mCachedLevel == null) return null;
+
+        ScriptSource source = mEngine.CreateScriptSourceFromString("simulate()");
         return source.Execute(mScope);
     }
 
-    public void DebugMessage() 
+    /// <summary>
+    /// A binding intended to be called only by IronPython, runs the cached user code in the current level scope
+    /// </summary>
+    public dynamic execute_user_code() 
     {
-        Debug.Log("It Worked");
+        ScriptSource source = mEngine.CreateScriptSourceFromString(CachedUserCode);
+        return source.Execute(mScope);
     }
 }

@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public class SimulateTestCode : MonoBehaviour
 {
-    public TMP_InputField mInputField;
-    public IronPythonContainer mIPContainer;
+    public TMP_InputField InputField;
+    public IronPythonContainer IPContainer;
+    public LevelDefinition TestLevel;
 
     private void Start()
     {
@@ -17,6 +18,23 @@ public class SimulateTestCode : MonoBehaviour
 
     public void Execute() 
     {
-        Debug.Log(mIPContainer.ExecutePython(mInputField.text));
+        IPContainer.InitializeLevel(TestLevel);
+        IPContainer.CachedUserCode = InputField.text;
+        Debug.Log(IPContainer.Simulate());
+    }
+
+    public void PrintFirst() 
+    {
+        Debug.Log("First");
+    }
+
+    public void PrintSecond()
+    {
+        Debug.Log("Second");
+    }
+
+    public void PrintThird()
+    {
+        Debug.Log("Third");
     }
 }
