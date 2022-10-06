@@ -676,12 +676,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 4704b920b18ba5846a82111ec489a0b9, type: 3}
-  bend: 5
+  bend: 3
   scanlineSize1: 300
   scanlineSpeed1: -10
   scanlineSize2: 10
   scanlineSpeed2: -5
-  scanlineAmount: 0.01
+  scanlineAmount: 0.005
   vignetteSize: 0.5
   vignetteSmoothness: 0.6
   vignetteEdgeRound: 8
