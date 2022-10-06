@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 489561327}
     m_Modifications:
+    - target: {fileID: 2448993790253634997, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96470594
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448993790253634997, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2511877617201069607, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -219,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IronPythonTestUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5420817983321705027, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5856417005223124392, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
       propertyPath: IPContainer
       value: 
@@ -247,6 +259,22 @@ PrefabInstance:
       propertyPath: PythonContainer
       value: 
       objectReference: {fileID: 1853952314}
+    - target: {fileID: 7232088179196077941, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.039215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232088179196077941, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232088179196077941, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232088179196077941, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278849792
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
@@ -422,8 +450,8 @@ Canvas:
   m_GameObject: {fileID: 489561323}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -561,6 +589,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -634,6 +663,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2fd8b1081558c4aa897b14f804cfc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 4704b920b18ba5846a82111ec489a0b9, type: 3}
+  bend: 5
+  scanlineSize1: 300
+  scanlineSpeed1: -10
+  scanlineSize2: 10
+  scanlineSpeed2: -5
+  scanlineAmount: 0.01
+  vignetteSize: 0.5
+  vignetteSmoothness: 0.6
+  vignetteEdgeRound: 8
+  noiseSize: 50
+  noiseAmount: 0.03
+  redOffset: {x: -0.001, y: 0}
+  blueOffset: {x: 0, y: 0}
+  greenOffset: {x: 0.001, y: 0}
 --- !u!1 &1853952312
 GameObject:
   m_ObjectHideFlags: 0

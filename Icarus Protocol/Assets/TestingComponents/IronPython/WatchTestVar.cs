@@ -17,6 +17,7 @@ public class WatchTestVar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mText.text = $"testVar: {PythonContainer.GetPythonValue("testVar")}";
+        dynamic value = PythonContainer.GetPythonValue("testVar");
+        mText.text = $"testVar: {(value == null ? "N/A" : Mathf.Round((float)value * 100) / 100)}";
     }
 }
