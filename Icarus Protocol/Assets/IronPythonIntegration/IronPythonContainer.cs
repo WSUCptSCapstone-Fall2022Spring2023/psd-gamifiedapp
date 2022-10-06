@@ -51,9 +51,6 @@ public class IronPythonContainer : MonoBehaviour
     void Start()
     {
         mEngine = Python.CreateEngine();
-
-        mLevelScope = mEngine.CreateScope();
-        mLevelScope.SetVariable("parent", this);
     }
 
     /// <summary>
@@ -63,25 +60,19 @@ public class IronPythonContainer : MonoBehaviour
     {
         if (mSimulating)
         {
-            ScriptSource source = mEngine.CreateScriptSourceFromString("simulate_tick()");
-            source.Execute(mLevelScope);
+            mEngine.Execute("simulate_tick()", mLevelScope);
 
             if (mCodeLoopTimer <= 0)
             {
                 mCodeLoopTimer = mCachedLevel.CodeLoopDuration;
-                source = mEngine.CreateScriptSourceFromString("simulate()");
-                source.Execute(mLevelScope);
+                mEngine.Execute("simulate()", mLevelScope);
             }
             else
             {
                 mCodeLoopTimer -= Time.deltaTime;
             }
 
-            //Force scope sync
-            foreach (string identifier in mCachedLevel.ExposedMembers)
-            {
-                mUserScope.SetVariable(identifier, mLevelScope.GetVariable(identifier));
-            }
+            SyncScopes(mLevelScope, mUserScope);
         }
     }
 
@@ -101,10 +92,7 @@ public class IronPythonContainer : MonoBehaviour
 
         //Dynamically initialize player scope
         mUserScope = mEngine.CreateScope();
-        foreach (string identifier in level.ExposedMembers) 
-        {
-            mUserScope.SetVariable(identifier, mLevelScope.GetVariable(identifier));
-        }
+        SyncScopes(mLevelScope, mUserScope);
     }
 
     /// <summary>
@@ -113,8 +101,6 @@ public class IronPythonContainer : MonoBehaviour
     public void Simulate(string userCode) 
     {
         mCachedUserCode = userCode;
-
-        //Exit early if level has not been initialized.
         if (mCachedLevel == null) return;
         mSimulating = true;
     }
@@ -137,12 +123,7 @@ public class IronPythonContainer : MonoBehaviour
     {
         ScriptSource source = mEngine.CreateScriptSourceFromString(mCachedUserCode);
         source.Execute(mUserScope);
-
-        //Force scope sync
-        foreach (string identifier in mCachedLevel.ExposedMembers)
-        {
-            mLevelScope.SetVariable(identifier, mUserScope.GetVariable(identifier));
-        }
+        SyncScopes(mUserScope, mLevelScope);
     }
 
     /// <summary>
@@ -156,6 +137,19 @@ public class IronPythonContainer : MonoBehaviour
         mSimulating = false;
         InitializeLevel(mCachedLevel);
         //TODO: Remove Debug
-        Debug.Log($"Exited with code: {exitCode}");
+        Debug.Log($"Simulation exited with code: {exitCode}");
+    }
+
+    /// <summary>
+    /// Transfers the scope data from one scope to another, used to intersect scopes.
+    /// </summary>
+    /// <param name="fromScope">The scope to take values from</param>
+    /// <param name="toScope">The scope to transer values to</param>
+    private void SyncScopes(ScriptScope fromScope, ScriptScope toScope) 
+    {
+        foreach (string identifier in mCachedLevel.ExposedMembers)
+        {
+            toScope.SetVariable(identifier, fromScope.GetVariable(identifier));
+        }
     }
 }

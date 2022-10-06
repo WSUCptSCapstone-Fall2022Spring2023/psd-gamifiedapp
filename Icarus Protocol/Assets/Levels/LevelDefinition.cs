@@ -26,7 +26,6 @@ public class LevelDefinition : MonoBehaviour
     /// </summary>
     public float CodeLoopDuration;
 
-
     /// <summary>
     /// This list contains the string identifiers of all member variables made available to the player from the lesson file.
     /// </summary>
