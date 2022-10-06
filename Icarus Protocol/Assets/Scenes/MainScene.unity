@@ -227,6 +227,26 @@ PrefabInstance:
       propertyPath: mIPContainer
       value: 
       objectReference: {fileID: 1853952314}
+    - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: CodeLoopDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: ExposedMembers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: ExposedMembers.Array.data[0]
+      value: testVar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: ExposedMembers.Array.data[1]
+      value: double
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784706801169723978, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: PythonContainer
+      value: 
+      objectReference: {fileID: 1853952314}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}

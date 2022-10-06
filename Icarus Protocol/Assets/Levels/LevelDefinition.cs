@@ -22,6 +22,17 @@ public class LevelDefinition : MonoBehaviour
     public List<UnityEvent> ActionGroups;
 
     /// <summary>
+    /// The delay between each time that the user's code is simulated.
+    /// </summary>
+    public float CodeLoopDuration;
+
+
+    /// <summary>
+    /// This list contains the string identifiers of all member variables made available to the player from the lesson file.
+    /// </summary>
+    public List<string> ExposedMembers;
+
+    /// <summary>
     /// A binding intended for use by IronPython. Calls all the actions subscribed to a particular action group.
     /// </summary>
     /// <param name="groupID"></param>

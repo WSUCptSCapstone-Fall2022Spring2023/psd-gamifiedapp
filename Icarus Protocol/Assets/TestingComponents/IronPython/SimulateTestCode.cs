@@ -19,8 +19,7 @@ public class SimulateTestCode : MonoBehaviour
     public void Execute() 
     {
         IPContainer.InitializeLevel(TestLevel);
-        IPContainer.CachedUserCode = InputField.text;
-        Debug.Log(IPContainer.Simulate());
+        IPContainer.Simulate(InputField.text);
     }
 
     public void PrintFirst() 
