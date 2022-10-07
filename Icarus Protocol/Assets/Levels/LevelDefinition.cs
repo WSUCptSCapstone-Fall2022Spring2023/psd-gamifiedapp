@@ -13,7 +13,7 @@ public class LevelDefinition : MonoBehaviour
     /// <summary>
     /// The filepath of the level test.py file relative to the application data root.
     /// </summary>
-    public string TestFile;
+    public TextAsset TestFile;
 
     /// <summary>
     /// The action groups tied to this level to be activated by the simulation.

@@ -746,20 +746,6 @@
             additional options.
             </summary>
         </member>
-        <member name="M:IronPython.Hosting.Python.CreateRuntime(System.AppDomain)">
-            <summary>
-            Creates a new ScriptRuntime with the IronPython scripting engine pre-configured
-            in the specified AppDomain.  The remote ScriptRuntime may  be manipulated from 
-            the local domain but all code will run in the remote domain.
-            </summary>
-        </member>
-        <member name="M:IronPython.Hosting.Python.CreateRuntime(System.AppDomain,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            Creates a new ScriptRuntime with the IronPython scripting engine pre-configured
-            in the specified AppDomain with additional options.  The remote ScriptRuntime may 
-            be manipulated from the local domain but all code will run in the remote domain.
-            </summary>
-        </member>
         <member name="M:IronPython.Hosting.Python.CreateEngine">
             <summary>
             Creates a new ScriptRuntime and returns the ScriptEngine for IronPython. If
@@ -772,26 +758,6 @@
             Creates a new ScriptRuntime with the specified options and returns the 
             ScriptEngine for IronPython. If the ScriptRuntime is required it can be 
             acquired from the Runtime property on the engine.
-            </summary>
-        </member>
-        <member name="M:IronPython.Hosting.Python.CreateEngine(System.AppDomain)">
-            <summary>
-            Creates a new ScriptRuntime and returns the ScriptEngine for IronPython. If
-            the ScriptRuntime is required it can be acquired from the Runtime property
-            on the engine.
-            
-            The remote ScriptRuntime may be manipulated from the local domain but 
-            all code will run in the remote domain.
-            </summary>
-        </member>
-        <member name="M:IronPython.Hosting.Python.CreateEngine(System.AppDomain,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            Creates a new ScriptRuntime with the specified options and returns the 
-            ScriptEngine for IronPython. If the ScriptRuntime is required it can be 
-            acquired from the Runtime property on the engine.
-            
-            The remote ScriptRuntime may be manipulated from the local domain but 
-            all code will run in the remote domain.
             </summary>
         </member>
         <member name="M:IronPython.Hosting.Python.GetEngine(Microsoft.Scripting.Hosting.ScriptRuntime)">
@@ -984,12 +950,6 @@
             
             This is exposed as a service through PythonEngine and the helper class
             uses this service to get the correct remoting semantics.
-            </summary>
-        </member>
-        <member name="M:IronPython.Hosting.PythonService.GetLocalCommandDispatcher">
-            <summary>
-            Returns an ObjectHandle to a delegate of type Action[Action] which calls the current
-            command dispatcher.
             </summary>
         </member>
         <member name="F:IronPython.Hosting.ErrorCodes.IncompleteStatement">
@@ -2634,40 +2594,6 @@
             continues to run on a non-UI thread.
             </summary>
         </member>
-        <member name="M:IronPython.Runtime.ClrModule.LoadTypeLibrary(IronPython.Runtime.CodeContext,System.Object)">
-            <summary>
-            LoadTypeLibrary(rcw) -> type lib desc
-            
-            Gets an ITypeLib object from OLE Automation compatible RCW ,
-            reads definitions of CoClass'es and Enum's from this library
-            and creates an object that allows to instantiate coclasses
-            and get actual values for the enums.
-            </summary>
-        </member>
-        <member name="M:IronPython.Runtime.ClrModule.LoadTypeLibrary(IronPython.Runtime.CodeContext,System.Guid)">
-            <summary>
-            LoadTypeLibrary(guid) -> type lib desc
-            
-            Reads the latest registered type library for the corresponding GUID,
-            reads definitions of CoClass'es and Enum's from this library
-            and creates a IDynamicMetaObjectProvider that allows to instantiate coclasses
-            and get actual values for the enums.
-            </summary>
-        </member>
-        <member name="M:IronPython.Runtime.ClrModule.AddReferenceToTypeLibrary(IronPython.Runtime.CodeContext,System.Object)">
-            <summary>
-            AddReferenceToTypeLibrary(rcw) -> None
-            
-            Makes the type lib desc available for importing. See also LoadTypeLibrary.
-            </summary>
-        </member>
-        <member name="M:IronPython.Runtime.ClrModule.AddReferenceToTypeLibrary(IronPython.Runtime.CodeContext,System.Guid)">
-            <summary>
-            AddReferenceToTypeLibrary(guid) -> None
-            
-            Makes the type lib desc available for importing.  See also LoadTypeLibrary.
-            </summary>
-        </member>
         <member name="M:IronPython.Runtime.ClrModule.GetClrType(System.Type)">
             <summary>
             Gets the CLR Type object from a given Python type object.
@@ -3717,6 +3643,11 @@
             <summary>
             Returns the stack size.  IronPython does not implement this
             because byte code is not supported.
+            </summary>
+        </member>
+        <member name="P:IronPython.Runtime.FunctionCode.Target">
+            <summary>
+            The current target for the function.  This can change based upon adaptive compilation, recursion enforcement, and tracing.
             </summary>
         </member>
         <member name="M:IronPython.Runtime.FunctionCode.FromSourceUnit(Microsoft.Scripting.SourceUnit,IronPython.Compiler.PythonCompilerOptions,System.Boolean)">
@@ -6018,17 +5949,6 @@
             
             Data is a public field so that this works properly with DynamicSite's as the reference
             type (and EnsureInitialize)
-            </summary>
-        </member>
-        <member name="M:IronPython.Runtime.Slice.DeprecatedFixed(System.Object,System.Int32@,System.Int32@)">
-            <summary>
-            Gets the indices for the deprecated __getslice__, __setslice__, __delslice__ functions
-            
-            This form is deprecated in favor of using __getitem__ w/ a slice object as an index.  This
-            form also has subtly different mechanisms for fixing the slice index before calling the function.
-            
-            If an index is negative and __len__ is not defined on the object than an AttributeError
-            is raised.
             </summary>
         </member>
         <member name="T:IronPython.Runtime.StringFormatSpec">

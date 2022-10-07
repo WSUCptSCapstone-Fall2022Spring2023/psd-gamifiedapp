@@ -87,7 +87,7 @@ public class IronPythonContainer : MonoBehaviour
         mLevelScope = mEngine.CreateScope();
         mLevelScope.SetVariable("parent", this);
         mLevelScope.SetVariable("environment", level);
-        ScriptSource source = mEngine.CreateScriptSourceFromFile(Application.dataPath + level.TestFile);
+        ScriptSource source = mEngine.CreateScriptSourceFromString(level.TestFile.text);
         source.Execute(mLevelScope);
 
         //Dynamically initialize player scope

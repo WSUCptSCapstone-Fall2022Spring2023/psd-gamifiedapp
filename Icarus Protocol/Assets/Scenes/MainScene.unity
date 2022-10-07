@@ -240,6 +240,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1853952314}
     - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
+      propertyPath: TestFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 5034fc9d1af0a354d9645c092d2eb798, type: 3}
+    - target: {fileID: 5960792426279143129, guid: f3cfafbdd8738b24989eb70a3bed4b50, type: 3}
       propertyPath: CodeLoopDuration
       value: 1
       objectReference: {fileID: 0}

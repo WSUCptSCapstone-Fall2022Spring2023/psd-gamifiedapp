@@ -309,7 +309,7 @@
             Compiled reg-ex pattern
             </summary>
         </member>
-        <member name="M:IronPython.Modules.PythonRegex.PreParseRegex(IronPython.Runtime.CodeContext,System.String)">
+        <member name="M:IronPython.Modules.PythonRegex.PreParseRegex(IronPython.Runtime.CodeContext,System.String,System.Boolean)">
             <summary>
             Preparses a regular expression text returning a ParsedRegex class
             that can be used for further regular expressions.
