@@ -14,11 +14,11 @@ In this sprint, we managed to achieve all of the issues that we set out to close
 ## Completed Issues/User Stories
 Here are links to the issues that we completed in this sprint:
 
- * [#18: Fix Gitignore] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/18)
- * [#4: Core IronPython Integration] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/4)
- * [#1: Produce Solutions Approach Document] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/1)
- * [#2: Produce Sprint Report Document] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/2)
- * [#3: Update README to Meet Requirements] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/3)
+ * [#18: Fix Gitignore](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/18)
+ * [#4: Core IronPython Integration](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/4)
+ * [#1: Produce Solutions Approach Document](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/1)
+ * [#2: Produce Sprint Report Document](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/2)
+ * [#3: Update README to Meet Requirements](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/issues/3)
  
  ## Incomplete Issues/User Stories
  Here are links to issues we worked on but did not complete in this sprint:
@@ -29,9 +29,9 @@ Here are links to the issues that we completed in this sprint:
 Please review the following code files, which were actively developed during this sprint, for quality:
  * [IronPythonContainer.cs](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Icarus%20Protocol/Assets/IronPythonIntegration/IronPythonContainer.cs)
  * [LevelDefinition.cs](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Icarus%20Protocol/Assets/Levels/LevelDefinition.cs	)
- * [Solution_Approach_Document.pdf] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/Solution_Approach_Document.pdf)
- * [Requirements_and_Specifications.pdf] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/Requirements_and_Specifications.pdf)
- * [IcarusProtocol_Project_Report.pdf] (https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/IcarusProtocol_Project_Report.pdf)
+ * [Solution_Approach_Document.pdf](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/Solution_Approach_Document.pdf)
+ * [Requirements_and_Specifications.pdf](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/Requirements_and_Specifications.pdf)
+ * [IcarusProtocol_Project_Report.pdf](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Documentation/IcarusProtocol_Project_Report.pdf)
  * *Temporary scripts and behaviors made only for UI testing and demo purposes are ommitted for brevity, and since they'll be deleted once they are no longer useful*
 
 ## Retrospective Summary
@@ -47,5 +47,5 @@ Here's what we'd like to improve:
   
 Here are changes we plan to implement in the next sprint:
    * We've reviewed git protocol between us, and will endeavor to be careful when branching, pulling, and pushing, to ensure the cleanliness and usefulness of git functionality.
-   * When tackling future documentation, we intend to perform an overview before beginning work, ensuring that both of us are on the same page about exactly what each section entails writing.
+   * When tackling future documentation, we intend to perform an overview before beginning work, ensuring that both of us are on the same page about exactly what each section entails.
    * We intend to evaluate the workload posed by each task well in advance of the week in which it is due, ensuring that there are no more unpleasant surprises about what work we need to accomplish.
