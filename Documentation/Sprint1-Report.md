@@ -1,5 +1,7 @@
 # Sprint 1 Report (8/26/21 - 10/9/2021)
 
+Sprint 1 Demo Video: [https://youtu.be/dahdbZ_sNJw](https://youtu.be/dahdbZ_sNJw)
+
 ## What's New (User Facing)
  * Project features test UI allowing you to write and simulate basic Python code and view the state of the python variable "testVar" during simulation.
  * Simulation ends in success if testVar is forced below -20, and ends in failure if testVar is allowed to become higher than 20.
