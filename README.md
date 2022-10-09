@@ -76,5 +76,5 @@ There are currently no known problems.
 
 ## License
 
-- [MIT License](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint1/Improved-Demo-Appearance/MITLicense.txt)
+- [MIT License](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/sprint1/Update-README-To-Meet-Requirements/MITLicense.txt)
 
