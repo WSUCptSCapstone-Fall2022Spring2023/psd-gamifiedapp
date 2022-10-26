@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.96470594, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -99,7 +99,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 1, b: 0.96541667, a: 1}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestFile: \TestingComponents\IronPython\lesson-test.py
+  TestFile: {fileID: 4900000, guid: 5034fc9d1af0a354d9645c092d2eb798, type: 3}
   ActionGroups:
   - m_PersistentCalls:
       m_Calls:
@@ -217,8 +217,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  CodeLoopDuration: 0
-  ExposedMembers: []
+  CodeLoopDuration: 1
+  ExposedMembers:
+  - testVar
+  - double
 --- !u!1 &1618994188300294271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,8 +1004,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294965084
-  m_fontColor: {r: 0.3622641, g: 0.9670776, b: 1, a: 1}
+    rgba: 4278849792
+  m_fontColor: {r: 0, g: 0.06666667, b: 0.039215688, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
