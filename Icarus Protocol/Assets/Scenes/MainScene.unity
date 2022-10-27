@@ -767,10 +767,42 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 489561327}
     m_Modifications:
+    - target: {fileID: 398497872, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 235.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 398497872, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 181.8296
+      objectReference: {fileID: 0}
+    - target: {fileID: 398497872, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -47.499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 398497872, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -375.4848
+      objectReference: {fileID: 0}
+    - target: {fileID: 799978504, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_margin.w
+      value: -248.89554
+      objectReference: {fileID: 0}
+    - target: {fileID: 799978504, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_margin.y
+      value: 45.83277
+      objectReference: {fileID: 0}
     - target: {fileID: 3410015253207310119, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
       propertyPath: IPContainer
       value: 
       objectReference: {fileID: 1853952314}
+    - target: {fileID: 3580254907667096534, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 608.6997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580254907667096534, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -575.64984
+      objectReference: {fileID: 0}
     - target: {fileID: 3580254908024591108, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
       propertyPath: ActionGroups.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
