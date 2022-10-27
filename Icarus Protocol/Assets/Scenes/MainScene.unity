@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -768,14 +768,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 489561327}
     m_Modifications:
-    - target: {fileID: 1381742811092532651, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 605
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811092532651, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 920
-      objectReference: {fileID: 0}
     - target: {fileID: 1381742811575844656, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -863,86 +855,6 @@ PrefabInstance:
     - target: {fileID: 1381742811575844659, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
       propertyPath: m_Name
       value: LevelSelectUIContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811740090900, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435674, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 605
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435674, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 920
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435674, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435674, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435674, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 619
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435675, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1381742811837435675, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435675, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9450981
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435675, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811837435675, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_Color.r
-      value: 0.14901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811933226662, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 453.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742811988994848, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 453.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812065609807, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 453.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812079852655, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812361386221, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812530201808, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812648112768, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 453.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812677537856, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 453.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381742812912254022, guid: b99dc02ab249d6d4d8a5000f22159770, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
