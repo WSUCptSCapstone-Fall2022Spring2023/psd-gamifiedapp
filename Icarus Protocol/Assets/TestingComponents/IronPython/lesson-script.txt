@@ -1,0 +1,5 @@
+Welcome to the Icarus Protocol test level. This level shows off some of the basic principles and concepts of the Icarus Protocol game.
+
+~You allowed testVar to get too high. You'll need to force it below -20 to win.
+
+~You managed to fail in a way no one knew was possible. Apparently testVar can't be equal to 5.4321?

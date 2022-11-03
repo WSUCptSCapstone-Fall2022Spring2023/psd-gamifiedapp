@@ -8,12 +8,17 @@ using UnityEngine.Events;
 /// <summary>
 /// The LevelDefinition stores all of the essential information representing a single level.
 /// </summary>
-public class LevelDefinition : MonoBehaviour
+public class PhaseDefinition : MonoBehaviour
 {
     /// <summary>
     /// The filepath of the level test.py file relative to the application data root.
     /// </summary>
     public TextAsset TestFile;
+
+    /// <summary>
+    /// The text asset associated with the script for this phase.
+    /// </summary>
+    public TextAsset ScriptFile;
 
     /// <summary>
     /// The action groups tied to this level to be activated by the simulation.

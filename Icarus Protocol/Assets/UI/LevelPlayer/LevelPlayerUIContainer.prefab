@@ -186,7 +186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.499996, y: -375.4848}
+  m_AnchoredPosition: {x: -47.5, y: -375.4848}
   m_SizeDelta: {x: 235.6, y: 181.8296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &398497874
@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 3580254907667096534}
   - component: {fileID: 3580254907667096532}
   - component: {fileID: 3580254907667096533}
+  - component: {fileID: 5086060637916340948}
   m_Layer: 5
   m_Name: AIWindow
   m_TagString: Untagged
@@ -780,6 +781,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5086060637916340948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580254907667096535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc7f3555adb3694b87f32b3a4a402ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 20651501}
 --- !u!1 &3580254908365523921
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +856,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3580254908675781662}
   - component: {fileID: 3410015253207310119}
-  - component: {fileID: 3580254908024591108}
   m_Layer: 5
   m_Name: LevelPlayerUIContainer
   m_TagString: Untagged
@@ -886,41 +899,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb8f2d42d41aa84395d78dde4187129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PhaseDefinition: {fileID: 3580254908024591108}
+  PhaseDefinition: {fileID: 0}
   IPContainer: {fileID: 0}
   SimulateButton: {fileID: 336417458}
---- !u!114 &3580254908024591108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3580254908675781663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TestFile: {fileID: 4900000, guid: 5034fc9d1af0a354d9645c092d2eb798, type: 3}
-  ActionGroups:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  CodeLoopDuration: 1
-  ExposedMembers:
-  - testVar
-  - double
+  OutputController: {fileID: 5086060637916340948}
+  SuccessMessage: {fileID: 536783347330554714, guid: 33a552d4fd0106d4dbd5a89305d038dc, type: 3}
+  FailureMessage: {fileID: 6082586879204589637, guid: 04462ddef394273448fb8c312f7ff900, type: 3}
 --- !u!1 &3580254909036242256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1051,7 @@ GameObject:
   - component: {fileID: 7193405217952421363}
   - component: {fileID: 335411378713114620}
   - component: {fileID: 8257861479354287022}
+  - component: {fileID: 20651501}
   m_Layer: 5
   m_Name: AIWindowContent
   m_TagString: Untagged
@@ -1192,3 +1177,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &20651501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568575588900635357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ac5344497535f468325c306751cc24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextReference: {fileID: 8257861479354287022}
+  TextDelay: 0.04

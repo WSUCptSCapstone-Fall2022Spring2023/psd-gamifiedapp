@@ -1,5 +1,6 @@
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,12 @@ using UnityEngine;
 /// </summary>
 public class IronPythonContainer : MonoBehaviour
 {
+    /// <summary>
+    /// An event that triggers each time that the simulation exist. 
+    /// Subscribed to by the UI and phase definitions to manage phase transitions and responses.
+    /// </summary>
+    public event EventHandler<int> OnSimulationExit;
+
     /// <summary>
     /// Stores a private internal reference to the running engine managing the IronPython interpreter
     /// </summary>
@@ -28,7 +35,7 @@ public class IronPythonContainer : MonoBehaviour
     /// <summary>
     /// Stores a private internal cache of the initialized level.
     /// </summary>
-    private LevelDefinition mCachedLevel { get; set; }
+    private PhaseDefinition mCachedLevel { get; set; }
 
     /// <summary>
     /// Is true if user code is being simulated, false otherwise.
@@ -79,7 +86,7 @@ public class IronPythonContainer : MonoBehaviour
     /// <summary>
     /// Uses a LevelDefinition script to initialize a level's unique simulation code and scope elements.
     /// </summary>
-    public void InitializeLevel(LevelDefinition level) 
+    public void InitializeLevel(PhaseDefinition level) 
     {
         mCachedLevel = level;
 
@@ -136,6 +143,8 @@ public class IronPythonContainer : MonoBehaviour
     {
         mSimulating = false;
         InitializeLevel(mCachedLevel);
+        OnSimulationExit(this, exitCode);
+
         //TODO: Remove Debug
         Debug.Log($"Simulation exited with code: {exitCode}");
     }

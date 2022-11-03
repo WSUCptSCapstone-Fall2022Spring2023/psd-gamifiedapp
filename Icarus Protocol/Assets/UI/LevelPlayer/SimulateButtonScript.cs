@@ -15,7 +15,7 @@ public class SimulateButtonScript : MonoBehaviour
     /// <summary>
     /// A reference to the active phase definition, provided by the parent level controller.
     /// </summary>
-    public LevelDefinition PhaseDefinition;
+    public PhaseDefinition PhaseDefinition;
 
     /// <summary>
     /// A reference to the ID for getting packaged code
