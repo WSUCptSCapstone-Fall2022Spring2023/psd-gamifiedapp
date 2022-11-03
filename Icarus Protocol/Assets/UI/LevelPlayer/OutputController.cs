@@ -4,6 +4,9 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 
+/// <summary>
+/// Controls the AIOuput text box in the bottom left to print feedback and conversations.
+/// </summary>
 public class OutputController : MonoBehaviour
 {
     /// <summary>

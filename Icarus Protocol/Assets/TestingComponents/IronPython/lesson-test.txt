@@ -17,5 +17,5 @@ def simulate():
 
 def simulate_tick():
 	global testVar
-	testVar = testVar + 0.01
+	testVar = testVar + 0.1
 	return testVar

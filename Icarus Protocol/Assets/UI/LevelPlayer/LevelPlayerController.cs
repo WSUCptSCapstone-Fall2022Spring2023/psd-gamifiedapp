@@ -42,12 +42,18 @@ public class LevelPlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
-        SimulateButton.PhaseDefinition = PhaseDefinition;
         SimulateButton.IPContainer = IPContainer;
-        OutputController.InitializeScript(PhaseDefinition.ScriptFile);
-        OutputController.AdvanceScript();
+        InitializePhase(PhaseDefinition);
 
         IPContainer.OnSimulationExit += SimulationExited;
+    }
+
+    public void InitializePhase(PhaseDefinition phase) 
+    {
+        PhaseDefinition = phase;
+        SimulateButton.PhaseDefinition = phase;
+        OutputController.InitializeScript(phase.ScriptFile);
+        OutputController.AdvanceScript();
     }
 
     /// <summary>
@@ -62,7 +68,10 @@ public class LevelPlayerController : MonoBehaviour
         }
         else 
         {
-            OutputController.AdvanceScript();
+            if (PhaseDefinition.NextPhase != null)
+            {
+                InitializePhase(PhaseDefinition.NextPhase);
+            }
             Instantiate(SuccessMessage, transform);
         }
     }

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Automatically kills the gameobject it's on after a time delay, used to spawn in an object and ensure autonomous self-deletion.
+/// </summary>
 public class SelfDisable : MonoBehaviour
 {
     /// <summary>

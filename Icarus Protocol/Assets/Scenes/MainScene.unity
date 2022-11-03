@@ -881,14 +881,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1853952314}
     - target: {fileID: 3410015253207310119, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
-      propertyPath: FailureMessage
-      value: 
-      objectReference: {fileID: 6082586879204589637, guid: 04462ddef394273448fb8c312f7ff900, type: 3}
-    - target: {fileID: 3410015253207310119, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
-      propertyPath: SuccessMessage
-      value: 
-      objectReference: {fileID: 536783347330554714, guid: 33a552d4fd0106d4dbd5a89305d038dc, type: 3}
-    - target: {fileID: 3410015253207310119, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
       propertyPath: PhaseDefinition
       value: 
       objectReference: {fileID: 6428709698912022950}
@@ -1051,6 +1043,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1135508379}
     m_Modifications:
     - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: NextPhase
+      value: 
+      objectReference: {fileID: 6428709698912022951}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: FastTickSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: ActionGroups.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 366307826}
@@ -1113,6 +1113,17 @@ Transform:
 --- !u!114 &6428709698912022950 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+  m_PrefabInstance: {fileID: 6428709698912022948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6428709698912022951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6428709698912022951, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
   m_PrefabInstance: {fileID: 6428709698912022948}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

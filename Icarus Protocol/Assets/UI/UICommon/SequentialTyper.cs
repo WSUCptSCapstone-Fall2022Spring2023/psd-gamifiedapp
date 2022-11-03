@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Allows a text box to be typed one character at a time with a slight delay instead of all at once.
+/// </summary>
 public class SequentialTyper : MonoBehaviour
 {
     /// <summary>

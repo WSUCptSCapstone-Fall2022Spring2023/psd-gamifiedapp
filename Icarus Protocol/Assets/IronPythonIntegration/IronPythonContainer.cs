@@ -48,6 +48,11 @@ public class IronPythonContainer : MonoBehaviour
     private float mCodeLoopTimer { get; set; }
 
     /// <summary>
+    /// The timer variable used to time the "fast ticks"
+    /// </summary>
+    private float tickTimer { get; set; }
+
+    /// <summary>
     /// Stores the private internal cached user code for the simulation.
     /// </summary>
     private string mCachedUserCode { get; set; }
@@ -67,7 +72,15 @@ public class IronPythonContainer : MonoBehaviour
     {
         if (mSimulating)
         {
-            mEngine.Execute("simulate_tick()", mLevelScope);
+            if (tickTimer <= 0)
+            {
+                tickTimer = mCachedLevel.FastTickSpeed;
+                mEngine.Execute("simulate_tick()", mLevelScope);
+            }
+            else
+            {
+                tickTimer -= Time.deltaTime;
+            }
 
             if (mCodeLoopTimer <= 0)
             {

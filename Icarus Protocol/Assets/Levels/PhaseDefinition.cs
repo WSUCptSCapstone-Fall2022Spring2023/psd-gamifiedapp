@@ -32,9 +32,20 @@ public class PhaseDefinition : MonoBehaviour
     public float CodeLoopDuration;
 
     /// <summary>
+    /// Defines the speed of the "fast tick" behavior. 0 means it will run every frame.
+    /// </summary>
+    public float FastTickSpeed;
+
+    /// <summary>
     /// This list contains the string identifiers of all member variables made available to the player from the lesson file.
     /// </summary>
     public List<string> ExposedMembers;
+
+
+    /// <summary>
+    /// Holds the reference to the next phase definition in the level in a linked-list style format.
+    /// </summary>
+    public PhaseDefinition NextPhase;
 
     /// <summary>
     /// A binding intended for use by IronPython. Calls all the actions subscribed to a particular action group.
