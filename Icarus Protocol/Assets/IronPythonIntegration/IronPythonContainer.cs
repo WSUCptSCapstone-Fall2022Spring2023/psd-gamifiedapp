@@ -18,6 +18,11 @@ public class IronPythonContainer : MonoBehaviour
     public event EventHandler<int> OnSimulationExit;
 
     /// <summary>
+    /// Triggers an event when IronPython initialization completes to prevent orering issues with Start() functions.
+    /// </summary>
+    public event EventHandler OnInitComplete;
+
+    /// <summary>
     /// Stores a private internal reference to the running engine managing the IronPython interpreter
     /// </summary>
     private ScriptEngine mEngine { get; set; }
@@ -63,6 +68,7 @@ public class IronPythonContainer : MonoBehaviour
     void Start()
     {
         mEngine = Python.CreateEngine();
+        OnInitComplete(this, null);
     }
 
     /// <summary>

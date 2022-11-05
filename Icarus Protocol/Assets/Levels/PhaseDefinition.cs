@@ -11,6 +11,11 @@ using UnityEngine.Events;
 public class PhaseDefinition : MonoBehaviour
 {
     /// <summary>
+    /// Stores an optional reference to the custom UI layout that should be created for this phase.
+    /// </summary>
+    public GameObject PhaseUI;
+
+    /// <summary>
     /// The filepath of the level test.py file relative to the application data root.
     /// </summary>
     public TextAsset TestFile;
@@ -30,7 +35,7 @@ public class PhaseDefinition : MonoBehaviour
     /// The delay between each time that the user's code is simulated.
     /// </summary>
     public float CodeLoopDuration;
-
+    
     /// <summary>
     /// Defines the speed of the "fast tick" behavior. 0 means it will run every frame.
     /// </summary>
@@ -41,11 +46,25 @@ public class PhaseDefinition : MonoBehaviour
     /// </summary>
     public List<string> ExposedMembers;
 
+    /// <summary>
+    /// A list containing the friendly names of each of the variables exposed to the player for this phase.
+    /// </summary>
+    public List<string> FriendlyVariableNames;
 
     /// <summary>
     /// Holds the reference to the next phase definition in the level in a linked-list style format.
     /// </summary>
     public PhaseDefinition NextPhase;
+
+    /// <summary>
+    /// Set to true if this phase is supposed to load in "fill in the blank" mode
+    /// </summary>
+    public bool FillInBlank;
+
+    /// <summary>
+    /// Text Asset containing starter code and or FITB syntax.
+    /// </summary>
+    public TextAsset starterCode;
 
     /// <summary>
     /// A binding intended for use by IronPython. Calls all the actions subscribed to a particular action group.

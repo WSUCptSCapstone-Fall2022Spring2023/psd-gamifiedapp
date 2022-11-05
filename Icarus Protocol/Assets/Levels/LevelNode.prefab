@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PhaseUI: {fileID: 4473375324309296309, guid: f001ef81acd2c4747a1784af6a460459, type: 3}
   TestFile: {fileID: 4900000, guid: 5034fc9d1af0a354d9645c092d2eb798, type: 3}
   ScriptFile: {fileID: 4900000, guid: 73ecf0c3cfaf404478746a412f0cc1ba, type: 3}
   ActionGroups:
@@ -67,6 +68,8 @@ MonoBehaviour:
   ExposedMembers:
   - testVar
   - double
+  FriendlyVariableNames:
+  - testVar
   NextPhase: {fileID: 6428709698912022951}
 --- !u!114 &6428709698912022951
 MonoBehaviour:
@@ -80,6 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PhaseUI: {fileID: 1339420377333279286, guid: fad4a157629ecb2489c50785820cbba3, type: 3}
   TestFile: {fileID: 4900000, guid: 231397cc13678144e9b6557637226f16, type: 3}
   ScriptFile: {fileID: 4900000, guid: 18dadf5fd6534b448a700ad249d0164f, type: 3}
   ActionGroups: []
@@ -87,4 +91,6 @@ MonoBehaviour:
   FastTickSpeed: 0.1
   ExposedMembers:
   - double
+  FriendlyVariableNames:
+  - double(int)
   NextPhase: {fileID: 0}
