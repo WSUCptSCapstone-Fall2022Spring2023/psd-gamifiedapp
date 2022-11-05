@@ -10,7 +10,7 @@ public class SimulateTestCode : MonoBehaviour
 {
     public TMP_InputField InputField;
     public IronPythonContainer IPContainer;
-    public LevelDefinition TestLevel;
+    public PhaseDefinition TestLevel;
 
     private void Start()
     {

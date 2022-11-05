@@ -7,11 +7,15 @@ def simulate():
 	global testVar
 	parent.execute_user_code()
 	if testVar > 20:
+		environment.trigger_action_group(1)
 		parent.end_simulation(1)
+	elif testVar == 5.4321:
+		parent.end_simulation(2)
 	elif testVar < -20:
+		environment.trigger_action_group(0)
 		parent.end_simulation(0)
 
 def simulate_tick():
 	global testVar
-	testVar = testVar + 0.01
+	testVar = testVar + 0.1
 	return testVar

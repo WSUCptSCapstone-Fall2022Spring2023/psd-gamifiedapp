@@ -1,0 +1,3 @@
+Congratulations on beating the first phase! Welcome to phase 2! In this phase you can't touch testVar directly, and only have 10 seconds to make it very large. Try using the double() function. 
+
+~You ran out of time. Make sure you're doubling every time.
