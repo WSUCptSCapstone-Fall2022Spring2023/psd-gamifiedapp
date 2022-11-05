@@ -34,6 +34,16 @@ public class IDEController : MonoBehaviour
     private bool fillInBlankMode;
 
     /// <summary>
+    /// The blanks being used in this phase.
+    /// </summary>
+    private List<TMP_InputField> blanks = new List<TMP_InputField>();
+
+    /// <summary>
+    /// Stores the raw text segments of the example code
+    /// </summary>
+    private List<string> textSegements = new List<string>();
+
+    /// <summary>
     /// Packages and returns the player code string from the current active code source.
     /// </summary>
     /// <returns></returns>
@@ -61,7 +71,7 @@ public class IDEController : MonoBehaviour
         RawInputField.text = "";
         if (fillInBlank)
         {
-            StaticText.text = text;
+            BuildBlanks(text);
             RawInputField.enabled = false;
         }
         else 
@@ -76,19 +86,53 @@ public class IDEController : MonoBehaviour
     /// </summary>
     private void BuildBlanks(string rawText) 
     {
-        string[] segments = Regex.Split(rawText, @"(\[\[|\]\])");
+        blanks = new List<TMP_InputField>();
+        textSegements = new List<string>();
+
+        string[] segments = Regex.Split(rawText, @"\[\[|\]\]");
         StringBuilder backingString = new StringBuilder();
         foreach (string segment in segments) 
         {
-            if (Regex.IsMatch(segment, @"[0-9]*"))
+            if (int.TryParse(segment, out int parsedValue))
             {
-                backingString.Append(String.Concat(Enumerable.Repeat(" ", int.Parse(segment))));
-
+                AddBlank(backingString, parsedValue);
             }
             else
-            { 
-                
+            {
+                backingString.Append(segment);
+                textSegements.Add(segment);
             }
         }
+        StaticText.text = backingString.ToString();
+    }
+
+
+    /// <summary>
+    /// Adds and initializes a blank.
+    /// </summary>
+    /// <param name="backingString">A reference to the iterating background string</param>
+    /// <param name="parsedValue">The value marking the intended length of the blank.</param>
+    private void AddBlank(StringBuilder backingString, int parsedValue)
+    {
+        blanks.Add(Instantiate(BlankPrefab, this.transform).GetComponent<TMP_InputField>());
+        Vector2 blankPosition = LocateTextPosition(backingString.ToString());
+        RectTransform blankTransform = blanks.Last().GetComponent<RectTransform>();
+        blankTransform.anchoredPosition = blankPosition;
+        blankTransform.sizeDelta = new Vector2(13 * parsedValue + 10, 30);
+        backingString.Append(String.Concat(Enumerable.Repeat(" ", parsedValue)));
+        blanks.Last().characterLimit = parsedValue;
+    }
+
+    /// <summary>
+    /// Locates the expected position of a character in a text object
+    /// </summary>
+    private Vector2 LocateTextPosition(string text) 
+    {
+        List<string> splitString = text.Split('\n').ToList();
+        var yPosition = (splitString.Count() - 1) * -27.5f + 437.5f;
+        Debug.Log(splitString.Last());
+        var xPosition = (splitString.Last().Length) * 13 - 365;
+        Debug.Log($"{xPosition} : {yPosition}");
+        return new Vector2(xPosition, yPosition);
     }
 }
