@@ -138,9 +138,7 @@ public class IDEController : MonoBehaviour
     {
         List<string> splitString = text.Split('\n').ToList();
         var yPosition = (splitString.Count() - 1) * -27.5f + 437.5f;
-        Debug.Log(splitString.Last());
         var xPosition = (splitString.Last().Length) * 13 - 365;
-        Debug.Log($"{xPosition} : {yPosition}");
         return new Vector2(xPosition, yPosition);
     }
 

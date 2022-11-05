@@ -62,7 +62,7 @@ public class LevelPlayerController : MonoBehaviour
 
 
         IPContainer.OnSimulationExit += SimulationExited;
-        IPContainer.OnInitComplete += (sender, e) => InitializePhase(PhaseDefinition);
+        InitializePhase(PhaseDefinition);
     }
     public void InitializePhase(PhaseDefinition phase) 
     {

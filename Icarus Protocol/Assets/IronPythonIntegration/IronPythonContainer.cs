@@ -18,11 +18,6 @@ public class IronPythonContainer : MonoBehaviour
     public event EventHandler<int> OnSimulationExit;
 
     /// <summary>
-    /// Triggers an event when IronPython initialization completes to prevent orering issues with Start() functions.
-    /// </summary>
-    public event EventHandler OnInitComplete;
-
-    /// <summary>
     /// Stores a private internal reference to the running engine managing the IronPython interpreter
     /// </summary>
     private ScriptEngine mEngine { get; set; }
@@ -63,12 +58,11 @@ public class IronPythonContainer : MonoBehaviour
     private string mCachedUserCode { get; set; }
 
     /// <summary>
-    /// Initializes Unity object before the first Update loop.
+    /// Runs when a script is loaded. Has priority over normal start functions.
     /// </summary>
-    void Start()
+    void Awake()
     {
         mEngine = Python.CreateEngine();
-        OnInitComplete(this, null);
     }
 
     /// <summary>
@@ -107,18 +101,21 @@ public class IronPythonContainer : MonoBehaviour
     /// </summary>
     public void InitializeLevel(PhaseDefinition level) 
     {
-        mCachedLevel = level;
+        if (mEngine != null)
+        {
+            mCachedLevel = level;
 
-        //Initialize level scope
-        mLevelScope = mEngine.CreateScope();
-        mLevelScope.SetVariable("parent", this);
-        mLevelScope.SetVariable("environment", level);
-        ScriptSource source = mEngine.CreateScriptSourceFromString(level.TestFile.text);
-        source.Execute(mLevelScope);
+            //Initialize level scope
+            mLevelScope = mEngine.CreateScope();
+            mLevelScope.SetVariable("parent", this);
+            mLevelScope.SetVariable("environment", level);
+            ScriptSource source = mEngine.CreateScriptSourceFromString(level.TestFile.text);
+            source.Execute(mLevelScope);
 
-        //Dynamically initialize player scope
-        mUserScope = mEngine.CreateScope();
-        SyncScopes(mLevelScope, mUserScope);
+            //Dynamically initialize player scope
+            mUserScope = mEngine.CreateScope();
+            SyncScopes(mLevelScope, mUserScope);
+        }
     }
 
     /// <summary>
