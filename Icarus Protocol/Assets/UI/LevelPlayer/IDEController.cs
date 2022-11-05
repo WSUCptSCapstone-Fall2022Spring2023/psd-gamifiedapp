@@ -34,14 +34,9 @@ public class IDEController : MonoBehaviour
     private bool fillInBlankMode;
 
     /// <summary>
-    /// The blanks being used in this phase.
+    /// Stores the segments of the example code
     /// </summary>
-    private List<TMP_InputField> blanks = new List<TMP_InputField>();
-
-    /// <summary>
-    /// Stores the raw text segments of the example code
-    /// </summary>
-    private List<string> textSegements = new List<string>();
+    private List<GenericSegment> segments = new List<GenericSegment>();
 
     /// <summary>
     /// Packages and returns the player code string from the current active code source.
@@ -51,7 +46,12 @@ public class IDEController : MonoBehaviour
     {
         if (fillInBlankMode)
         {
-            return StaticText.text;
+            StringBuilder outputString = new StringBuilder();
+            foreach (GenericSegment segment in segments) 
+            {
+                outputString.Append(segment.ToString());
+            }
+            return outputString.ToString();
         }
         else 
         {
@@ -69,6 +69,15 @@ public class IDEController : MonoBehaviour
         fillInBlankMode = fillInBlank;
         StaticText.text = "";
         RawInputField.text = "";
+        foreach (GenericSegment segment in segments) 
+        {
+            if (segment.Blank != null) 
+            {
+                Destroy(segment.Blank.gameObject);
+            }
+        }
+        segments = new List<GenericSegment>();
+
         if (fillInBlank)
         {
             BuildBlanks(text);
@@ -86,12 +95,11 @@ public class IDEController : MonoBehaviour
     /// </summary>
     private void BuildBlanks(string rawText) 
     {
-        blanks = new List<TMP_InputField>();
-        textSegements = new List<string>();
+        segments = new List<GenericSegment>();
 
-        string[] segments = Regex.Split(rawText, @"\[\[|\]\]");
+        string[] splitSections = Regex.Split(rawText, @"\[\[|\]\]");
         StringBuilder backingString = new StringBuilder();
-        foreach (string segment in segments) 
+        foreach (string segment in splitSections) 
         {
             if (int.TryParse(segment, out int parsedValue))
             {
@@ -100,7 +108,7 @@ public class IDEController : MonoBehaviour
             else
             {
                 backingString.Append(segment);
-                textSegements.Add(segment);
+                segments.Add(new GenericSegment(segment));
             }
         }
         StaticText.text = backingString.ToString();
@@ -114,13 +122,13 @@ public class IDEController : MonoBehaviour
     /// <param name="parsedValue">The value marking the intended length of the blank.</param>
     private void AddBlank(StringBuilder backingString, int parsedValue)
     {
-        blanks.Add(Instantiate(BlankPrefab, this.transform).GetComponent<TMP_InputField>());
+        segments.Add( new GenericSegment(Instantiate(BlankPrefab, this.transform).GetComponent<TMP_InputField>()));
         Vector2 blankPosition = LocateTextPosition(backingString.ToString());
-        RectTransform blankTransform = blanks.Last().GetComponent<RectTransform>();
+        RectTransform blankTransform = segments.Last().Blank.GetComponent<RectTransform>();
         blankTransform.anchoredPosition = blankPosition;
         blankTransform.sizeDelta = new Vector2(13 * parsedValue + 10, 30);
         backingString.Append(String.Concat(Enumerable.Repeat(" ", parsedValue)));
-        blanks.Last().characterLimit = parsedValue;
+        segments.Last().Blank.characterLimit = parsedValue;
     }
 
     /// <summary>
@@ -134,5 +142,43 @@ public class IDEController : MonoBehaviour
         var xPosition = (splitString.Last().Length) * 13 - 365;
         Debug.Log($"{xPosition} : {yPosition}");
         return new Vector2(xPosition, yPosition);
+    }
+
+    /// <summary>
+    /// A private internal class that holds a segment that is either a string segement OR a blank.
+    /// </summary>
+    private class GenericSegment 
+    {
+        /// <summary>
+        /// The text value of the segment if it exists
+        /// </summary>
+        public string Text;
+
+        /// <summary>
+        /// The blank reference of the segment if it exists.
+        /// </summary>
+        public TMP_InputField Blank;
+
+        /// <summary>
+        /// True if segement is a blank.
+        /// </summary>
+        private bool isBlank;
+
+        public GenericSegment(string text) 
+        {
+            Text = text;
+            isBlank = false;
+        }
+
+        public GenericSegment(TMP_InputField blank)
+        {
+            Blank = blank;
+            isBlank = true;
+        }
+
+        public override string ToString()
+        {
+            return isBlank ? Blank.text : Text;
+        }
     }
 }

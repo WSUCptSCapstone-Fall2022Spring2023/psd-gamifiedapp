@@ -50,19 +50,7 @@ MonoBehaviour:
   ScriptFile: {fileID: 4900000, guid: 73ecf0c3cfaf404478746a412f0cc1ba, type: 3}
   ActionGroups:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -71,6 +59,8 @@ MonoBehaviour:
   FriendlyVariableNames:
   - testVar
   NextPhase: {fileID: 6428709698912022951}
+  FillInBlank: 1
+  starterCode: {fileID: 4900000, guid: 19dc3b944df60ea4eb400cd843fa4840, type: 3}
 --- !u!114 &6428709698912022951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,5 +82,7 @@ MonoBehaviour:
   ExposedMembers:
   - double
   FriendlyVariableNames:
-  - double(int)
+  - double()
   NextPhase: {fileID: 0}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
