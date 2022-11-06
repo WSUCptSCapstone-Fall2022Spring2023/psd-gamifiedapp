@@ -40,7 +40,7 @@ public class LevelListController : MonoBehaviour
     /// <param name="level">This is the cooresponding level for the button.</param>
     void InitializeButton (GameObject button, GameObject level)
     {
-        ButtonBehavior behavior = button.GetComponent<ButtonBehavior>();
+        LevelButtonBehavior behavior = button.GetComponent<LevelButtonBehavior>();
         behavior.Initialization(level.GetComponent<LevelDescription>(), DescriptionReference);
     }
 }

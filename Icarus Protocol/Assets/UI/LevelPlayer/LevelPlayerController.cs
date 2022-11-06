@@ -9,6 +9,11 @@ using UnityEngine;
 public class LevelPlayerController : MonoBehaviour
 {
     /// <summary>
+    /// Handles general UI layout transitions.
+    /// </summary>
+    public UILayoutHandler UIHandler;
+
+    /// <summary>
     /// Stores the PhaseDefinition for the current phase.
     /// </summary>
     public PhaseDefinition PhaseDefinition;
@@ -106,6 +111,10 @@ public class LevelPlayerController : MonoBehaviour
             if (PhaseDefinition.NextPhase != null)
             {
                 InitializePhase(PhaseDefinition.NextPhase);
+            }
+            else
+            {
+                UIHandler.TransitionToLevelSelect(3);
             }
             Instantiate(SuccessMessage, transform);
         }
