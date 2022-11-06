@@ -12,6 +12,21 @@ using UnityEngine.UIElements;
 public class LevelButtonBehavior : MonoBehaviour
 {
     /// <summary>
+    /// A reference to the completion icon to the right of the level text.
+    /// </summary>
+    public UnityEngine.UI.Image Icon;
+
+    /// <summary>
+    /// The image to use for an incomplete level
+    /// </summary>
+    public Sprite IncompleteImage;
+
+    /// <summary>
+    /// The image to use for a complete level.
+    /// </summary>
+    public Sprite CompleteImage;
+
+    /// <summary>
     /// This is a reference to the cooresponding level description
     /// </summary>
     private LevelDescription levelDescription;
@@ -30,6 +45,7 @@ public class LevelButtonBehavior : MonoBehaviour
         levelDescription = level;
         TMP_Text text = GetComponentInChildren<TMP_Text>();
         text.text = levelDescription.levelName;
+        Icon.sprite = level.GetComponent<ProgressRecord>().LevelComplete ? CompleteImage : IncompleteImage;
     }
 
     /// <summary>
@@ -37,6 +53,7 @@ public class LevelButtonBehavior : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
+        description.gameObject.SetActive(true);
         description.Initialization(levelDescription);
     }
 }

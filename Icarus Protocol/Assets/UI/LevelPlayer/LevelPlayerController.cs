@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
@@ -108,6 +109,8 @@ public class LevelPlayerController : MonoBehaviour
         }
         else 
         {
+            ProgressRecord progressRecord = PhaseDefinition.GetComponent<ProgressRecord>();
+            progressRecord.PhaseCompletion.First(e => e.PhaseID == PhaseDefinition.ID).PhaseComplete = true;
             if (PhaseDefinition.NextPhase != null)
             {
                 InitializePhase(PhaseDefinition.NextPhase);
@@ -115,6 +118,7 @@ public class LevelPlayerController : MonoBehaviour
             else
             {
                 UIHandler.TransitionToLevelSelect(3);
+                progressRecord.LevelComplete = true;
             }
             Instantiate(SuccessMessage, transform);
         }

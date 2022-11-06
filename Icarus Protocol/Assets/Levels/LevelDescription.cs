@@ -9,6 +9,11 @@ using UnityEngine;
 public class LevelDescription: MonoBehaviour
 {
     /// <summary>
+    /// The ID of the level, must be unique from the IDs of other levels. 
+    /// </summary>
+    public string levelID;
+
+    /// <summary>
     /// The name of the level.
     /// </summary>
     public string levelName;
@@ -17,4 +22,9 @@ public class LevelDescription: MonoBehaviour
     /// The description of the level.
     /// </summary>
     public string levelDescription;
+
+    /// <summary>
+    /// Stores a list of the levels that must be completed before this level is unlocked.
+    /// </summary>
+    public ProgressRecord[] Prerequisites;
 }

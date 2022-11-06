@@ -28,6 +28,11 @@ public class UILayoutHandler : MonoBehaviour
     public GameObject LevelPlayerUI;
 
     /// <summary>
+    /// The current state that the UI is in.
+    /// </summary>
+    public TransitionType CurrentState;
+
+    /// <summary>
     /// Timer used to delay UI transitions
     /// </summary>
     private float timer = 0;
@@ -93,6 +98,7 @@ public class UILayoutHandler : MonoBehaviour
         LevelPlayerUI.GetComponent<LevelPlayerController>().InitializePhase(targetPhase);
         LevelPlayerUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
+        CurrentState = TransitionType.LEVEL_PLAYER;
     }
 
     /// <summary>
@@ -101,7 +107,9 @@ public class UILayoutHandler : MonoBehaviour
     private void LevelSelectTransition()
     {
         LevelPlayerUI.SetActive(false);
+        LevelSelectUI.GetComponentInChildren<LevelListController>().Initialize();
         LevelSelectUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
+        CurrentState = TransitionType.LEVEL_SELECT;
     }
 }
