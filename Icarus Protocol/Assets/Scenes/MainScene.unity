@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: This is another test
+  levelName: Another test
   levelDescription: Testing, testing, 1, 2, 3!
 --- !u!1 &963194225
 GameObject:
