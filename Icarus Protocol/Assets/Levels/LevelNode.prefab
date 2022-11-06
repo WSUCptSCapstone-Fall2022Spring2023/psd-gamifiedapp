@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6636767413296342602}
   - component: {fileID: 4961718171917905431}
   - component: {fileID: 6428709698912022951}
+  - component: {fileID: -6341351023651436294}
   m_Layer: 0
   m_Name: LevelNode
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,3 +87,18 @@ MonoBehaviour:
   NextPhase: {fileID: 0}
   FillInBlank: 0
   starterCode: {fileID: 0}
+--- !u!114 &-6341351023651436294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Test Level
+  levelDescription: This is a level for testing. It features two phases demonstration
+    most of the basic mechanics of the game.

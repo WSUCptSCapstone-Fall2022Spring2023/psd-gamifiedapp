@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 /// <summary>
 /// This is the behaviors for the level selection button
 /// </summary>
-public class ButtonBehavior : MonoBehaviour
+public class LevelButtonBehavior : MonoBehaviour
 {
     /// <summary>
     /// This is a reference to the cooresponding level description

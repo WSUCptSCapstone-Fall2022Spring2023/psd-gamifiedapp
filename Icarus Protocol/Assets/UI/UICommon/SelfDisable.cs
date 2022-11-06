@@ -36,4 +36,12 @@ public class SelfDisable : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    /// <summary>
+    /// Called when this behavior is disabled
+    /// </summary>
+    public void OnDisable()
+    {
+        Destroy(gameObject);
+    }
 }

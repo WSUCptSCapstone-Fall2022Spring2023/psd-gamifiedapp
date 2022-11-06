@@ -854,6 +854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RawInputField: {fileID: 3580254907480985857}
+  StaticText: {fileID: 0}
+  BlankPrefab: {fileID: 0}
 --- !u!1 &3580254907667096535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1059,7 @@ MonoBehaviour:
   VariablesPane: {fileID: 9002888375360323297}
   SuccessMessage: {fileID: 536783347330554714, guid: 33a552d4fd0106d4dbd5a89305d038dc, type: 3}
   FailureMessage: {fileID: 6082586879204589637, guid: 04462ddef394273448fb8c312f7ff900, type: 3}
-  IDE: {fileID: 0}
+  IDE: {fileID: 3580254908024591106}
 --- !u!1 &3580254909036242256
 GameObject:
   m_ObjectHideFlags: 0
