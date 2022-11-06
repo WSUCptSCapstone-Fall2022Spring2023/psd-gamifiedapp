@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// This is the behavior for the level description UI component
+/// </summary>
 public class DescriptionBehavior : MonoBehaviour
 {
     /// <summary>

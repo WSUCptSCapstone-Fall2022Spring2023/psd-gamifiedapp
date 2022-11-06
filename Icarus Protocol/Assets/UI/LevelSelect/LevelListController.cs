@@ -19,7 +19,9 @@ public class LevelListController : MonoBehaviour
     /// </summary>
     public DescriptionBehavior DescriptionReference;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         GameObject[] levels = GameObject.FindGameObjectsWithTag("Level");
@@ -29,12 +31,6 @@ public class LevelListController : MonoBehaviour
             GameObject newButton = Instantiate(ButtonPrefab, this.transform);
             InitializeButton(newButton, level);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /// <summary>
