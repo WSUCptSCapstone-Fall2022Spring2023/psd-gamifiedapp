@@ -5,19 +5,25 @@ using UnityEngine;
 
 public class WatchTestVar : MonoBehaviour
 {
-    public IronPythonContainer PythonContainer;
+    public string varIdentifier;
+
+    private PhaseUIController parent;
 
     private TMP_Text mText;
 
     private void Start()
     {
-        mText = GetComponent<TMP_Text>();   
+        mText = GetComponent<TMP_Text>();
+        parent = GetComponentInParent<PhaseUIController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        dynamic value = PythonContainer.GetPythonValue("testVar");
-        mText.text = $"testVar: {(value == null ? "N/A" : Mathf.Round((float)value * 100) / 100)}";
+        dynamic value = parent?.IPContainer.GetPythonValue(varIdentifier);
+        if (value != null) 
+        {
+            mText.text = $"{varIdentifier}: {(value == null ? "N/A" : Mathf.Round((float)value * 100) / 100)}";
+        }
     }
 }
