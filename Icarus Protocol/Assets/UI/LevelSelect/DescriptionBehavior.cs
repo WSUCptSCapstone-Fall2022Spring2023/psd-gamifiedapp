@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -21,7 +22,17 @@ public class DescriptionBehavior : MonoBehaviour
     /// <summary>
     /// This is text for the body
     /// </summary>
-    public TMP_Text BodyText;
+    public SequentialTyper BodyText;
+
+    /// <summary>
+    /// Stores a reference to the text on the continue button
+    /// </summary>
+    public TMP_Text ButtonText;
+
+    /// <summary>
+    /// Reference to the object that builds and rebuils checkboxes marking completion.
+    /// </summary>
+    public CheckboxBuilder CheckBoxHandler;
 
     /// <summary>
     /// Callable method for initilization of the button's values.
@@ -30,6 +41,9 @@ public class DescriptionBehavior : MonoBehaviour
     {
         LevelDescription = level;
         HeaderText.text = level.levelName;
-        BodyText.text = level.levelDescription;
+        BodyText.GiveTypingJob(level.levelDescription);
+        ProgressRecord progressRecord = level.LevelProgress;
+        CheckBoxHandler.BuildBoxes(progressRecord);
+        ButtonText.text = !progressRecord.PhaseCompletion.Any(e => e.PhaseComplete) ? "Start" : (progressRecord.PhaseCompletion.Any(e => !e.PhaseComplete) ? "Continue" : "Replay");
     }
 }

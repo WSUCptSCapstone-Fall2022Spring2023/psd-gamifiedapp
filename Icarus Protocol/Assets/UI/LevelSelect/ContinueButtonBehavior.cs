@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ContinueButtonBehavior : MonoBehaviour
@@ -19,6 +20,13 @@ public class ContinueButtonBehavior : MonoBehaviour
     /// </summary>
     public void On_Click() 
     {
-        uiHandler.TransitionToLevelPlayer(descriptionReference.LevelDescription.GetComponent<PhaseDefinition>(), 0);
+        ProgressRecord progressRecord = descriptionReference.LevelDescription.LevelProgress;
+        PhaseDefinition[] phaseDefinitions = descriptionReference.LevelDescription.GetComponents<PhaseDefinition>();
+        PhaseDefinition firstIncomplete = phaseDefinitions.FirstOrDefault(e => progressRecord.PhaseCompletion.First(i => i.PhaseID == e.ID).PhaseComplete == false);
+        if (firstIncomplete == null)
+        {
+            firstIncomplete = phaseDefinitions[0];
+        }
+        uiHandler.TransitionToLevelPlayer(firstIncomplete, 0);
     }
 }

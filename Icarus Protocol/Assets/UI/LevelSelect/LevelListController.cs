@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,14 +20,32 @@ public class LevelListController : MonoBehaviour
     /// </summary>
     public DescriptionBehavior DescriptionReference;
 
+
+    /// <summary>
+    /// Stores the levels in the scene on load.
+    /// </summary>
+    private GameObject[] levels;
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
-        GameObject[] levels = GameObject.FindGameObjectsWithTag("Level");
+        levels = GameObject.FindGameObjectsWithTag("Level");
+        Initialize();
+    }
 
-        foreach (GameObject level in levels)
+    /// <summary>
+    /// Runs initialization on the level list and hides the description box.
+    /// </summary>
+    public void Initialize()
+    {
+        DescriptionReference.gameObject.SetActive(false);
+        foreach (GameObject child in GetComponentsInChildren<LevelButtonBehavior>().Select(e => e.gameObject)) 
+        {
+            if (child != this.gameObject) Destroy(child);
+        }
+        foreach (GameObject level in levels.Where(e => !e.GetComponent<LevelDescription>().Prerequisites.Any(i => !i.LevelProgress.LevelComplete)))
         {
             GameObject newButton = Instantiate(ButtonPrefab, this.transform);
             InitializeButton(newButton, level);

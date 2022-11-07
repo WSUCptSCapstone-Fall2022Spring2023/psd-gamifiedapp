@@ -11,6 +11,11 @@ using UnityEngine.Events;
 public class PhaseDefinition : MonoBehaviour
 {
     /// <summary>
+    /// The ID of this phase, must be unique from the IDs of other phases in this level.
+    /// </summary>
+    public string ID;
+
+    /// <summary>
     /// Stores an optional reference to the custom UI layout that should be created for this phase.
     /// </summary>
     public GameObject PhaseUI;
