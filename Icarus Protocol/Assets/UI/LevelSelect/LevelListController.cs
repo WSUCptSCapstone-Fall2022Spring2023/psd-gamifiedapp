@@ -45,7 +45,7 @@ public class LevelListController : MonoBehaviour
         {
             if (child != this.gameObject) Destroy(child);
         }
-        foreach (GameObject level in levels.Where(e => !e.GetComponent<LevelDescription>().Prerequisites.Any(i => !i.LevelComplete)))
+        foreach (GameObject level in levels.Where(e => !e.GetComponent<LevelDescription>().Prerequisites.Any(i => !i.LevelProgress.LevelComplete)))
         {
             GameObject newButton = Instantiate(ButtonPrefab, this.transform);
             InitializeButton(newButton, level);

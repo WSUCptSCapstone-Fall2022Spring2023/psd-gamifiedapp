@@ -20,7 +20,7 @@ public class ContinueButtonBehavior : MonoBehaviour
     /// </summary>
     public void On_Click() 
     {
-        ProgressRecord progressRecord = descriptionReference.LevelDescription.GetComponent<ProgressRecord>();
+        ProgressRecord progressRecord = descriptionReference.LevelDescription.LevelProgress;
         PhaseDefinition[] phaseDefinitions = descriptionReference.LevelDescription.GetComponents<PhaseDefinition>();
         PhaseDefinition firstIncomplete = phaseDefinitions.FirstOrDefault(e => progressRecord.PhaseCompletion.First(i => i.PhaseID == e.ID).PhaseComplete == false);
         if (firstIncomplete == null)

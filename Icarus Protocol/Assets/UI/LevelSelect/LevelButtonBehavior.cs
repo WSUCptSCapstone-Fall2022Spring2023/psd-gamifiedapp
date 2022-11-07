@@ -45,7 +45,7 @@ public class LevelButtonBehavior : MonoBehaviour
         levelDescription = level;
         TMP_Text text = GetComponentInChildren<TMP_Text>();
         text.text = levelDescription.levelName;
-        Icon.sprite = level.GetComponent<ProgressRecord>().LevelComplete ? CompleteImage : IncompleteImage;
+        Icon.sprite = level.LevelProgress.LevelComplete ? CompleteImage : IncompleteImage;
     }
 
     /// <summary>

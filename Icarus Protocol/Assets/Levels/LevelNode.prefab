@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelID: 01-test
+  LevelID: 01-test
   levelName: Test Level
-  levelDescription: This is a level for testing. It features two phases demonstration
+  levelDescription: This is a level for testing. It features two phases demonstrating
     most of the basic mechanics of the game.
+  Prerequisites: []

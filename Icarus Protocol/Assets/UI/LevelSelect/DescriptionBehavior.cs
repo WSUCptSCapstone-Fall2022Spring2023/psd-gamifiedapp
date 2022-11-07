@@ -42,7 +42,7 @@ public class DescriptionBehavior : MonoBehaviour
         LevelDescription = level;
         HeaderText.text = level.levelName;
         BodyText.GiveTypingJob(level.levelDescription);
-        ProgressRecord progressRecord = level.GetComponent<ProgressRecord>();
+        ProgressRecord progressRecord = level.LevelProgress;
         CheckBoxHandler.BuildBoxes(progressRecord);
         ButtonText.text = !progressRecord.PhaseCompletion.Any(e => e.PhaseComplete) ? "Start" : (progressRecord.PhaseCompletion.Any(e => !e.PhaseComplete) ? "Continue" : "Replay");
     }

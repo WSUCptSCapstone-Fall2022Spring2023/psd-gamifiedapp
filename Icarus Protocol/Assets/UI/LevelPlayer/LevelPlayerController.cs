@@ -55,6 +55,11 @@ public class LevelPlayerController : MonoBehaviour
     public IDEController IDE;
 
     /// <summary>
+    /// A reference to the save handler to allow saving on phase transitions.
+    /// </summary>
+    public SaveAndLoad SaveHandler;
+
+    /// <summary>
     /// Caches a reference to the currently extant phase UI
     /// </summary>
     private GameObject phaseUI;
@@ -109,7 +114,7 @@ public class LevelPlayerController : MonoBehaviour
         }
         else 
         {
-            ProgressRecord progressRecord = PhaseDefinition.GetComponent<ProgressRecord>();
+            ProgressRecord progressRecord = PhaseDefinition.GetComponent<LevelDescription>().LevelProgress;
             progressRecord.PhaseCompletion.First(e => e.PhaseID == PhaseDefinition.ID).PhaseComplete = true;
             if (PhaseDefinition.NextPhase != null)
             {
@@ -120,6 +125,7 @@ public class LevelPlayerController : MonoBehaviour
                 UIHandler.TransitionToLevelSelect(3);
                 progressRecord.LevelComplete = true;
             }
+            SaveHandler.Save();
             Instantiate(SuccessMessage, transform);
         }
     }

@@ -6,9 +6,13 @@ using UnityEngine;
 /// <summary>
 /// A dataobject used to store progress for save and load serialization.
 /// </summary>
-[Serializable]
-public class ProgressRecord : MonoBehaviour
+public class ProgressRecord
 {
+    /// <summary>
+    /// The ID of this level. Must be unique from the IDs of other levels.
+    /// </summary>
+    public string LevelID;
+
     /// <summary>
     /// True if the level as a whole has been completed
     /// </summary>
@@ -17,12 +21,11 @@ public class ProgressRecord : MonoBehaviour
     /// <summary>
     /// Stores the completion state of each phase in the level associated with that phase's ID
     /// </summary>
-    public List<PhaseProgress> PhaseCompletion;
+    public List<PhaseProgress> PhaseCompletion = new List<PhaseProgress>();
 
     /// <summary>
     /// An object to help Unity serialize the data.
     /// </summary>
-    [Serializable]
     public class PhaseProgress 
     {
         /// <summary>
