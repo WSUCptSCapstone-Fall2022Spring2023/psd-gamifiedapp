@@ -73,7 +73,7 @@ There are currently no known problems.
 ## Additional Documentation
 
   * [Sprint 1 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint1/Produce-Sprint-Report/Documentation/Sprint1-Report.md)
-  * [Sprint 2 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/Sprint_Reports/Sprint2-Report.md)
+  * [Sprint 2 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint2/Produce-Sprint-2-Report/Sprint_Reports/Sprint2-Report.md)
 
 ## License
 
