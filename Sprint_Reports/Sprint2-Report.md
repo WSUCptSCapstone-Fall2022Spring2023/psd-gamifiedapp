@@ -7,9 +7,10 @@
  * Within the level, the user can complete a phase then see a success or failure notification
  * On a successful phase completion, if there is another available phase, the user will be directed to the next level phase.
  * Documents folder contains Introductions, Project Overview, Requirements and Specifications, Solutions Approach Document, and a Testing and User Acceptance Document.
+ * All progress through phases is autosaved to a file that is loaded on launch.
 
 ## Work Summary (Developer Facing)
-During this sprint we spent the main bulk of our time creating the UI components and scripts for the main gameplay loop. The team created UI layouts for the level select page and level phases based on the initial designs illustrated in the Solutions Approach Document. There were three main areas of challenge for the team for this sprint: Unity skills, UI integration, Unity-Json serialization, and Unity component initialization order. One team member had to be given a quick introductory course from another member in how to use the strengths of the Unity Engine. Additionally, by the nature of using Git version control with the Unity Engine, the team had to shift the nature of how game objects would be saved, given conflicting objects in the main scene will be overridden in the case of a merge. Another challenge that required learning experiences, was finding a method of conversion of Unity objects to a json objects. Finally, the team was challenged by default order of component initialization order of the Unity Engine. The team used a combination of techniques including moving initialization logic into a separate user defined script and implemented component dependency functionality. For this sprint, time management was a priority that the team addressed early, which has lead to a consistent and low pressured sprint work period. 
+During this sprint we spent the main bulk of our time creating the UI components and scripts for the main gameplay loop. The team created UI layouts for the level select page and level phases based on the initial designs illustrated in the Solutions Approach Document. There were three main areas of challenge for the team for this sprint: Unity skills, UI integration, Unity-Json serialization, and Unity component initialization order. One team member had to be given a quick introductory course from another member in how to use the strengths of the Unity Engine. Additionally, by the nature of using Git version control with the Unity Engine, the team had to shift the nature of how game objects would be saved, given conflicting objects in the main scene will be overridden in the case of a merge. Another challenge that required learning experiences, was finding a method of conversion of Unity objects to a json objects. Finally, the team was challenged by default order of component initialization order of the Unity Engine. The team used a combination of techniques including moving initialization logic into a separate user defined script and using event handlers to initialize dependency chains. For this sprint, time management was a priority that the team addressed early, which has lead to a consistent and low pressured sprint work period. 
 
 ## Unfinished Work
 In this sprint, we managed to achieve all of the issues that we set out to close, delivering most of the project's documentation as well as completing the core UI layouts and functionality that we aimed to achieve. There was no unfinished work.
@@ -64,23 +65,9 @@ Here's what went well:
 
 Here's what we'd like to improve:
 
-   *  Last sprint, we wanted to perform an overview of the document requirements and expectations. We opted for more of a brief discussion without the overview we imagined at the end of the last sprint, which could have caused issues due to internal team misunderstanding, but luckily it didn't. In the future, we plan to have a more in-depth team discussion about the subject of the document.
-   *  
-   *  
-
-
-
-   * We made a few mistakes throughout this sprint in our git management (the .gitignore being wrong initially for instance), as well as one teammate branching without remembering to pull, which could have caused problems, but luckily didn't this time. 
-   * There were initially some misconceptions about what certain sections of documentation entailed, which led to the need to redo work, spending extra time in doing so.
-   * We did not make ourselves aware early enough about the requirements of the sprint rubric (i.e. before/after videos) and were caught off guard by these requirements, leading to a stressful crunch week before the due date.
+   *  We found that we would often forget to move issues on the Kanban board to the In Progress Category while we were actively working on them.
+   *  We air more on the conservative side for time allocated for each issues in this sprint, leading to potential time we could have had for taking on more issues that were initially dedicated to the next sprint. 
 
 Here are changes we plan to implement in the next sprint:
-   *  
-   *  
-   *  
-
-
-
-   * We've reviewed git protocol between us, and will endeavor to be careful when branching, pulling, and pushing, to ensure the cleanliness and usefulness of git functionality.
-   * When tackling future documentation, we intend to perform an overview before beginning work, ensuring that both of us are on the same page about exactly what each section entails.
-   * We intend to evaluate the workload posed by each task well in advance of the week in which it is due, ensuring that there are no more unpleasant surprises about what work we need to accomplish.
+   *  When beginning work on a new issue, we will create a new branch and move the issue into the In Progress section of the Kanban Board.
+   *  For future sprints, we plan to evaluate the workload in regards to each issue and allocate issues to a sprint according to the time in the sprint and the estimated time for the issue.
