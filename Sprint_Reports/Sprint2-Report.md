@@ -1,5 +1,7 @@
 # Sprint 2 Report (10/9/2022 - 11/9/2022)
 
+Demo Video Link: [https://youtu.be/51n9nxng2rc](https://youtu.be/51n9nxng2rc)
+
 ## What's New (User Facing)
  * Project features two main UI pages: the level select pages, which allows the user to view and select available levels, and a level page, which displays and allows the user to play the current phase. 
  * The level select page provides a description of the user selected level as well as the current phase progress for the level.
