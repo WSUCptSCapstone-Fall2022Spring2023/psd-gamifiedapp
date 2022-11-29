@@ -9,6 +9,7 @@ public enum TransitionType
 {
     LEVEL_SELECT,
     LEVEL_PLAYER,
+    MANUAL,
     NONE
 }
 
@@ -26,6 +27,11 @@ public class UILayoutHandler : MonoBehaviour
     /// A reference to the level player UI
     /// </summary>
     public GameObject LevelPlayerUI;
+
+    /// <summary>
+    /// A reference to the manual UI
+    /// </summary>
+    public GameObject ManualUI;
 
     /// <summary>
     /// The current state that the UI is in.
@@ -67,6 +73,16 @@ public class UILayoutHandler : MonoBehaviour
     }
 
     /// <summary>
+    /// Transitions to manual
+    /// </summary>
+    /// <param name="delay"></param>
+    public void TransitionToManual(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.MANUAL;
+    }
+
+    /// <summary>
     /// Called once per frame.
     /// </summary>
     public void Update()
@@ -82,6 +98,9 @@ public class UILayoutHandler : MonoBehaviour
                         break;
                     case TransitionType.LEVEL_SELECT:
                         LevelSelectTransition();
+                        break;
+                    case TransitionType.MANUAL:
+                        ManualTransition();
                         break;
                 }
             }
@@ -111,5 +130,16 @@ public class UILayoutHandler : MonoBehaviour
         LevelSelectUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_SELECT;
+    }
+
+    /// <summary>
+    /// Transitions to manual.
+    /// </summary>
+    private void ManualTransition()
+    {
+        ManualUI.GetComponentInChildren<LevelListController>().Initialize();
+        ManualUI.SetActive(true);
+        queuedTransition = TransitionType.NONE;
+        CurrentState = TransitionType.MANUAL;
     }
 }
