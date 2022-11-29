@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: LevelID
-      value: 02-AnotherTest
+      value: 01-Statements
       objectReference: {fileID: 0}
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: levelID
@@ -141,23 +141,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: levelName
-      value: Another Test
+      value: Life Support
       objectReference: {fileID: 0}
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: levelDescription
-      value: This is the second level. It only unlocks when the first level is complete.
+      value: The ship reports that it is currently running on emergency life support.
+        It is of vital importance that it be restored as quickly as possible, before
+        the ship has to start deactivating cryo-pods.
       objectReference: {fileID: 0}
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: Prerequisites.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6341351023651436294, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: Prerequisites.Array.data[0]
       value: 
       objectReference: {fileID: 6428709698912022950}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: ID
+      value: 01-1-setVariables
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: PhaseUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: TestFile
+      value: 
+      objectReference: {fileID: 4900000, guid: a2d4aa8cc856e6c479b311678123fcd2, type: 3}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: NextPhase
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: ScriptFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 67b4a15cfec959c4ba25d05f1def0a09, type: 3}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: FillInBlank
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: starterCode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: CodeLoopDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: ActionGroups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: ExposedMembers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: ExposedMembers.Array.data[0]
+      value: lifeSupportActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961718171917905431, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
+      propertyPath: FriendlyVariableNames.Array.data[0]
+      value: lifeSupportActive
+      objectReference: {fileID: 0}
     - target: {fileID: 5305999128055833320, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: m_Name
-      value: LevelNode (1)
+      value: Level1-Statements
       objectReference: {fileID: 0}
     - target: {fileID: 6636767413296342602, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
       propertyPath: m_RootOrder
@@ -805,6 +855,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 489561327}
     m_Modifications:
+    - target: {fileID: 1240982537525416740, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240982537525416740, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00015258789
+      objectReference: {fileID: 0}
     - target: {fileID: 1619971844948411936, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: m_Name
       value: UILayoutHandler
@@ -853,6 +911,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2828347669249772138, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828347669249772138, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405294837431160719, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405294837431160719, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405294837431160719, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237333181804382738, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -381.1729
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237333181804382738, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 181.17288
+      objectReference: {fileID: 0}
     - target: {fileID: 5515967428298326848, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: IPContainer
       value: 
@@ -861,6 +947,34 @@ PrefabInstance:
       propertyPath: SaveHandler
       value: 
       objectReference: {fileID: 3673970615123932502}
+    - target: {fileID: 5700077979068193874, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700077979068193874, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700077979068193874, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940801195428472952, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685761048485069073, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685761048485069073, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685761048485069073, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}

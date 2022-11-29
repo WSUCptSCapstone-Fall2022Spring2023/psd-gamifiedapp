@@ -75,6 +75,21 @@ public class LevelPlayerController : MonoBehaviour
         IPContainer.OnSimulationExit += SimulationExited;
         InitializePhase(PhaseDefinition);
     }
+
+    /// <summary>
+    /// Called every frame
+    /// </summary>
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            OutputController.AdvanceScript();
+        }
+    }
+
+    /// <summary>
+    /// Initializes the level player with the data of a particular phase.
+    /// </summary>
+    /// <param name="phase"></param>
     public void InitializePhase(PhaseDefinition phase) 
     {
         //Destroy old phase UI
