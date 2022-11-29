@@ -137,7 +137,7 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void ManualTransition()
     {
-        ManualUI.GetComponentInChildren<LevelListController>().Initialize();
+        ManualUI.GetComponentInChildren<ManualListController>().Initialize();
         ManualUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.MANUAL;
