@@ -77,16 +77,6 @@ public class LevelPlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Called every frame
-    /// </summary>
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            OutputController.AdvanceScript();
-        }
-    }
-
-    /// <summary>
     /// Initializes the level player with the data of a particular phase.
     /// </summary>
     /// <param name="phase"></param>

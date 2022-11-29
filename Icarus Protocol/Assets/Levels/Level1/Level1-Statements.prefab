@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2671502116966444833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3506949312793504643}
+  - component: {fileID: 5426654803797443891}
+  - component: {fileID: 2912201126658286558}
+  - component: {fileID: 3468725502630609756}
+  - component: {fileID: 1210150213513290939}
+  - component: {fileID: 2432555577599589901}
+  - component: {fileID: 4219293293348505229}
+  m_Layer: 0
+  m_Name: Level1-Statements
+  m_TagString: Level
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3506949312793504643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5426654803797443891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelID: 01-Statements
+  levelName: Life Support
+  levelDescription: The ship reports that it is currently running on emergency life
+    support. It is of vital importance that it be restored as quickly as possible,
+    before the ship has to start deactivating cryo-pods.
+  Prerequisites: []
+--- !u!114 &2912201126658286558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-1-setVariables
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: a2d4aa8cc856e6c479b311678123fcd2, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 67b4a15cfec959c4ba25d05f1def0a09, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 2
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - lifeSupportActive
+  FriendlyVariableNames:
+  - lifeSupportActive
+  NextPhase: {fileID: 3468725502630609756}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &3468725502630609756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-2-callFunction
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 2368f87a80411ab47b9067fcf3f7450f, type: 3}
+  ScriptFile: {fileID: 4900000, guid: fbb81e0fa54e2bd40986c2d2b3aa71f8, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 3
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - oxygen
+  - nitrogen
+  - MixGases
+  FriendlyVariableNames:
+  - oxygen
+  - nitrogen
+  - MixGases()
+  NextPhase: {fileID: 1210150213513290939}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &1210150213513290939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-2-useVariable
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: cfb71a47b44749341b3c92f81db7d606, type: 3}
+  ScriptFile: {fileID: 4900000, guid: ddb4b7249f099e640b6bdc35b044074b, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 2
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - coolant
+  - liquid
+  - MixCoolant
+  FriendlyVariableNames:
+  - coolant
+  - liquid
+  - MixCoolant()
+  NextPhase: {fileID: 2432555577599589901}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &2432555577599589901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-4-parameters
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 61cbbf516f818504a8d0ef6340038cbb, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 29a4be58e99258d4bb384fbccfc1b6e1, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 100
+  FastTickSpeed: 0.05
+  ExposedMembers:
+  - VentHeat
+  FriendlyVariableNames:
+  - VentHeat(amount, time)
+  NextPhase: {fileID: 4219293293348505229}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &4219293293348505229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-5-advancedFunctions
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 94f52db37da04424cb8059de8eb4c773, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 85d299910a497574d8b0df035527a0b5, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - GetPower
+  - RoutePower
+  FriendlyVariableNames:
+  - 'GetPower() : number'
+  - RoutePower(amount)
+  NextPhase: {fileID: 0}
+  FillInBlank: 0
+  starterCode: {fileID: 0}

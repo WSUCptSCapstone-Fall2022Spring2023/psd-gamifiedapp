@@ -30,6 +30,11 @@ public class OutputController : MonoBehaviour
     private int mScriptIndex = 0;
 
     /// <summary>
+    /// A boolean that is set to true if a failure message is being shown, allowing the user to return to the last main message.
+    /// </summary>
+    private bool mShowingFailure = false;
+
+    /// <summary>
     /// Initializes the script prompts and failure responses
     /// </summary>
     public void InitializeScript(TextAsset scriptFile) 
@@ -46,7 +51,14 @@ public class OutputController : MonoBehaviour
     public void AdvanceScript() 
     {
         //TODO: Make this advance through multiple prompts once conversations are added.
-        if (ScriptPrompts.Count > mScriptIndex) Text.GiveTypingJob(ScriptPrompts[mScriptIndex++]);
+        if (ScriptPrompts.Count > mScriptIndex) {
+            Text.GiveTypingJob(ScriptPrompts[mScriptIndex++]);
+        }
+        else if (mShowingFailure){
+            Text.GiveTypingJob(ScriptPrompts[mScriptIndex - 1]);
+            mShowingFailure = false;
+        }
+
         Debug.Log($"Advanced {mScriptIndex}");
     }
 
@@ -57,5 +69,6 @@ public class OutputController : MonoBehaviour
     public void PrintFailureResponse(int exitCode) 
     {
         Text.GiveTypingJob(FailureResponses[exitCode - 1]);
+        mShowingFailure = true;
     }
 }

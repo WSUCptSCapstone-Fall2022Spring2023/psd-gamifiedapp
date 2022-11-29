@@ -1,0 +1,43 @@
+heat = 100
+venting = False
+timer = 0
+ventAmount = 0
+
+def VentHeat(amount, time):
+	global timer
+	global venting
+	global ventAmount
+
+	timer = time
+	venting = True
+	ventAmount = amount
+
+def simulate():
+	global venting
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if not venting:
+		parent.end_simulation(1)
+
+def simulate_tick():
+	global timer
+	global heat
+	global venting
+	global ventAmount
+
+	if venting:
+		heat -= 0.05 * ventAmount
+		timer -= 0.05	
+
+	if timer < 0 and venting == True:
+		if heat > 85 and heat < 87:
+			parent.end_simulation(0)
+		else:
+			if heat >= 87:
+				parent.end_simulation(2)	
+			else:
+				parent.end_simulation(3)
+	return 0

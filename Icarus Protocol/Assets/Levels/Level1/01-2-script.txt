@@ -4,4 +4,6 @@ To get this working, I'll need to set 'nitrogen' equal to 78, and 'oxygen' equal
 
 To call a function I just write the function's name, followed by parentheses '()', and that will activate a piece of code somewhere else in the system.
 
-~Hmmm... that didn't seem to work. I should only need one line of code I think... something like 'lifeSupportActive = True'
+~It appears that the gas injectors didn't fire. After I have the mixture set correctly, I'll have to use the code 'MixGases()' to call the function.
+
+~The gas injectors fired, but it looks like something was wrong with the mixture that I provided. Either my values were invalid, or they weren't the correct mix of 78 nitrogen to 22 oxygen.

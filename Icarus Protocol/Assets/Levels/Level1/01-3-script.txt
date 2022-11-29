@@ -1,0 +1,13 @@
+Life support confirms gases are now combining correctly.
+
+Next priority, coolant. It appears that the coolant mixture isn't correct in parts of the ship. If I try and fire up other systems like this they might overheat.
+
+There is a variable called 'coolant' in the system. It won't do anything to set it directly but I can set the system's 'liquid' then call 'MixCoolant()' to mix it.
+
+For this to work 'liquid' will need to be equal to 11 times the coolant amount. In code I can write that as '11 * coolant', using '*' as a multiplication sign.
+
+~It appears that after I've set the values, I'll need to call 'MixCoolant()' to make the mixture.
+
+~Something appears to be wrong with my coolant mixture. Setting liquid to 11 times the coolant should look something like 'liquid = coolant * 11'
+
+~I can't change coolant directly, but I can use it to set another variable like 'liquid'

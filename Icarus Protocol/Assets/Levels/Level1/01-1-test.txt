@@ -2,9 +2,13 @@ lifeSupportActive = False
 
 def simulate():
 	global lifeSupportActive
-	parent.execute_user_code()
-	if lifeSupportActive:
-		environment.trigger_action_group(0)
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if lifeSupportActive is True:
 		parent.end_simulation(0)
 	else:
 		parent.end_simulation(1)
