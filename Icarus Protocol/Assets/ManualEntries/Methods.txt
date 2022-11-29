@@ -1,0 +1,5 @@
+A Method is a function with a purpose that someone has created. Sometimes, it will need extra infromation to work properly, you can pass it extra data within the parenthesis and separtated by commas. Sometimes, Methods can return a value, you can save that data to a variable. Here are some common examples of Methods:
+
+-  HeatHouse()
+-  SetThermostat(69)
+-  currentTemp = Temperature()

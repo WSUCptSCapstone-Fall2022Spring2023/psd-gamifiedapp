@@ -138,8 +138,7 @@ public class UILayoutHandler : MonoBehaviour
     private void ManualTransition()
     {
         ManualUI.GetComponentInChildren<ManualListController>().Initialize();
-        ManualUI.SetActive(true);
+        ManualUI.SetActive(!(ManualUI.activeInHierarchy));
         queuedTransition = TransitionType.NONE;
-        CurrentState = TransitionType.MANUAL;
     }
 }

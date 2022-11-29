@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// This is the main controller for the entries in the manual.
+/// </summary>
 public class ManualListController : MonoBehaviour
 {
     /// <summary>
-    /// Prefab of a level selection button
+    /// Prefab of a manual entry button
     /// </summary>
     public GameObject ButtonPrefab;
 
     /// <summary>
-    /// Reference to description of level
+    /// Reference to description of a manual entry
     /// </summary>
     public ManualDescriptionBehavior ManualDescriptionReference;
-
-
-    /// <summary>
-    /// Stores the levels in the scene on load.
-    /// </summary>
-    private GameObject[] levels;
 
     /// <summary>
     /// Start is called before the first frame update
@@ -30,7 +27,7 @@ public class ManualListController : MonoBehaviour
     }
 
     /// <summary>
-    /// Runs initialization on the level list and hides the description box.
+    /// Runs initialization on the manual entry list and creates unlocked manual entry buttons
     /// </summary>
     public void Initialize()
     {
@@ -40,7 +37,7 @@ public class ManualListController : MonoBehaviour
         {
             if (child != this.gameObject) Destroy(child);
         }
-        foreach (ManualDescription description in manualEntries)
+        foreach (ManualDescription description in manualEntries.Where(e => e.Prerequisite == null || e.Prerequisite.LevelProgress.LevelComplete))
         {
             GameObject newButton = Instantiate(ButtonPrefab, this.transform);
             InitializeButton(newButton, description);
@@ -48,7 +45,7 @@ public class ManualListController : MonoBehaviour
     }
 
     /// <summary>
-    /// This initializes the name and corresponding values of the level button.
+    /// This initializes the name and corresponding values of the manual entry button.
     /// </summary>
     /// <param name="button">This is the button being modified.</param>
     /// <param name="level">This is the cooresponding level for the button.</param>

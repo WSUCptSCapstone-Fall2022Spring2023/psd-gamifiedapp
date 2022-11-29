@@ -10,12 +10,12 @@ using UnityEngine;
 public class ManualButtonBehavior : MonoBehaviour
 {
     /// <summary>
-    /// This is a reference to the cooresponding level description
+    /// This is a reference to the cooresponding manual description
     /// </summary>
     private ManualDescription manualDescription;
 
     /// <summary>
-    /// This a reference to the level description behavior
+    /// This a reference to the manual description behavior
     /// </summary>
     private ManualDescriptionBehavior description;
 
@@ -31,7 +31,7 @@ public class ManualButtonBehavior : MonoBehaviour
     }
 
     /// <summary>
-    /// This is the onclick behavior for clicking a level selection button
+    /// This is the onclick behavior for clicking a manual entry button
     /// </summary>
     public void OnClick()
     {

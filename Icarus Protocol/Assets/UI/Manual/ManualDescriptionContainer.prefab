@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 6697249966062979929}
   - component: {fileID: -3657462600880839289}
   m_Layer: 5
-  m_Name: ManualDescriptionShadow
+  m_Name: ManualDescriptionContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,7 @@ using UnityEngine;
 public class ManualDescriptionBehavior : MonoBehaviour
 {
     /// <summary>
-    /// This is a reference to the cooresponding level description
+    /// This is a reference to the cooresponding manual entry description
     /// </summary>
     public ManualDescription ManualEntryDescription;
 
@@ -31,6 +31,6 @@ public class ManualDescriptionBehavior : MonoBehaviour
     {
         ManualEntryDescription = manualEntry;
         HeaderText.text = manualEntry.manualEntryName;
-        BodyText.GiveTypingJob(manualEntry.manualEntryDescription);
+        BodyText.GiveTypingJob(manualEntry.manualEntryDescription.text);
     }
 }

@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 4097881538747623379}
   - component: {fileID: 319850726}
   - component: {fileID: 319850727}
+  - component: {fileID: 1331040702}
   m_Layer: 5
-  m_Name: ManualLevelShadow
+  m_Name: ManualLevelContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,9 +132,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manualEntryName: Test Manual Entry
-  manualEntryDescription: So this is the testing entry
-  Prerequisites: []
+  manualEntryName: Test Entry
+  manualEntryDescription: {fileID: 4900000, guid: 97cc1b4319f8b3a4c8f7ae458ff7b38f, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &1331040702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Locked Entry
+  manualEntryDescription: {fileID: 4900000, guid: 1fe1f0ba6cad60043913c30eface9300, type: 3}
+  Prerequisite: {fileID: 0}
 --- !u!1 &4097881539480462664
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4097881539480462667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -220,14 +236,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 4097881539480462667}
     m_Modifications:
-    - target: {fileID: -3657462600880839289, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
-      propertyPath: BodyText
-      value: 
-      objectReference: {fileID: 675536439543365736}
-    - target: {fileID: -3657462600880839289, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
-      propertyPath: HeaderText
-      value: 
-      objectReference: {fileID: 1416146981854986933}
     - target: {fileID: 6697249966062979928, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -314,33 +322,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6697249966062979935, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
       propertyPath: m_Name
-      value: ManualDescriptionShadow
+      value: ManualDescriptionContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
---- !u!114 &675536439543365736 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2850287692132276440, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
-  m_PrefabInstance: {fileID: 3373685807082035376}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79ac5344497535f468325c306751cc24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1416146981854986933 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4428893793975245317, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
-  m_PrefabInstance: {fileID: 3373685807082035376}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7201159569213390135 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -3657462600880839289, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}

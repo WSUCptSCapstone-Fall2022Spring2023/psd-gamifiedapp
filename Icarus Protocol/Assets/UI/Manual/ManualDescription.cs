@@ -8,17 +8,17 @@ using UnityEngine;
 public class ManualDescription : MonoBehaviour
 {
     /// <summary>
-    /// The name of the level.
+    /// The name of the manual entry.
     /// </summary>
     public string manualEntryName;
 
     /// <summary>
-    /// The description of the level.
+    /// The description of the manual entry.
     /// </summary>
-    public string manualEntryDescription;
+    public TextAsset manualEntryDescription;
 
     /// <summary>
-    /// Stores a list of the levels that must be completed before this level is unlocked.
+    /// Stores the level that is needed to unlock this manual entry.
     /// </summary>
-    public LevelDescription[] Prerequisites = new LevelDescription[0];
+    public LevelDescription Prerequisite;
 }
