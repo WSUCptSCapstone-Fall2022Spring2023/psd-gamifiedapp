@@ -1,0 +1,10 @@
+A comment is a line or section of code that the computer knows not to read. They can be used to leave notes to yourself or others. Here are some common commenting examples:
+
+  - # My secret comment
+    # I can leave quite a few
+    # of these comments
+     
+  - ''' 
+    If I want to leave a longer comment that 
+    is over one line, I can use three (') or (").
+    '''
