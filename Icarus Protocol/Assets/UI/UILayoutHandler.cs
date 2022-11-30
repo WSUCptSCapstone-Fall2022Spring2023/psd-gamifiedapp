@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public enum TransitionType
 {
     LEVEL_SELECT,
     LEVEL_PLAYER,
+    START_MENU,
     NONE
 }
 
@@ -26,6 +28,11 @@ public class UILayoutHandler : MonoBehaviour
     /// A reference to the level player UI
     /// </summary>
     public GameObject LevelPlayerUI;
+
+    /// <summary>
+    /// A reference to the start menu UI
+    /// </summary>
+    public GameObject StartMenuUI;
 
     /// <summary>
     /// The current state that the UI is in.
@@ -106,6 +113,11 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelSelectTransition()
     {
+        if(StartMenuUI.activeInHierarchy)
+        {
+            StartMenuUI.SetActive(false);
+        }
+
         LevelPlayerUI.SetActive(false);
         LevelSelectUI.GetComponentInChildren<LevelListController>().Initialize();
         LevelSelectUI.SetActive(true);
