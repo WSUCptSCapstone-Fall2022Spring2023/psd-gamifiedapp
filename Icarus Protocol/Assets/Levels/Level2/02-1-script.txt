@@ -1,0 +1,11 @@
+First things first, I should get the forward shielding operational. The problem is that I'm running on emergency power. I need to make sure that I only use the shields 'if' they're needed.
+
+I can do this using an 'if statement' the code for that looks like 'if variable < 5:' which means 'if variable is less than 5'. 
+
+Any code I write on the following lines (as long as it's tabbed in with one TAB or 4 spaces) will only run if the condition is true.
+
+So I need to set it up so that if 'ThreatDistance()' is less than 25, the code calls 'ActivateShields()'. Call it too early and I'll run out of power. Call it too late and the ship will be damaged.
+
+~An example of the conditional I'll need looks like 
+'if ThreatDistance < 600:    
+	ActivateShields()'

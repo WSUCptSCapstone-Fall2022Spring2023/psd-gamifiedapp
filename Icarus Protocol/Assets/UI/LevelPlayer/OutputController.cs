@@ -40,7 +40,7 @@ public class OutputController : MonoBehaviour
     public void InitializeScript(TextAsset scriptFile) 
     {
         mScriptIndex = 0;
-        List<string> splitList = scriptFile.text.Split("\r\n", System.StringSplitOptions.RemoveEmptyEntries).ToList();
+        List<string> splitList = scriptFile.text.Split("\r\n\r\n", System.StringSplitOptions.RemoveEmptyEntries).ToList();
         ScriptPrompts = splitList.Where(e => !e.StartsWith("~")).ToList();
         FailureResponses = splitList.Where(e => e.StartsWith("~")).Select(e => e[1..]).ToList();
     }
