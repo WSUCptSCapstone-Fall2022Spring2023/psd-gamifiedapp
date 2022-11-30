@@ -1,0 +1,26 @@
+cellTotal = 0
+
+def ExposeCell(cellID):
+	global cellTotal
+	if cellID < 987 and cellID > 0:
+		cellTotal += cellID 
+	else:
+		parent.end_simulation(1)
+
+def simulate():
+	global cellTotal
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if cellTotal = 486591:
+		parent.end_simulation(0)
+	elif cellTotal > 486591:
+		parent.end_simulation(2)
+	else:
+		parent.end_simulation(3)
+
+def simulate_tick():
+	return 0

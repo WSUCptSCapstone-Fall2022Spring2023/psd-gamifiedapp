@@ -1,0 +1,65 @@
+threats = [[4,10,9,7,4,7],[1,2,10,9,1],[5,2,9,6,5]]
+threatIndex = 0
+
+def ThreatsRemaining():
+	global threatIndex
+	global threats
+
+	return len(threats[threatIndex])
+
+def ThreatSize():
+	global threatIndex
+	global threats
+	
+	if len(threats[threatIndex] == 0):
+		parent.end_simulation(3)
+		return
+
+	return threats[threatIndex][0]
+
+def FireIonBeam():
+	global threats
+	global threatIndex
+
+	if len(threats[threatIndex] == 0):
+		parent.end_simulation(3)
+		return
+
+	if ThreatSize() < 5:
+		threats[threatIndex] = threats[threatIndex][1 : ]
+	else:
+		parent.endSimulation(1)
+
+def FireFusionBomb():
+	global threats
+	global threatIndex
+
+	if len(threats[threatIndex] == 0):
+		parent.end_simulation(3)
+		return
+
+	if ThreatSize() >= 5:
+		threats[threatIndex] = threats[threatIndex][1 : ]
+	else:
+		parent.endSimulation(1)
+
+
+def simulate():
+	global threats
+	global threatIndex
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if ThreatsRemaining() == 0:
+		if threatIndex == (len(threats) - 1):
+			parent.end_simulation(0)
+		else:
+			threatIndex += 1
+	else:
+		parent.end_simulation(2)
+
+def simulate_tick():
+	return 0
