@@ -47,7 +47,7 @@ def simulate():
 
 	if distanceLeft <= 0:
 		if leftActive is True:
-			distanceLeft = "N/A"
+			distanceLeft = 999999
 		else:
 			parent.end_simulation(1)
 
@@ -64,10 +64,11 @@ def simulate_tick():
 	global distanceLeft
 	global distanceRight
 
-	distanceLeft -= 3
+	if distanceLeft != 999999: distanceLeft -= 3
 	distanceRight -= 3
 	if leftActive or rightActive:
 		shieldPower -= 5
 		if shieldPower <= 0:
-			shieldsActive = False
+			leftActive = False
+			rightActive = False
 	return 0

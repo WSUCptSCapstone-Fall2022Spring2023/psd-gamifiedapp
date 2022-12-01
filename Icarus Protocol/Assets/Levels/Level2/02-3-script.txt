@@ -1,4 +1,6 @@
- Shields are now operating at full strength. The final step is to activate the port and starboard shields. This works a lot like the forward shielding, but due to power constraints I can only activate the left or right shields, and I'll need them to turn off when they aren't needed. 
+ Shields are now operating at full strength. The final step is to activate the port and starboard shields. 
+
+This works a lot like the forward shielding, but due to power constraints I can only activate the left or right shields, and I'll need them to turn off when they aren't needed. 
 
 I should be able to do this easily with an 'elif' statement. 'elif' is short for 'else if' and I should use it if I need to do one thing, or another thing based on a different condition.
 
@@ -10,14 +12,16 @@ elif variable < 3:
 
 I can even add multiple 'elif' cases in a row. The only rule is that it has to begin with an 'if' statement, and if I want to use an 'else' statement it has to come at the end.
 
-To make the shields work I'll need to call 'Activate("left")' or 'Activate("right")' to activate the left or right shields. It's important that I remember to add quotes ("") around the words left or right when I pass them into the function. That makes the data into a 'string' which is a short piece of text.
+To make the shields work I'll need to call 'Activate("left")' or 'Activate("right")' to activate the left or right shields. 
+
+It's important that I remember to add quotes ("") around the words left or right when I pass them into the function. That makes the data into a 'string' which is a short piece of text.
 
 I'll need to 'Activate("left")' or 'Activate("right")' when the respective 'Distance("left")' or 'Distance("right")' is low enough. 'else' I'll need to call 'Deactivate()' the shields to save power.
 
 ~Something struck the port-side hull. I need to make sure that one of my cases checks
-'if Distance("left") < 25:"
+'if Distance("left") < 20:"
 and that I'm deactivating the shields with 'Deactivate()' when they aren't needed using an 'else:' case.
 
 ~Something struck the starboard hull. I need to make sure that one of my cases checks
-'if Distance("right") < 25:"
+'if Distance("right") < 20:"
 and that I'm deactivating the shields with 'Deactivate()' when they aren't needed using an 'else:' case.
