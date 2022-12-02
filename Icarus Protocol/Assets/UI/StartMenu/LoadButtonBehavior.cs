@@ -3,20 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// The behavior for starting the game
+/// The behavior for loading a save file from the starting menu
 /// </summary>
-public class StartButtonBehavior : MonoBehaviour
+public class LoadButtonBehavior : MonoBehaviour
 {
+    /// <summary>
+    /// Reference to the save and load handler class
+    /// </summary>
+    public SaveAndLoad saveAndLoader;
+
     /// <summary>
     /// A reference to the UI Handler for facilitating layout transitions.
     /// </summary>
     public UILayoutHandler uiHandler;
 
     /// <summary>
-    /// Called when the button is clicked.
+    /// Once clicked the previously saved game will be loaded.
     /// </summary>
     public void OnClick()
     {
+        saveAndLoader.LoadProgress();
         uiHandler.TransitionToLevelSelect(0);
     }
 }

@@ -211,11 +211,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6636767413296342602, guid: ed1ee56e627e0b54f990b77978ce8ca3, type: 3}
   m_PrefabInstance: {fileID: 165412743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &193079414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 297659119012784994, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-  m_PrefabInstance: {fileID: 5940801196329176728}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &365613212
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +558,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1619971844948411951, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
   m_PrefabInstance: {fileID: 5940801196329176728}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &756769245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1619971844948411950, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+  m_PrefabInstance: {fileID: 5940801196329176728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249fc963dbcf28a4ba9116da3f51b620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &963194227 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6304939948489727533, guid: 35279856f279f6d42bde6176d7716e02, type: 3}
@@ -814,14 +820,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UILayoutHandler
       objectReference: {fileID: 0}
-    - target: {fileID: 1619971844948411950, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: StartMenuUI
-      value: 
-      objectReference: {fileID: 193079414}
-    - target: {fileID: 1619971844948411950, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: CurrentState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1619971844948411951, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -866,10 +864,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4709948214110824340, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3153228266179596559, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: uiHandler
+      value: 
+      objectReference: {fileID: 756769245}
+    - target: {fileID: 3153228266179596559, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: saveAndLoader
+      value: 
+      objectReference: {fileID: 3673970615123932502}
     - target: {fileID: 5515967428298326848, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: IPContainer
       value: 
