@@ -15,6 +15,14 @@ GameObject:
   - component: {fileID: 319850726}
   - component: {fileID: 319850727}
   - component: {fileID: 1331040702}
+  - component: {fileID: 5940801196329176730}
+  - component: {fileID: 5940801196329176731}
+  - component: {fileID: 5940801196329176732}
+  - component: {fileID: 5940801196329176733}
+  - component: {fileID: 5940801196329176734}
+  - component: {fileID: 5940801196329176735}
+  - component: {fileID: 5940801196329176736}
+  - component: {fileID: 5940801196329176737}
   m_Layer: 5
   m_Name: ManualLevelContainer
   m_TagString: Untagged
@@ -95,10 +103,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 30
     m_Right: 0
-    m_Top: 85
+    m_Top: 40
     m_Bottom: 85
   m_ChildAlignment: 0
-  m_Spacing: 60
+  m_Spacing: 25
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -132,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manualEntryName: Test Entry
+  manualEntryName: Statements
   manualEntryDescription: {fileID: 4900000, guid: 97cc1b4319f8b3a4c8f7ae458ff7b38f, type: 3}
   Prerequisite: {fileID: 0}
 --- !u!114 &1331040702
@@ -147,8 +155,128 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manualEntryName: Locked Entry
+  manualEntryName: Methods
   manualEntryDescription: {fileID: 4900000, guid: 1fe1f0ba6cad60043913c30eface9300, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Variable Types
+  manualEntryDescription: {fileID: 4900000, guid: 2afbb89c3544bd646be76dc619180ba9, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Operators
+  manualEntryDescription: {fileID: 4900000, guid: 286eed34c70f14d499a0e61438b1137d, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Lists
+  manualEntryDescription: {fileID: 4900000, guid: 64f6fe9a584827248a0adf8468fd4f41, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: If Elif Else
+  manualEntryDescription: {fileID: 4900000, guid: 38519735ac93c41419f8a11e1c3228ef, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: For Loops
+  manualEntryDescription: {fileID: 4900000, guid: 350734b69b1510f419b566ee276c1eb2, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Conditionals
+  manualEntryDescription: {fileID: 4900000, guid: 3cc824e59ed83284ab31eea8839476e7, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Commenting
+  manualEntryDescription: {fileID: 4900000, guid: 6f3d83ec40f9e2546a90e4cfe4364f72, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &5940801196329176737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: While Loops
+  manualEntryDescription: {fileID: 4900000, guid: a634e1ff72f77c4488efa16632c5194b, type: 3}
   Prerequisite: {fileID: 0}
 --- !u!1 &4097881539480462664
 GameObject:

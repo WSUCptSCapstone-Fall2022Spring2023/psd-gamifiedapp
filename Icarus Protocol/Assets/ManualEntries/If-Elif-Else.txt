@@ -1,0 +1,30 @@
+Using conditionals, you can use if statements to control the flow of the program. 
+
+If:
+  -  num = 2
+     if num == 2:
+        print("num was 2!")
+        
+    # This prints "num was 2!"
+
+If-Else:
+  -  num = 2
+     if num > 2:
+        print("num is greater than 2!")
+     else:
+        print("num is 2 or lower!")
+        
+    # This prints "num is 2 or lower!"
+
+If-Elif-Else:
+  -  num = 2
+     if num > 2:
+        print("num is greater than 2!")
+     elif num < 2:
+        print("num is less than 2!")
+     elif num == 2:
+        print("num is 2!")
+     else:
+        print("num isn't a number?")
+        
+    # This prints "num is 2!"

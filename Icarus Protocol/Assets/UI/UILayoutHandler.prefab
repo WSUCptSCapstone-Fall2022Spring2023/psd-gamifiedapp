@@ -251,14 +251,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1619971844948411951}
     m_Modifications:
-    - target: {fileID: 319850727, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
-      propertyPath: manualEntryDescription
-      value: 
-      objectReference: {fileID: 4900000, guid: 97cc1b4319f8b3a4c8f7ae458ff7b38f, type: 3}
-    - target: {fileID: 1331040702, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
-      propertyPath: manualEntryDescription
-      value: 
-      objectReference: {fileID: 4900000, guid: 1fe1f0ba6cad60043913c30eface9300, type: 3}
     - target: {fileID: 4097881539480462664, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
       propertyPath: m_Name
       value: 'ManualUIContainer '

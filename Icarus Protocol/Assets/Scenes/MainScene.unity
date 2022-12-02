@@ -861,18 +861,10 @@ PrefabInstance:
       propertyPath: SaveHandler
       value: 
       objectReference: {fileID: 3673970615123932502}
-    - target: {fileID: 5936618769560214203, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: manualEntryDescription
-      value: 
-      objectReference: {fileID: 4900000, guid: 97cc1b4319f8b3a4c8f7ae458ff7b38f, type: 3}
     - target: {fileID: 5936618770168218594, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: Prerequisite
       value: 
       objectReference: {fileID: 6428709698912022950}
-    - target: {fileID: 5936618770168218594, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: manualEntryDescription
-      value: 
-      objectReference: {fileID: 4900000, guid: 1fe1f0ba6cad60043913c30eface9300, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
