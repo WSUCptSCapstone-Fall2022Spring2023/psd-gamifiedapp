@@ -24,6 +24,10 @@ public class EscapeListener : MonoBehaviour
             {
                 Application.Quit();
             }
+            else if (UIHandler.CurrentState == TransitionType.START_MENU)
+            {
+                Application.Quit();
+            }
         }
     }
 }

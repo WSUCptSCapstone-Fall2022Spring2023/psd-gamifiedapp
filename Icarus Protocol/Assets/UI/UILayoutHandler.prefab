@@ -521,6 +521,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1619971844948411951}
     m_Modifications:
     - target: {fileID: 1817163199, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
+      propertyPath: UiHandler
+      value: 
+      objectReference: {fileID: 1619971844948411950}
+    - target: {fileID: 1817163199, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: uiHandler
       value: 
       objectReference: {fileID: 1619971844948411950}
@@ -552,6 +556,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5644612676604650623, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
+      propertyPath: EscapeListener
+      value: 
+      objectReference: {fileID: 1236069456188970482}
     - target: {fileID: 6002052771770373530, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -636,6 +644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6338155293570694184, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
+      propertyPath: UiHandler
+      value: 
+      objectReference: {fileID: 1619971844948411950}
     - target: {fileID: 6338155293570694184, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: uiHandler
       value: 

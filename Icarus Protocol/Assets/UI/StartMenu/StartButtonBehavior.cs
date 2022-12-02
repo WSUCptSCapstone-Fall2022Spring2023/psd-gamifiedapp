@@ -10,13 +10,13 @@ public class StartButtonBehavior : MonoBehaviour
     /// <summary>
     /// A reference to the UI Handler for facilitating layout transitions.
     /// </summary>
-    public UILayoutHandler uiHandler;
+    public UILayoutHandler UiHandler;
 
     /// <summary>
     /// Called when the button is clicked.
     /// </summary>
     public void OnClick()
     {
-        uiHandler.TransitionToLevelSelect(0);
+        UiHandler.TransitionToLevelSelect(0);
     }
 }

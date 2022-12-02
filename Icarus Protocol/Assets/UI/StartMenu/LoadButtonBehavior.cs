@@ -10,19 +10,19 @@ public class LoadButtonBehavior : MonoBehaviour
     /// <summary>
     /// Reference to the save and load handler class
     /// </summary>
-    public SaveAndLoad saveAndLoader;
+    public SaveAndLoad SaveAndLoader;
 
     /// <summary>
     /// A reference to the UI Handler for facilitating layout transitions.
     /// </summary>
-    public UILayoutHandler uiHandler;
+    public UILayoutHandler UiHandler;
 
     /// <summary>
     /// Once clicked the previously saved game will be loaded.
     /// </summary>
     public void OnClick()
     {
-        saveAndLoader.LoadProgress();
-        uiHandler.TransitionToLevelSelect(0);
+        SaveAndLoader.LoadProgress();
+        UiHandler.TransitionToLevelSelect(0);
     }
 }
