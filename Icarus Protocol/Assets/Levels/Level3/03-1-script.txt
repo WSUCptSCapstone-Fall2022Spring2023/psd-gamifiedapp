@@ -10,7 +10,7 @@ A 'while' statement runs the code block tabbed beneath it over and over as long 
 
 I can review that code in the manual if I need to. To solve this problem I'll need to call 'ChargeUp()' while 'ChargeAmount() < 100' and then outside of the repeating code block (i.e. after the while loop and not tabbed in) I'll need to call 'Fire()'
 
-~It looks like the cannon dry-fired. That means that I must have called 'Fire()' without calling 'ChargeUp()' enough times. I'll need to make sure that the loop condition calls 'ChargeUp()' without firing until 'ChargeAmount() >= 100' (ChargeAmount is greater than or equal to 100)
+~It looks like the cannon dry-fired. That means that I must have called 'Fire()' without calling 'ChargeUp()' enough times. 
 
 ~Hmmm... the cannon isn't firing, or it isn't firing fast enough. I need to make sure that every time my code is run it charges the cannon fully using a 'while' loop and fires it once.
 

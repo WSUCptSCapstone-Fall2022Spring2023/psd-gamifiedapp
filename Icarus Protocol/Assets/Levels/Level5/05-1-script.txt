@@ -1,11 +1,14 @@
-Power levels show the reactor core operating at near maximum power. Now I can turn my attention to some of the other important systems. Most essential is fixing navigation. Once we can figure out where we are and where we're going I can get the ship back on track for its mission.
+Power levels show the reactor core operating at near maximum power. Now I can turn my attention to some of the other important systems. Most essential is fixing navigation. 
 
-First things first. I'll need to find the coordinates of the planet "Aletherial Prime" the data for preprogrammed planet coordinates is stored in a list called 'coords'. In the code, lists work like other variables, but they contain more than one value. 
+Once we can figure out where we are and where we're going I can get the ship back on track for its mission.
+
+First things first. I'll need to find the coordinates of the planet "Aletherial Prime" the data for planet coordinates is stored in a list called 'coords'. In the code, lists work like variables, but contain more than one value. 
 
 I can get one of the values in the list using 'indexing'. If I have a list called 'myList' 'myList[0]' gets me the first item in the list (list indexes start with 0), 'myList[1]' will get the second item and so on.
 
 The coords list contains the following:
 coords = [Kalmephus, Nundiecarro, Rugnarth, Supheron, Rigantu, Onides, Aletharial Prime, Cenegawa, Siverus, Dao KGA, Zyke 6SZ] 
+
 I need to assign the variable destination to equal "coords[index]" where index is the list index of Aletharial Prime
 
 ~The coordinates I provided seem to point at Cenegawa instead of Aletharial Prime, remember that list indexes begin at 0, meaning the 6th item is actually at index 5

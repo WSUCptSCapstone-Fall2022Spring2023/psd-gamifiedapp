@@ -1,5 +1,5 @@
 chargeState = 0
-successful Firings = 0
+successfulFirings = 0
 timer = 10
 
 def ChargeUp():

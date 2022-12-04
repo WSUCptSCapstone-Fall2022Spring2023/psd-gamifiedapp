@@ -185,6 +185,14 @@ public class IronPythonContainer : MonoBehaviour
     }
 
     /// <summary>
+    /// A function called by IronPython to check if simulation has been halted.
+    /// </summary>
+    public bool is_simulating() 
+    {
+        return mSimulating;
+    }
+
+    /// <summary>
     /// Transfers the scope data from one scope to another, used to intersect scopes.
     /// </summary>
     /// <param name="fromScope">The scope to take values from</param>
