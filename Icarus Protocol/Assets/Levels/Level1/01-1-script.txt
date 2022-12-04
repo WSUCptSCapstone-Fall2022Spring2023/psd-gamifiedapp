@@ -1,5 +1,5 @@
 Well I won't be able to fix anything else until the system is active. There is a 'variable' in the code that should let me turn it on. I think it was called... 'lifeSupportActive'. 
 
-I can set it to be equal to anything I want, but to turn on the lifesupport I'll need to set it equal to 'True' by writing the variable name an '=' sign, and then the value I want to set it to.
+I can set it to be equal to anything I want, but to turn on the lifesupport I'll need to set it equal to 'True' by writing the variable name with an '=' sign, and then the value I want to set it to.
 
 ~Hmmm... that didn't seem to work. I should only need one line of code I think... something like 'lifeSupportActive = True'

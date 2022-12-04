@@ -1,6 +1,6 @@
 Power levels show the reactor core operating at near maximum power. Now I can turn my attention to some of the other important systems. Most essential is fixing navigation. 
 
-Once we can figure out where we are and where we're going I can get the ship back on track for its mission.
+Once we can figure out where we're going I can get the ship back on track for its mission.
 
 First things first. I'll need to find the coordinates of the planet "Aletherial Prime" the data for planet coordinates is stored in a list called 'coords'. In the code, lists work like variables, but contain more than one value. 
 

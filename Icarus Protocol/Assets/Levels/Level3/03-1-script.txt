@@ -2,9 +2,9 @@ It's good that shields are operational, but they wont' hold forever. When the sh
 
 We should have just enough power to activate the artillery systems to begin autotargeting. Looks like the firing sequence is corrupted, however.
 
-It looks like I'll need to call the 'ChargeUp()' function repeatedly until the gun is 100% charged, and then call 'Fire()' I could just call the 'ChargeUp()' function manually a few hundred times, but it's probably easiest too just use a 'while' loop.
+It looks like I'll need to call the 'ChargeUp()' function repeatedly until the gun is 100% charged, and then call 'Fire()' I could just call the 'ChargeUp()' function manually a few hundred times, but it's probably easiest to just use a 'while' loop.
 
-A 'while' statement runs the code block tabbed beneath it over and over as long as it's condition is true.
+A 'while' statement runs the code block tabbed beneath it over and over as long as its condition is true.
 'while Condition():
 	RunCode()'
 
