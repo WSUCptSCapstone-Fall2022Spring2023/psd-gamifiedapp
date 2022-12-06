@@ -1,0 +1,54 @@
+currentPolarity = 1
+switches = 0
+timer = 10
+locked = False
+
+def SetPositive():
+	global currentPolarity
+	global switches
+	global locked
+
+	if locked:
+		parent.end_simulation(3)
+
+	locked = True
+	if currentPolarity > 0:
+		parent.end_simulation(1)
+	else:
+		currentPolarity = 1
+		switches += 1
+
+def SetNegative():
+	global currentPolarity
+	global switches
+	global locked
+
+	if locked:
+		parent.end_simulation(3)
+
+	locked = True
+	if currentPolarity < 0:
+		parent.end_simulation(1)
+	else:
+		currentPolarity = -1
+		switches += 1
+
+def simulate():
+	global switches
+	global locked
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	locked = False
+	if switches > 80:
+		parent.end_simulation(0)
+
+def simulate_tick():
+	global timer
+	timer -= 0.05
+	if timer < 0:
+		parent.end_simulation(2)
+	return 0

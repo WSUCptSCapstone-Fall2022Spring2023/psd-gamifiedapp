@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6205599820770358542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4874727666308673964}
+  - component: {fileID: 4054071888471662364}
+  - component: {fileID: 6586402662025411057}
+  - component: {fileID: 7386728271457419864}
+  - component: {fileID: 6562199472908240978}
+  m_Layer: 0
+  m_Name: Level2-Conditionals
+  m_TagString: Level
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4874727666308673964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205599820770358542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4054071888471662364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205599820770358542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelID: 02-Conditionals
+  levelName: Shield Generator
+  levelDescription: Life support is functioning, but shield generators are still
+    down. It's only a matter of time before the Helios strikes space debris. It's
+    critical that the shield generators be functional.
+  Prerequisites: []
+--- !u!114 &6586402662025411057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205599820770358542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 02-1-ifcase
+  PhaseUI: {fileID: 3780883625501654787, guid: cff9caef9f11f65479cb283f146513c2, type: 3}
+  TestFile: {fileID: 4900000, guid: b7d8777e79c135140ae950377b41358c, type: 3}
+  ScriptFile: {fileID: 4900000, guid: cbce8f89ca1a7e1459229cd8e6860643, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.05
+  ExposedMembers:
+  - ThreatDistance
+  - ActivateShields
+  FriendlyVariableNames:
+  - 'ThreatDistance() : num'
+  - ActivateShields()
+  NextPhase: {fileID: 7386728271457419864}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &7386728271457419864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205599820770358542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 02-2-ifelse
+  PhaseUI: {fileID: 3780883625501654787, guid: a657dee62d27318469243c6ec995a15b, type: 3}
+  TestFile: {fileID: 4900000, guid: beb702914a60a234f9565d523528f70d, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 073b52377380fb549a4ff582bfcb318d, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.05
+  ExposedMembers:
+  - SetNegative
+  - SetPositive
+  - currentPolarity
+  FriendlyVariableNames:
+  - SetNegative()
+  - SetPositive()
+  - currentPolarity
+  NextPhase: {fileID: 6562199472908240978}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &6562199472908240978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205599820770358542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 02-3ifelif
+  PhaseUI: {fileID: 3780883625501654787, guid: b413eaf6cd215294095bc9b29a03a69a, type: 3}
+  TestFile: {fileID: 4900000, guid: 84ceda5ffa173354782d58f62a4b6f6b, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 4c5b472f611b6d94e9929a0fcf479548, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.05
+  ExposedMembers:
+  - Distance
+  - Activate
+  - Deactivate
+  FriendlyVariableNames:
+  - Distance(direction)
+  - Activate(direction)
+  - Deactivate()
+  NextPhase: {fileID: 0}
+  FillInBlank: 0
+  starterCode: {fileID: 0}

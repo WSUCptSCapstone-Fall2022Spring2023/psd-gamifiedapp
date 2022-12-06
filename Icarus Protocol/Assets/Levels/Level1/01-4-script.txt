@@ -1,0 +1,13 @@
+Life support is almost functional. It looks like there's some leftover heat in the system that needs to be vented.
+
+Some functions in the system require extra information. In order to provide these 'parameters' to functions you put the info in the parentheses separated by commas. 
+
+I should be able to vent heat from the system by calling 'VentHeat(amount, time)' where amount is how many degrees to vent per second and time is the number of seconds.
+
+The target temperature is 86 degrees, and the system is currently at 100 degrees. So I'll need to call 'VentHeat(amount, time)' with the right information to lower the temperature.
+
+~I'll need to call VentHeat properly in order to do anything. For instance, to vent 1 degree a second for 5 seconds I'd program 'VentHeat(1, 5)'
+
+~I tried to vent heat, but the system is still too hot. I either need to vent more heat each second or burn heat for longer.
+
+~It looks like I vented too much heat. I should either vent fewer degrees each second or vent heat for less time.

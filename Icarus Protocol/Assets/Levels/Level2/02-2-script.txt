@@ -1,0 +1,19 @@
+The shields are activating on time to stop threats, but they still don't have enough power. I should be able to fix that by cycling the shield polarity.
+
+To do this I'll need to check if the 'currentPolarity' is positive (greater than 0), and if so switch it to negative by calling 'SetNegative()'.
+
+Otherwise I should set it to positive with 'SetPositive()', making it flip back and forth quickly. I can do this by applying an 'else' case. 
+
+An else case looks something like...
+'if variable == 3:
+	DoSomething()
+else:
+	DoSomethingElse()'
+
+I can review what an if/else statement looks like in the manual. To cycle the shields I'll need to write one that calls 'SetNegative()' when 'currentPolarity > 0' and 'else' it calls 'SetPositive()'
+
+~It looks like I overloaded the shields generators! That means I called 'SetPositive()' when it was already positive or 'SetNegative()' when it was already negative.
+
+~It appears that the shields aren't cycling fast enough. I should make sure that the shields are alternated back and forth every time the code is run.
+
+~The shield generators locked up. That likely means I called the alternator functions too fast. I should only alternate one time at most each time my code is run. 

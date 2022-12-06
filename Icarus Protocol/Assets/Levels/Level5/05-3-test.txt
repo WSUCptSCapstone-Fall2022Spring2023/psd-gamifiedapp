@@ -1,0 +1,24 @@
+hiddenNavSteps = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+navSteps = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+returnSteps = []
+
+def PlanStep(item):
+	global returnSteps
+	returnSteps.append(item)
+
+def simulate():
+	global hiddenNavSteps
+	global returnSteps
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if returnSteps == hiddenNavSteps:
+		parent.end_simulation(0)
+	else:
+		parent.end_simulation(1)
+
+def simulate_tick():
+	return 0

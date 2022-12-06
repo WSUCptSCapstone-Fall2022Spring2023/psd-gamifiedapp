@@ -25,11 +25,22 @@ public class OutputController : MonoBehaviour
     private List<string> FailureResponses { get; set; } = new List<string>();
 
     /// <summary>
+    /// Stores the index of the current script prompt
+    /// </summary>
+    private int mScriptIndex = 0;
+
+    /// <summary>
+    /// A boolean that is set to true if a failure message is being shown, allowing the user to return to the last main message.
+    /// </summary>
+    private bool mShowingFailure = false;
+
+    /// <summary>
     /// Initializes the script prompts and failure responses
     /// </summary>
     public void InitializeScript(TextAsset scriptFile) 
     {
-        List<string> splitList = scriptFile.text.Split("\n", System.StringSplitOptions.RemoveEmptyEntries).ToList();
+        mScriptIndex = 0;
+        List<string> splitList = scriptFile.text.Split("\r\n\r\n", System.StringSplitOptions.RemoveEmptyEntries).ToList();
         ScriptPrompts = splitList.Where(e => !e.StartsWith("~")).ToList();
         FailureResponses = splitList.Where(e => e.StartsWith("~")).Select(e => e[1..]).ToList();
     }
@@ -40,7 +51,15 @@ public class OutputController : MonoBehaviour
     public void AdvanceScript() 
     {
         //TODO: Make this advance through multiple prompts once conversations are added.
-        Text.GiveTypingJob(ScriptPrompts[0]);
+        if (ScriptPrompts.Count > mScriptIndex) {
+            Text.GiveTypingJob(ScriptPrompts[mScriptIndex++]);
+        }
+        else if (mShowingFailure){
+            Text.GiveTypingJob(ScriptPrompts[mScriptIndex - 1]);
+            mShowingFailure = false;
+        }
+
+        Debug.Log($"Advanced {mScriptIndex}");
     }
 
     /// <summary>
@@ -50,5 +69,6 @@ public class OutputController : MonoBehaviour
     public void PrintFailureResponse(int exitCode) 
     {
         Text.GiveTypingJob(FailureResponses[exitCode - 1]);
+        mShowingFailure = true;
     }
 }

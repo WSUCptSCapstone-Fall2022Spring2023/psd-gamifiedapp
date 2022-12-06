@@ -1,0 +1,9 @@
+I've got all of the cells exposed, now I need to scan them, and dispose of any of them that are empty or damaged.
+
+I can use the same for loop range as last time to loop through all of the cells, but the logic inside the loop will need to be a bit more complex.
+
+I'll have to check for 2 things. First, I'll need to check if 'CellFullness(cellID)' < 10. Then I'll have to check if 'CellDamaged()'. If either condition is true I need to call 'Dispose(cellID)' to get rid of the cell. 
+
+~The system reported that I tried to dispose of a useful cell. It stopped the process to avoid fuel waste. I should review my if conditions to make sure I'm only disposing of cells with fullness < 10 or damaged cells.
+
+~The program exited but system analysis still reports that there are damaged or empty cells somewhere in the system. I should make sure my for loop is covering the full 'range(1,987)' and that my if conditions are correct.
