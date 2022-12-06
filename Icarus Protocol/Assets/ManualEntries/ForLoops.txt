@@ -1,0 +1,18 @@
+A For Loop is a technique that lets you do an action multiple times. Similar to the while loop, the notable difference is the conditional for entering the loop. The format for this loop is 'for' then '(a single variable name, ie num or x)' then 'in' followed by '(the variable you want to loop through)' then ':'. Now to enter instructions for each loop, on the next line either tab once or enter 4 spaces, then add your code. Some common for loops:
+
+  -  myList = []
+     myList.Append(1)
+     myList.Append(2)
+     myList.Append(4)
+
+    # This prints 1 then 2 then 4
+     for num in myList:
+        print(num)
+
+  - # This prints the numbers 1, 2, 3, 4, 5 
+    for x in range(5):
+        print(x)
+
+    # This prints the numbers 3, 4, 5
+    for x in range(3,6):
+        print(x)

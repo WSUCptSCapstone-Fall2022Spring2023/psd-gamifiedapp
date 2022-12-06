@@ -1,0 +1,15 @@
+A While loop is a technique that lets you do an action multiple times. Similar to the for loop, the notable difference is the conditional for entering the loop. The format for this loop is 'while' followed by '(the entry conditional ie. count < 5)' then ':'. To enter instructions for the loop, move to the next line and either tab or enter 4 spaces.
+Some common while loops:
+
+  -  count = 0
+    # This prints 0, 1, 2, 3, 4
+     while count < 5:
+        print(count)
+        count = count + 1
+
+    # This prints 5, 6, 7, 8, 9
+     while True:
+        print(count)
+        count += 1
+        if count >= 10:
+            break;

@@ -1,0 +1,14 @@
+There are many types of variables that you can create and/or use. Here are some common variable types: 
+
+int:
+  - This is an integer, a number on the number line
+  - myInt = 8
+
+float:
+  - This is a float, a number with a decimal
+  - myFloat = 8.0
+  - myFloat = 8.8
+
+string:
+  - This is a string, a container for letters, numbers, and other characters that humans can read.
+  - myString = "I don't like bananas!"

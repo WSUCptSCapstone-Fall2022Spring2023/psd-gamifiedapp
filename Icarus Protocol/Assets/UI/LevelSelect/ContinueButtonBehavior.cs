@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// This is the behavior for the continue button for a level.
+/// </summary>
 public class ContinueButtonBehavior : MonoBehaviour
 {
     /// <summary>

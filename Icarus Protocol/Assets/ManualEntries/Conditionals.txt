@@ -1,0 +1,21 @@
+A conditional is a statement that when evaluated is either True or False. Some common conditionals are:
+
+  -  x = 2
+
+    # You can check if a variable is the same as 
+      another variable with "=="
+     print(x == 2) # prints True
+     print(x == 3) # prints False
+
+    # You can also check if a variable is not the 
+      same as another variable with "!="
+     print(x != 2) # prints False
+
+    # You can use < (less than), > (greater than), 
+      <= (less than or equal to), and >= (greater than or equal to)
+     print(x < 3) # prints True
+
+  - x = 5
+    if x > 3:
+        print("Mystery number is greater than 3")
+    # This will print "Mystery number is greater than 3"
