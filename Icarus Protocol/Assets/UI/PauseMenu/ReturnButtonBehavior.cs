@@ -17,6 +17,7 @@ public class ReturnButtonBehavior : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
+        UiHandler.ClosePauseMenu();
         UiHandler.TransitionToLevelSelect(0);
     }
 

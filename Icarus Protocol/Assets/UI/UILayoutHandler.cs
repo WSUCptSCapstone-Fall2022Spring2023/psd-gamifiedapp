@@ -102,6 +102,13 @@ public class UILayoutHandler : MonoBehaviour
         queuedTransition = TransitionType.PAUSE_MENU;
     }
 
+    /// <summary>
+    /// Closes pause menu
+    /// </summary>
+    public void ClosePauseMenu()
+    {
+        UnpauseMenuTransitions();
+    }
 
     /// <summary>
     /// Called once per frame.
