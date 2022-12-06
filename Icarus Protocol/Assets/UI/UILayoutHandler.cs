@@ -11,6 +11,7 @@ public enum TransitionType
     LEVEL_SELECT,
     LEVEL_PLAYER,
     START_MENU,
+    PAUSE_MENU,
     NONE
 }
 
@@ -35,9 +36,19 @@ public class UILayoutHandler : MonoBehaviour
     public GameObject StartMenuUI;
 
     /// <summary>
+    /// A reference to the pause menu UI
+    /// </summary>
+    public GameObject PauseMenuUI;
+
+    /// <summary>
     /// The current state that the UI is in.
     /// </summary>
     public TransitionType CurrentState;
+
+    /// <summary>
+    /// Stores the Over and Under layouts
+    /// </summary>
+    private TransitionType CurrentOverlay;
 
     /// <summary>
     /// Timer used to delay UI transitions
@@ -74,6 +85,25 @@ public class UILayoutHandler : MonoBehaviour
     }
 
     /// <summary>
+    /// Transitions to start menu
+    /// </summary>
+    public void TranistionToStartMenu(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.START_MENU;
+    }
+    
+    /// <summary>
+    /// Transitions to the pause menu
+    /// </summary>
+    public void TogglePauseMenu(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.PAUSE_MENU;
+    }
+
+
+    /// <summary>
     /// Called once per frame.
     /// </summary>
     public void Update()
@@ -90,6 +120,19 @@ public class UILayoutHandler : MonoBehaviour
                     case TransitionType.LEVEL_SELECT:
                         LevelSelectTransition();
                         break;
+                    case TransitionType.START_MENU:
+                        StartMenuTransition();
+                        break;
+                    case TransitionType.PAUSE_MENU:
+                        if (CurrentOverlay == TransitionType.PAUSE_MENU)
+                        {
+                            UnpauseMenuTransitions();
+                        }
+                        else 
+                        {
+                            PauseMenuTransition();
+                        }                    
+                        break;
                 }
             }
             timer -= Time.deltaTime;
@@ -101,7 +144,7 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelPlayerTransition(PhaseDefinition targetPhase)
     {
-        LevelSelectUI.SetActive(false);
+        DisableAllLayouts();
         LevelPlayerUI.GetComponent<LevelPlayerController>().InitializePhase(targetPhase);
         LevelPlayerUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
@@ -113,15 +156,56 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelSelectTransition()
     {
-        if(StartMenuUI.activeInHierarchy)
-        {
-            StartMenuUI.SetActive(false);
-        }
 
-        LevelPlayerUI.SetActive(false);
+        DisableAllLayouts();
+
         LevelSelectUI.GetComponentInChildren<LevelListController>().Initialize();
         LevelSelectUI.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_SELECT;
+    }
+
+    /// <summary>
+    /// Transitions to start menu page from pause menu
+    /// </summary>
+    private void StartMenuTransition()
+    {
+        DisableAllLayouts();
+
+        StartMenuUI.SetActive(true);
+        queuedTransition = TransitionType.NONE;
+        CurrentState = TransitionType.START_MENU;
+    }
+
+    /// <summary>
+    /// Transitions to the pause menu
+    /// </summary>
+    private void PauseMenuTransition()
+    {
+        PauseMenuUI.GetComponentInChildren<PauseMenuController>().Initialize();
+        PauseMenuUI.SetActive(true);
+        queuedTransition = TransitionType.NONE;
+        CurrentOverlay = TransitionType.PAUSE_MENU;
+    }
+
+    /// <summary>
+    /// Transitions from the pause menu
+    /// </summary>
+    private void UnpauseMenuTransitions()
+    {
+        PauseMenuUI.SetActive(false);
+        CurrentOverlay = TransitionType.NONE;
+        queuedTransition = TransitionType.NONE;
+    }
+
+    /// <summary>
+    /// Disables all layouts
+    /// </summary>
+    private void DisableAllLayouts()
+    {
+        StartMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
+        LevelPlayerUI.SetActive(false);
+        LevelSelectUI.SetActive(false);
     }
 }

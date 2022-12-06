@@ -16,17 +16,9 @@ public class EscapeListener : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (UIHandler.CurrentState == TransitionType.LEVEL_PLAYER)
-            {
-                UIHandler.TransitionToLevelSelect(0);
-            } 
-            else if (UIHandler.CurrentState == TransitionType.LEVEL_SELECT)
-            {
-                Application.Quit();
-            }
-            else if (UIHandler.CurrentState == TransitionType.START_MENU)
-            {
-                Application.Quit();
+            if (UIHandler.CurrentState != TransitionType.START_MENU)
+            {               
+                UIHandler.TogglePauseMenu(0);
             }
         }
     }
