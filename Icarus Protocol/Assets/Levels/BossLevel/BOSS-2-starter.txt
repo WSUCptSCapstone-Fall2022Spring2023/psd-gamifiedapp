@@ -1,0 +1,2 @@
+sensorValue = sensors[5]
+SetSensors(sensorValue * 2.919818 % (3) / (5^3) * 3.122 / 94765 * (1 / 971.47462))

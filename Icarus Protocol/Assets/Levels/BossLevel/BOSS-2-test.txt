@@ -1,0 +1,21 @@
+sensors = [5,7,13,23,27,29,31]
+correctAnswer = False
+
+def SetSensors(value):
+	global correctAnswer
+	correctAnswer = value == (27 * 2.919818 % (3) / (5^3) * 3.122 / 94765 * (1 / 971.47462))
+
+def simulate():
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if correctAnswer:
+		parent.end_simulation(0)
+	else:
+		parent.end_simulation(1)
+
+
+def simulate_tick():
+	return 0
