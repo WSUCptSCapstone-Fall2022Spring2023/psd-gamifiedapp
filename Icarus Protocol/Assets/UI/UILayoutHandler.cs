@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,12 @@ using UnityEngine;
 /// </summary>
 public enum TransitionType 
 {
+    NONE,
     LEVEL_SELECT,
     LEVEL_PLAYER,
+    START_MENU,
+    PAUSE_MENU,
     MANUAL,
-    NONE
 }
 
 /// <summary>
@@ -29,15 +32,34 @@ public class UILayoutHandler : MonoBehaviour
     public GameObject LevelPlayerUI;
 
     /// <summary>
+    /// A reference to the start menu UI
+    /// </summary>
+    public GameObject StartMenuUI;
+
+    /// <summary>
+    /// A reference to the pause menu UI
+    /// </summary>
+    public GameObject PauseMenuUI;
+
+    ///<summary>
     /// A reference to the manual UI
     /// </summary>
     public GameObject ManualUI;
+
+    /// <summary>
+    /// A reference to the manual button to show and hide it in certain states.
+    /// </summary>
+    public GameObject ManualButton;
 
     /// <summary>
     /// The current state that the UI is in.
     /// </summary>
     public TransitionType CurrentState;
 
+    /// <summary>
+    /// Stores the Over and Under layouts
+    /// </summary>
+    public TransitionType CurrentOverlay;
     /// <summary>
     /// Timer used to delay UI transitions
     /// </summary>
@@ -73,6 +95,31 @@ public class UILayoutHandler : MonoBehaviour
     }
 
     /// <summary>
+    /// Transitions to start menu
+    /// </summary>
+    public void TransitionToStartMenu(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.START_MENU;
+    }
+    
+    /// <summary>
+    /// Transitions to the pause menu
+    /// </summary>
+    public void TogglePauseMenu(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.PAUSE_MENU;
+    }
+
+    /// <summary>
+    /// Closes pause menu
+    /// </summary>
+    public void ClosePauseMenu()
+    {
+        UnpauseMenuTransitions();
+	}
+	
     /// Transitions to manual
     /// </summary>
     /// <param name="delay"></param>
@@ -99,6 +146,19 @@ public class UILayoutHandler : MonoBehaviour
                     case TransitionType.LEVEL_SELECT:
                         LevelSelectTransition();
                         break;
+                    case TransitionType.START_MENU:
+                        StartMenuTransition();
+                        break;
+                    case TransitionType.PAUSE_MENU:
+                        if (CurrentOverlay == TransitionType.PAUSE_MENU)
+                        {
+                            UnpauseMenuTransitions();
+                        }
+                        else 
+                        {
+                            PauseMenuTransition();
+                        }  
+						break;
                     case TransitionType.MANUAL:
                         ManualTransition();
                         break;
@@ -113,9 +173,10 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelPlayerTransition(PhaseDefinition targetPhase)
     {
-        LevelSelectUI.SetActive(false);
+        DisableAllLayouts();
         LevelPlayerUI.GetComponent<LevelPlayerController>().InitializePhase(targetPhase);
         LevelPlayerUI.SetActive(true);
+        ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_PLAYER;
     }
@@ -125,20 +186,77 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelSelectTransition()
     {
-        LevelPlayerUI.SetActive(false);
+
+        DisableAllLayouts();
+
         LevelSelectUI.GetComponentInChildren<LevelListController>().Initialize();
         LevelSelectUI.SetActive(true);
+        ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_SELECT;
     }
 
     /// <summary>
+    /// Transitions to start menu page from pause menu
+    /// </summary>
+    private void StartMenuTransition()
+    {
+        DisableAllLayouts();
+
+        StartMenuUI.SetActive(true);
+        ManualButton.SetActive(false);
+        queuedTransition = TransitionType.NONE;
+        CurrentState = TransitionType.START_MENU;
+    }
+
+    /// <summary>
+    /// Transitions to the pause menu
+    /// </summary>
+    private void PauseMenuTransition()
+    {
+        PauseMenuUI.GetComponentInChildren<PauseMenuController>().Initialize();
+        PauseMenuUI.SetActive(true);
+        queuedTransition = TransitionType.NONE;
+        CurrentOverlay = TransitionType.PAUSE_MENU;
+    }
+
+    /// <summary>
+    /// Transitions from the pause menu
+    /// </summary>
+    private void UnpauseMenuTransitions()
+    {
+        PauseMenuUI.SetActive(false);
+        CurrentOverlay = TransitionType.NONE;
+        queuedTransition = TransitionType.NONE;
+    }
+
+    /// <summary>
+    /// Disables all layouts
+    /// </summary>
+    private void DisableAllLayouts()
+    {
+        StartMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
+        LevelPlayerUI.SetActive(false);
+        LevelSelectUI.SetActive(false);
+        ManualButton.SetActive(false);
+    }
+
     /// Transitions to manual.
     /// </summary>
     private void ManualTransition()
     {
         ManualUI.GetComponentInChildren<ManualListController>().Initialize();
-        ManualUI.SetActive(!(ManualUI.activeInHierarchy));
+        if (CurrentOverlay == TransitionType.NONE)
+        {
+            ManualUI.SetActive(true);
+            CurrentOverlay = TransitionType.MANUAL;
+        }
+        else 
+        {
+            ManualUI.SetActive(false);
+            CurrentOverlay = TransitionType.NONE;
+        }
         queuedTransition = TransitionType.NONE;
     }
 }

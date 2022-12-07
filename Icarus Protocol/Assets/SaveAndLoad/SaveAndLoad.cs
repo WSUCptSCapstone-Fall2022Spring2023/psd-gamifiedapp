@@ -30,8 +30,6 @@ public class SaveAndLoad : MonoBehaviour
                 progressRecord.PhaseCompletion.Add(new ProgressRecord.PhaseProgress() { PhaseComplete = false, PhaseID=phase.ID });
             }
         }
-
-        LoadProgress();
     }
 
     /// <summary>

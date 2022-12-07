@@ -31,7 +31,7 @@ public class LevelListController : MonoBehaviour
     /// </summary>
     void Start()
     {
-        levels = GameObject.FindGameObjectsWithTag("Level");
+        
         Initialize();
     }
 
@@ -40,6 +40,7 @@ public class LevelListController : MonoBehaviour
     /// </summary>
     public void Initialize()
     {
+        levels = GameObject.FindGameObjectsWithTag("Level");
         DescriptionReference.gameObject.SetActive(false);
         foreach (GameObject child in GetComponentsInChildren<LevelButtonBehavior>().Select(e => e.gameObject)) 
         {

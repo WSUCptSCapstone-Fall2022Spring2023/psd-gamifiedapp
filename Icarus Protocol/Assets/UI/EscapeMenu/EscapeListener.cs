@@ -16,13 +16,13 @@ public class EscapeListener : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (UIHandler.CurrentState == TransitionType.LEVEL_PLAYER)
+            if (UIHandler.CurrentState != TransitionType.START_MENU && UIHandler.CurrentOverlay != TransitionType.MANUAL)
             {
-                UIHandler.TransitionToLevelSelect(0);
-            } 
-            else if (UIHandler.CurrentState == TransitionType.LEVEL_SELECT)
+                UIHandler.TogglePauseMenu(0);
+            }
+            else if (UIHandler.CurrentOverlay == TransitionType.MANUAL) 
             {
-                Application.Quit();
+                UIHandler.TransitionToManual(0);
             }
         }
     }
