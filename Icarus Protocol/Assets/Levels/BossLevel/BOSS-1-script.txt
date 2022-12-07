@@ -1,0 +1,15 @@
+... something is wrong.
+ERROR: EXTERNAL AGENT DETECTED
+
+CODE CORRUPTION DETECTED
+
+MALICIOUS CODE DETECTED
+
+What is going on? Someone else is in the system. They're making minor changes to the code that are disrupting existing systems. I'll need to correct them... quickly.
+
+The system first detected an error somewhere in this code. 
+
+It's intended to trigger space compression if the compression core is active. Space compression should loop until CompressionFactor() is at least 100. Most of this code is correct but a small error somewhere is stopping it from working. 
+
+~It doesn't seem to be compressing enough space. I should check how many times the system loops the CompressSpace command.
+

@@ -1,0 +1,27 @@
+compression = 0
+
+def CompressionActive():
+	return True
+
+def CompressionFactor():
+	global compression
+	return compression
+
+def CompressSpace():
+	global compression
+	compression += 1
+
+def simulate():
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if compression >= 100 and compression < 105:
+		parent.end_simulation(0)
+	elif compression < 100:
+		parent.end_simulation(1)
+
+
+def simulate_tick():
+	return 0
