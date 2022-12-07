@@ -1,0 +1,5 @@
+A Statement is a line of logic, this could be computing a math equation or calling a fuction. Some common examples would be:
+
+-  answer = 2*2
+-  amount = GetCurrentAmount()
+-  isTrue = True

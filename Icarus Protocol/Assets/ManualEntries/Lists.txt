@@ -1,0 +1,11 @@
+A list is a container that can store many types of variables. The list is like a number line that starts at 0, and for each number you can add a variable in that slot. 
+
+  -  myList = []
+     myList.Append(1)
+     myList.Append(2)
+     myList.Append(4)
+
+    # You can reference a specific slot with "[(slot number)]'
+     print(myList[0]) # This will print 1
+     print(myList[2]) # This will print 4
+     

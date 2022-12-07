@@ -82,6 +82,8 @@ public class IronPythonContainer : MonoBehaviour
                 tickTimer -= Time.deltaTime;
             }
 
+            if (!mSimulating) return;
+
             if (mCodeLoopTimer <= 0)
             {
                 mCodeLoopTimer = mCachedLevel.CodeLoopDuration;
@@ -104,6 +106,7 @@ public class IronPythonContainer : MonoBehaviour
         if (mEngine != null)
         {
             mCachedLevel = level;
+            mCodeLoopTimer = 0;
 
             //Initialize level scope
             mLevelScope = mEngine.CreateScope();
@@ -163,6 +166,30 @@ public class IronPythonContainer : MonoBehaviour
 
         //TODO: Remove Debug
         Debug.Log($"Simulation exited with code: {exitCode}");
+    }
+
+    /// <summary>
+    /// A function intended to be called by IronPython to force a premature synchronization of the level scope to the user scope.
+    /// </summary>
+    public void push_user_scope() 
+    {
+        SyncScopes(mLevelScope, mUserScope);
+    }
+
+    /// <summary>
+    /// A function intended to be called by IronPython to force a premature synchronization of the user scope to the level scope.
+    /// </summary>
+    public void pull_user_scope()
+    {
+        SyncScopes(mUserScope, mLevelScope);
+    }
+
+    /// <summary>
+    /// A function called by IronPython to check if simulation has been halted.
+    /// </summary>
+    public bool is_simulating() 
+    {
+        return mSimulating;
     }
 
     /// <summary>

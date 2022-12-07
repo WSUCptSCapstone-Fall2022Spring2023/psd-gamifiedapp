@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6636767413296342602}
   - component: {fileID: 4961718171917905431}
-  - component: {fileID: 6428709698912022951}
   - component: {fileID: -6341351023651436294}
   m_Layer: 0
   m_Name: LevelNode
@@ -60,35 +59,9 @@ MonoBehaviour:
   - double
   FriendlyVariableNames:
   - testVar
-  NextPhase: {fileID: 6428709698912022951}
+  NextPhase: {fileID: 0}
   FillInBlank: 1
   starterCode: {fileID: 4900000, guid: 19dc3b944df60ea4eb400cd843fa4840, type: 3}
---- !u!114 &6428709698912022951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 02-double
-  PhaseUI: {fileID: 1339420377333279286, guid: fad4a157629ecb2489c50785820cbba3, type: 3}
-  TestFile: {fileID: 4900000, guid: 231397cc13678144e9b6557637226f16, type: 3}
-  ScriptFile: {fileID: 4900000, guid: 18dadf5fd6534b448a700ad249d0164f, type: 3}
-  ActionGroups: []
-  CodeLoopDuration: 1
-  FastTickSpeed: 0.1
-  ExposedMembers:
-  - double
-  FriendlyVariableNames:
-  - double()
-  NextPhase: {fileID: 0}
-  FillInBlank: 0
-  starterCode: {fileID: 0}
 --- !u!114 &-6341351023651436294
 MonoBehaviour:
   m_ObjectHideFlags: 0

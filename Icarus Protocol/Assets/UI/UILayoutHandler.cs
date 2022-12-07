@@ -12,6 +12,7 @@ public enum TransitionType
     LEVEL_PLAYER,
     START_MENU,
     PAUSE_MENU,
+    MANUAL,
     NONE
 }
 
@@ -39,6 +40,9 @@ public class UILayoutHandler : MonoBehaviour
     /// A reference to the pause menu UI
     /// </summary>
     public GameObject PauseMenuUI;
+    /// A reference to the manual UI
+    /// </summary>
+    public GameObject ManualUI;
 
     /// <summary>
     /// The current state that the UI is in.
@@ -87,7 +91,7 @@ public class UILayoutHandler : MonoBehaviour
     /// <summary>
     /// Transitions to start menu
     /// </summary>
-    public void TranistionToStartMenu(float delay)
+    public void TransitionToStartMenu(float delay)
     {
         timer = delay;
         queuedTransition = TransitionType.START_MENU;
@@ -108,6 +112,15 @@ public class UILayoutHandler : MonoBehaviour
     public void ClosePauseMenu()
     {
         UnpauseMenuTransitions();
+	}
+	
+    /// Transitions to manual
+    /// </summary>
+    /// <param name="delay"></param>
+    public void TransitionToManual(float delay)
+    {
+        timer = delay;
+        queuedTransition = TransitionType.MANUAL;
     }
 
     /// <summary>
@@ -138,7 +151,10 @@ public class UILayoutHandler : MonoBehaviour
                         else 
                         {
                             PauseMenuTransition();
-                        }                    
+                        }  
+						break;
+                    case TransitionType.MANUAL:
+                        ManualTransition();
                         break;
                 }
             }
@@ -214,5 +230,14 @@ public class UILayoutHandler : MonoBehaviour
         PauseMenuUI.SetActive(false);
         LevelPlayerUI.SetActive(false);
         LevelSelectUI.SetActive(false);
+    }
+
+    /// Transitions to manual.
+    /// </summary>
+    private void ManualTransition()
+    {
+        ManualUI.GetComponentInChildren<ManualListController>().Initialize();
+        ManualUI.SetActive(!(ManualUI.activeInHierarchy));
+        queuedTransition = TransitionType.NONE;
     }
 }
