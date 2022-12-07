@@ -8,12 +8,12 @@ using UnityEngine;
 /// </summary>
 public enum TransitionType 
 {
+    NONE,
     LEVEL_SELECT,
     LEVEL_PLAYER,
     START_MENU,
     PAUSE_MENU,
     MANUAL,
-    NONE
 }
 
 /// <summary>
@@ -40,9 +40,16 @@ public class UILayoutHandler : MonoBehaviour
     /// A reference to the pause menu UI
     /// </summary>
     public GameObject PauseMenuUI;
+
+    ///<summary>
     /// A reference to the manual UI
     /// </summary>
     public GameObject ManualUI;
+
+    /// <summary>
+    /// A reference to the manual button to show and hide it in certain states.
+    /// </summary>
+    public GameObject ManualButton;
 
     /// <summary>
     /// The current state that the UI is in.
@@ -52,8 +59,7 @@ public class UILayoutHandler : MonoBehaviour
     /// <summary>
     /// Stores the Over and Under layouts
     /// </summary>
-    private TransitionType CurrentOverlay;
-
+    public TransitionType CurrentOverlay;
     /// <summary>
     /// Timer used to delay UI transitions
     /// </summary>
@@ -170,6 +176,7 @@ public class UILayoutHandler : MonoBehaviour
         DisableAllLayouts();
         LevelPlayerUI.GetComponent<LevelPlayerController>().InitializePhase(targetPhase);
         LevelPlayerUI.SetActive(true);
+        ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_PLAYER;
     }
@@ -184,6 +191,7 @@ public class UILayoutHandler : MonoBehaviour
 
         LevelSelectUI.GetComponentInChildren<LevelListController>().Initialize();
         LevelSelectUI.SetActive(true);
+        ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_SELECT;
     }
@@ -196,6 +204,7 @@ public class UILayoutHandler : MonoBehaviour
         DisableAllLayouts();
 
         StartMenuUI.SetActive(true);
+        ManualButton.SetActive(false);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.START_MENU;
     }
@@ -230,6 +239,7 @@ public class UILayoutHandler : MonoBehaviour
         PauseMenuUI.SetActive(false);
         LevelPlayerUI.SetActive(false);
         LevelSelectUI.SetActive(false);
+        ManualButton.SetActive(false);
     }
 
     /// Transitions to manual.
@@ -237,7 +247,16 @@ public class UILayoutHandler : MonoBehaviour
     private void ManualTransition()
     {
         ManualUI.GetComponentInChildren<ManualListController>().Initialize();
-        ManualUI.SetActive(!(ManualUI.activeInHierarchy));
+        if (CurrentOverlay == TransitionType.NONE)
+        {
+            ManualUI.SetActive(true);
+            CurrentOverlay = TransitionType.MANUAL;
+        }
+        else 
+        {
+            ManualUI.SetActive(false);
+            CurrentOverlay = TransitionType.NONE;
+        }
         queuedTransition = TransitionType.NONE;
     }
 }

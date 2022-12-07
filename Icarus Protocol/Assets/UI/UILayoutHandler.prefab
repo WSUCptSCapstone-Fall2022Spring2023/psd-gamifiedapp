@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619971844948411951}
   - component: {fileID: 1619971844948411950}
+  - component: {fileID: 711152561}
   m_Layer: 0
   m_Name: UILayoutHandler
   m_TagString: Untagged
@@ -55,7 +56,22 @@ MonoBehaviour:
   StartMenuUI: {fileID: 3055598460077832299}
   PauseMenuUI: {fileID: 5744282287432815180}
   ManualUI: {fileID: 7691447625823827732}
+  ManualButton: {fileID: 1409870597159930340}
   CurrentState: 0
+  CurrentOverlay: 0
+--- !u!114 &711152561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619971844948411936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17db811f169007548987310461ad2377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIHandler: {fileID: 1619971844948411950}
 --- !u!1001 &483312298224350673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,6 +80,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1619971844948411951}
     m_Modifications:
+    - target: {fileID: 343044554271963109, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1122774056267695482, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -152,6 +172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OverlayContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 1523848554957847605, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6108260772013931340, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
       propertyPath: uiHandler
       value: 
@@ -162,6 +186,11 @@ PrefabInstance:
 --- !u!224 &658076363506397355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1122774056267695482, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
+  m_PrefabInstance: {fileID: 483312298224350673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1409870597159930340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523848554957847605, guid: e323fcb82b0c4da4ab2f63c801816000, type: 3}
   m_PrefabInstance: {fileID: 483312298224350673}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5936618769276015196
@@ -316,6 +345,14 @@ PrefabInstance:
     - target: {fileID: 756169415459113780, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144546411348696214, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144546411348696214, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 6002052771770373530, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: m_Pivot.x
@@ -668,6 +705,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -21.859985
       objectReference: {fileID: 0}
+    - target: {fileID: 1571440836914204905, guid: 532a9e9d270d1bf40ac17987ac8253ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1681
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571440836914204905, guid: 532a9e9d270d1bf40ac17987ac8253ad, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 378.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2145469859075051054, guid: 532a9e9d270d1bf40ac17987ac8253ad, type: 3}
       propertyPath: m_Name
       value: PauseMenuBackground
@@ -710,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710919019194205395, guid: 532a9e9d270d1bf40ac17987ac8253ad, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -109.78003
+      value: -109.78
       objectReference: {fileID: 0}
     - target: {fileID: 5810822746484006082, guid: 532a9e9d270d1bf40ac17987ac8253ad, type: 3}
       propertyPath: m_Pivot.x

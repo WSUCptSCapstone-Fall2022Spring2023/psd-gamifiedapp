@@ -16,9 +16,13 @@ public class EscapeListener : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (UIHandler.CurrentState != TransitionType.START_MENU)
-            {               
+            if (UIHandler.CurrentState != TransitionType.START_MENU && UIHandler.CurrentOverlay != TransitionType.MANUAL)
+            {
                 UIHandler.TogglePauseMenu(0);
+            }
+            else if (UIHandler.CurrentOverlay == TransitionType.MANUAL) 
+            {
+                UIHandler.TransitionToManual(0);
             }
         }
     }
