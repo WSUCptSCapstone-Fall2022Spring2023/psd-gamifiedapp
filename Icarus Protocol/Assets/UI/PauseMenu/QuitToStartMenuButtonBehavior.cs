@@ -18,6 +18,6 @@ public class QuitToStartMenuButtonBehavior : MonoBehaviour
     public void OnClick()
     {
         UiHandler.ClosePauseMenu();
-        UiHandler.TranistionToStartMenu(0);
+        UiHandler.TransitionToStartMenu(0);
     }
 }
