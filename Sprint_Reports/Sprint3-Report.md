@@ -1,5 +1,7 @@
 # Sprint 3 Report (11/09/2022 - 12/09/2022)
 
+Demo Video Link: https://youtu.be/J6gGKh12B-o
+
 ## What's New (User Facing)
 
  * Project features three new UI pages for the user to interact with: Starting page, Pause page, and Manual pages.
