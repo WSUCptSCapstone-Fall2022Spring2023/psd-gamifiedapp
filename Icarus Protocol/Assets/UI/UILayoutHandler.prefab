@@ -201,9 +201,21 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1619971844948411951}
     m_Modifications:
+    - target: {fileID: 3892812302834644642, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892812302834644642, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4097881539480462664, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
       propertyPath: m_Name
       value: 'ManualUIContainer '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097881539480462664, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4097881539480462667, guid: 77dfa9e927f7b8244925e518b01863de, type: 3}
       propertyPath: m_Pivot.x

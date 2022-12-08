@@ -21,9 +21,13 @@ public class WatchTestVar : MonoBehaviour
     void Update()
     {
         dynamic value = parent?.IPContainer.GetPythonValue(varIdentifier);
-        if (value != null) 
+        if (value != null && value is float)
         {
             mText.text = $"{varIdentifier}: {(value == null ? "N/A" : Mathf.Round((float)value * 100) / 100)}";
+        }
+        else if (value != null)
+        {
+            mText.text = $"{varIdentifier}: {(value == null ? "N/A" : value.ToString())}";
         }
     }
 }
