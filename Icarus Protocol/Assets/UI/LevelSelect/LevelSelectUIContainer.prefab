@@ -96,7 +96,7 @@ MonoBehaviour:
     m_Top: 85
     m_Bottom: 85
   m_ChildAlignment: 0
-  m_Spacing: 60
+  m_Spacing: 40
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 9022817334467178788, guid: b2f8b070e3d0b634b82f743846968e68, type: 3}
       propertyPath: BodyText
       value: 
-      objectReference: {fileID: 2158484684035255513}
+      objectReference: {fileID: 0}
     - target: {fileID: 9022817334467178788, guid: b2f8b070e3d0b634b82f743846968e68, type: 3}
       propertyPath: HeaderText
       value: 
@@ -319,17 +319,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f8b070e3d0b634b82f743846968e68, type: 3}
---- !u!114 &2158484684035255513 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2158484683481227029, guid: b2f8b070e3d0b634b82f743846968e68, type: 3}
-  m_PrefabInstance: {fileID: 1628435404}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4059252228299757774 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4059252229893974786, guid: b2f8b070e3d0b634b82f743846968e68, type: 3}
