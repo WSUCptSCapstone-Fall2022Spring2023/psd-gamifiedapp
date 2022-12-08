@@ -52,9 +52,7 @@ There are no add-ons for either the developer or player.
 
 ## Functionality
 
-Currently the project contains three UI elements: a small text box section in the center of the screen, a display of the value of testVar in the upper right side of the screen, and a button entitled Simulate underneath the text box. 
-
-The user can enter python code into the textbox then press the Simulate button and have their code run by IronPython. Additionally, the user can interact with the variable testVar through their python code. The user can also call the function double() which will double the value of an input number and return the result. Any user code written in the text box is run once per second until the simulation reaches an end state. Simulation ends in success if testVar is forced below -20, and ends in failure if testVar is allowed to become higher than 20.
+Currently, the protoype contains what we consider an "alpha" build of the game. The sounds, graphics, and UI still need polishing, and the game's content is in an incomplete 'shell' state, but it is all playable and reflects the major mechanics of the game with a variety of fully playable levels.
 
 ## Known Problems
 
@@ -74,6 +72,7 @@ There are currently no known problems.
 
   * [Sprint 1 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint1/Produce-Sprint-Report/Documentation/Sprint1-Report.md)
   * [Sprint 2 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint2/Produce-Sprint-2-Report/Sprint_Reports/Sprint2-Report.md)
+  * [Sprint 3 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint3/ProduceSprint3Report/Sprint_Reports/Sprint3-Report.md)
 
 ## License
 
