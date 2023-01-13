@@ -1,0 +1,52 @@
+hiddenValue = 0
+totalCalls = 0
+
+def Compress():
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == 3:
+		hiddenValue += 1
+	totalCalls += 1
+def Defer():
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == 1:
+		hiddenValue += 1
+	totalCalls += 1
+def Deploy():
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == 4:
+		hiddenValue += 1
+	totalCalls += 1
+def Inject():
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == 2:
+		hiddenValue += 1
+	totalCalls += 1
+def Prime():
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == 0:
+		hiddenValue += 1
+	totalCalls += 1
+
+def simulate():
+	global hiddenValue
+	global totalCalls
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+	
+	if hiddenValue == 5:
+		parent.end_simulation(0)
+	elif totalCalls < 5:
+		parent.end_simulation(1)
+	else:
+		parent.end_simulation(2)
+
+def simulate_tick():
+	return 0

@@ -1,0 +1,29 @@
+heatingCoils = False
+systemID = ""
+powerAmount = 0
+
+def simulate():
+	global heatingCoils
+	global systemID
+	global powerAmount
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	parent.pull_user_scope()
+	
+	if (heatingCoils is True) and (systemID == "LP1092") and (powerAmount == 81782):
+		parent.end_simulation(0)
+	elif heatingCoils is not True:
+		parent.end_simulation(2)
+	elif systemID != "LP1092":
+		parent.end_simulation(3)
+	elif powerAmount != 81782:
+		parent.end_simulation(4)
+	else:
+		parent.end_simulation(1)
+
+def simulate_tick():
+	return 0

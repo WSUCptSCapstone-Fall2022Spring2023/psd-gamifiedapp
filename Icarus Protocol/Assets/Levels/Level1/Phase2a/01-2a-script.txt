@@ -1,0 +1,12 @@
+It would appear that the nitrogen flow is being blocked by an issue with staging. Certain steps of the gas flow are happening in the wrong order.
+
+I'll need to reorder these functions until they're in the right order.
+Compress()
+Defer()
+Deploy()
+Inject()
+Prime()
+
+~It looks like I'm not calling all the functions. I have to call each one once in a particular order to make the system work.
+
+~I'm calling five functions, but either I'm repeating some and missing others, or I'm still calling them in the wrong order.

@@ -1,0 +1,17 @@
+Great! Things are firing up, but there's still something wrong inside of the startup script for the life support. It looks like a few values are corrupted.
+
+Looks like I'll need to reset three values. 'heatingCoils', 'systemID', and 'powerAmount'. They're currently all not getting set to the correct values for some reason.
+
+For the system to work I'll need to make sure that 
+'heatingCoils' equals True, 
+'systemID' equals "LP1092", 
+and 'powerAmount' equals 81782
+
+~It's still reading that not all the variables are set to the correct values.
+
+~The system says that the 'heatingCoils' aren't active. I'll need to set them to the keyword True, with no quotes around it, and with a capital 'T'
+
+~UNRECOGNIZED SYSTEM ID
+Hmm... looks like I didn't correctly set the systemID. It has to match the necessary value exactly, with quotes ("") around the word to let the code know that the word isn't a keyword or variable name.
+
+~This error indicates that the system isn't drawing the expected amount of power. I'll need to make sure that 'powerAmount' is set to exactly the right number with no quotes or other symbols around the number itself.

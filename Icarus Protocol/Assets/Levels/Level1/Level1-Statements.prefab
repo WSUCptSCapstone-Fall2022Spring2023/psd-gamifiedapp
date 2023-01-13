@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3506949312793504643}
   - component: {fileID: 5426654803797443891}
   - component: {fileID: 2912201126658286558}
+  - component: {fileID: 865115890174219017}
   - component: {fileID: 3468725502630609756}
   - component: {fileID: 1210150213513290939}
   - component: {fileID: 2432555577599589901}
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5426654803797443891
 MonoBehaviour:
@@ -78,6 +79,36 @@ MonoBehaviour:
   - lifeSupportActive
   FriendlyVariableNames:
   - lifeSupportActive
+  NextPhase: {fileID: 865115890174219017}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &865115890174219017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-1a-moreVariables
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: ab9454d8790a5444ea3e1e8cc80265d3, type: 3}
+  ScriptFile: {fileID: 4900000, guid: e8583b15bfd6d334f84a4da071eeeca3, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - heatingCoils
+  - systemID
+  - powerAmount
+  FriendlyVariableNames:
+  - heatingCoils
+  - systemID
+  - powerAmount
   NextPhase: {fileID: 3468725502630609756}
   FillInBlank: 0
   starterCode: {fileID: 0}
