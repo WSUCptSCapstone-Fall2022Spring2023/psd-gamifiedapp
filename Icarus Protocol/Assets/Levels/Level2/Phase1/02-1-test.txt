@@ -1,4 +1,4 @@
-distanceToThreat = 583
+distanceToThreat = 283
 shieldsActive = False
 shieldPower = 100
 

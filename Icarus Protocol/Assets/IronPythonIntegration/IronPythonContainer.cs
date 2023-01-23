@@ -128,6 +128,7 @@ public class IronPythonContainer : MonoBehaviour
     {
         mCachedUserCode = userCode;
         if (mCachedLevel == null) return;
+        InitializeLevel(mCachedLevel);
         mSimulating = true;
     }
 
@@ -161,7 +162,6 @@ public class IronPythonContainer : MonoBehaviour
     public void end_simulation(int exitCode) 
     {
         mSimulating = false;
-        InitializeLevel(mCachedLevel);
         OnSimulationExit(this, exitCode);
 
         //TODO: Remove Debug
