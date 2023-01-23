@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 2912201126658286558}
   - component: {fileID: 865115890174219017}
   - component: {fileID: 3468725502630609756}
+  - component: {fileID: 146239039628986827}
   - component: {fileID: 1210150213513290939}
   - component: {fileID: 2432555577599589901}
+  - component: {fileID: 5856988160646165075}
   - component: {fileID: 4219293293348505229}
   m_Layer: 0
   m_Name: Level1-Statements
@@ -139,9 +141,43 @@ MonoBehaviour:
   - oxygen
   - nitrogen
   - MixGases()
-  NextPhase: {fileID: 1210150213513290939}
+  NextPhase: {fileID: 146239039628986827}
   FillInBlank: 0
   starterCode: {fileID: 0}
+--- !u!114 &146239039628986827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-2a-moreFunctions
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 9f2c91bea2d05584ca0f31c1c9e3d234, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 03b07cbf572dfda4383e22eaf8a61389, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 1
+  FastTickSpeed: 1
+  ExposedMembers:
+  - Compress
+  - Deploy
+  - Inject
+  - Defer
+  - Prime
+  FriendlyVariableNames:
+  - Compress()
+  - Deploy()
+  - Inject()
+  - Defer()
+  - Prime()
+  NextPhase: {fileID: 1210150213513290939}
+  FillInBlank: 0
+  starterCode: {fileID: 4900000, guid: dfefc168511be2f4398d9b5420ab2b5f, type: 3}
 --- !u!114 &1210150213513290939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +231,34 @@ MonoBehaviour:
   - VentHeat
   FriendlyVariableNames:
   - VentHeat(amount, time)
+  NextPhase: {fileID: 5856988160646165075}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &5856988160646165075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671502116966444833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 01-4a-moreParameters
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 71b952a17bd9ec9429c12f49a64ef61e, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 3fd0db1339c11ae43a24fe9a5bd9e732, type: 3}
+  ActionGroups: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - IsolateVent
+  - SurgePower
+  FriendlyVariableNames:
+  - IsolateVent(ventName)
+  - SurgePower(num)
   NextPhase: {fileID: 4219293293348505229}
   FillInBlank: 0
   starterCode: {fileID: 0}

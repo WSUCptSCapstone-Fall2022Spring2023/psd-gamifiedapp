@@ -1,45 +1,36 @@
 hiddenValue = 0
 totalCalls = 0
 
+def AdvanceValue(neededValue):
+	global hiddenValue
+	global totalCalls
+	if hiddenValue == neededValue:
+		hiddenValue += 1
+	totalCalls += 1
+
 def Compress():
-	global hiddenValue
-	global totalCalls
-	if hiddenValue == 3:
-		hiddenValue += 1
-	totalCalls += 1
+	AdvanceValue(3)
+
 def Defer():
-	global hiddenValue
-	global totalCalls
-	if hiddenValue == 1:
-		hiddenValue += 1
-	totalCalls += 1
+	AdvanceValue(1)
+
 def Deploy():
-	global hiddenValue
-	global totalCalls
-	if hiddenValue == 4:
-		hiddenValue += 1
-	totalCalls += 1
+	AdvanceValue(4)
+
 def Inject():
-	global hiddenValue
-	global totalCalls
-	if hiddenValue == 2:
-		hiddenValue += 1
-	totalCalls += 1
+	AdvanceValue(2)
+
 def Prime():
-	global hiddenValue
-	global totalCalls
-	if hiddenValue == 0:
-		hiddenValue += 1
-	totalCalls += 1
+	AdvanceValue(0)
 
 def simulate():
 	global hiddenValue
 	global totalCalls
 
 	try:
-    		parent.execute_user_code()
+		parent.execute_user_code()
 	except Exception: 
-    		pass
+		pass
 	
 	if hiddenValue == 5:
 		parent.end_simulation(0)

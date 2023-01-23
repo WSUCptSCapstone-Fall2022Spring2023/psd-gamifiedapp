@@ -1,0 +1,52 @@
+ventIsolated = False
+powerSurged = False
+errorCode = 0
+
+def IsolateVent(vent):
+	global errorCode
+	global ventIsolated
+
+	if vent != "HV-67":
+		errorCode = 1
+
+	ventIsolated = True
+	return 0
+	
+def SurgePower(num):
+	global errorCode
+	global powerSurged
+
+	if num > 76:
+		errorCode = 2
+	elif num < 73:
+		errorCode = 3
+
+	powerSurged = True
+	return 0
+
+def simulate():
+	global powerSurged
+	global ventIsolated
+	global errorCode
+
+	try:
+    		parent.execute_user_code()
+	except Exception: 
+    		pass
+
+	if errorCode == 0:
+		if ventIsolated is True and powerSurged is True:
+			parent.end_simulation(0)
+		else:
+			parent.end_simulation(1)
+	elif errorCode == 1:
+		parent.end_simulation(2)
+	elif errorCode == 2:
+		parent.end_simulation(3)
+	elif errorCode == 3:
+		parent.end_simulation(4)
+
+	return 0
+
+def simulate_tick():
+	return 0
