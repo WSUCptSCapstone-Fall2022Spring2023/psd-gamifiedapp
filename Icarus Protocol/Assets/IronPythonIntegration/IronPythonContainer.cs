@@ -15,7 +15,7 @@ public class IronPythonContainer : MonoBehaviour
     /// An event that triggers each time that the simulation exist. 
     /// Subscribed to by the UI and phase definitions to manage phase transitions and responses.
     /// </summary>
-    public event EventHandler<int> OnSimulationExit;
+    public event EventHandler<(int, string)> OnSimulationExit;
 
     /// <summary>
     /// Stores a private internal reference to the running engine managing the IronPython interpreter
@@ -159,13 +159,14 @@ public class IronPythonContainer : MonoBehaviour
     /// >0 indicates some form of failure.
     /// </summary>
     /// <param name="exitCode"></param>
-    public void end_simulation(int exitCode) 
+    /// <param name="optionalMessage">Takes in an optional message accompanying the exit. Used for reporting exception content.</param>
+    public void end_simulation(int exitCode, string optionalMessage = "") 
     {
         mSimulating = false;
-        OnSimulationExit(this, exitCode);
+        OnSimulationExit(this, (exitCode, optionalMessage));
 
         //TODO: Remove Debug
-        Debug.Log($"Simulation exited with code: {exitCode}");
+        Debug.Log(optionalMessage == "" ? $"Simulation exited with code: {exitCode}": $"Simulation exited with message {optionalMessage}");
     }
 
     /// <summary>

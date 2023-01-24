@@ -78,9 +78,9 @@ MonoBehaviour:
   CodeLoopDuration: 2
   FastTickSpeed: 0.1
   ExposedMembers:
-  - lifeSupportActive
+  - active
   FriendlyVariableNames:
-  - lifeSupportActive
+  - active
   NextPhase: {fileID: 865115890174219017}
   FillInBlank: 0
   starterCode: {fileID: 0}

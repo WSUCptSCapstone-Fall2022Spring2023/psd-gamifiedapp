@@ -110,14 +110,19 @@ public class LevelPlayerController : MonoBehaviour
     /// <summary>
     /// Gets called when the IPContainer exits a simulation
     /// </summary>
-    private void SimulationExited(object sender, int exitCode) 
+    private void SimulationExited(object sender, (int, string) info) 
     {
-        if (exitCode > 0)
+        if (info.Item1 > 0)
         {
-            OutputController.PrintFailureResponse(exitCode);
+            OutputController.PrintFailureResponse(info.Item1);
             Instantiate(FailureMessage, transform);
         }
-        else 
+        else if (info.Item1 == -1) 
+        {
+            OutputController.PrintException(info.Item2);
+            Instantiate(FailureMessage, transform);
+        }
+        else
         {
             ProgressRecord progressRecord = PhaseDefinition.GetComponent<LevelDescription>().LevelProgress;
             progressRecord.PhaseCompletion.First(e => e.PhaseID == PhaseDefinition.ID).PhaseComplete = true;

@@ -1,14 +1,19 @@
-lifeSupportActive = False
+active = False
 
 def simulate():
-	global lifeSupportActive
+	global active
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "'true' is not defined" in repr(e):
+    			parent.end_simulation(2,repr(e))
+		else:
+			parent.end_simulation(-1,repr(e))
 
-	if lifeSupportActive is True:
+	parent.pull_user_scope()
+
+	if active is True:
 		parent.end_simulation(0)
 	else:
 		parent.end_simulation(1)
