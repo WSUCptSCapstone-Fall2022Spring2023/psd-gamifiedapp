@@ -14,3 +14,6 @@ using '*' as a multiplication sign. I can reveiw math symbols like this in the m
 'liquid = coolant * 11'
 
 ~I can't change coolant directly, but I can use it to set another variable like 'liquid'
+
+~SyntaxError("unexpected token 'x'")
+When I'm multiplying numbers in code, I need to use the asterisk (*) symbol, since code treats 'x' like a variable name.

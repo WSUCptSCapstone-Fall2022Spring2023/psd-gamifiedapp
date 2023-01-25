@@ -16,8 +16,14 @@ def simulate():
 	global venting
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "name 'amount' is not defined" in repr(e) or "name 'time' is not defined" in repr(e):
+			parent.end_simulation(4)
+		elif "VentHeat() takes exactly 2 arguments" in repr(e):
+			parent.end_simulation(5)
+		else:
+    			parent.end_simulation(-1, repr(e))
+		return
 
 	if not venting:
 		parent.end_simulation(1)

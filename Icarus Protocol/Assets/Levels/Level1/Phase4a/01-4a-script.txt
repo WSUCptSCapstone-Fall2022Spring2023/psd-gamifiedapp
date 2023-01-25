@@ -6,13 +6,16 @@ replacing 'ventName' with the target vent's name in quotes ("")
 
 Then I'll need to call SurgePower(num) with num being any number between 73 and 76.
 
-So to review. Call IsolateVent(ventName) on vent "HV-67" and then SurgePower(num) with a number between 73 and 76.
+So putting the algorithm together; Call IsolateVent(ventName) on vent "HV-67", and then SurgePower(num) with a number between 73 and 76.
 
 ~Something went wrong. Most likely I'm not calling both of the functions correctly and in order.
 
 ~IsolateVent() threw an error. I must not be targeting the right vent. I need to remember to get the name exactly right with capitals and symbols, and surround it in quotes ("")
 
-~When I simulated the code a breaker tripped. I must have surged more than 76 units of power to the system.
+~When I simulated the code a breaker tripped. I must have surged the wrong amount of power to the system.
 
 ~I'm reading an error in the SurgePower function. I need to use a number with with no special characters or letters around it like
 SurgePower(100)
+
+~NameError("name 'HV' is not defined")
+The vent name "HV-67" is a 'string' word, not a variable. That means it has to be passed into the function in quotes ("")

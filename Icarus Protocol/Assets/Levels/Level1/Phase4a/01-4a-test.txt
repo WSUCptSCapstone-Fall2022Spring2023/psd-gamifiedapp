@@ -16,11 +16,11 @@ def SurgePower(num):
 	global errorCode
 	global powerSurged
 
-	if num > 76:
+	if num > 76 or num < 73:
 		errorCode = 2
-	elif num < 73:
+	if type(num) != int and type(num) != float:
 		errorCode = 3
-
+	
 	powerSurged = True
 	return 0
 
@@ -31,8 +31,12 @@ def simulate():
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "name 'HV' is not defined" in repr(e):
+			parent.end_simulation(5)
+		else:
+    			parent.end_simulation(-1, repr(e))
+		return
 
 	if errorCode == 0:
 		if ventIsolated is True and powerSurged is True:

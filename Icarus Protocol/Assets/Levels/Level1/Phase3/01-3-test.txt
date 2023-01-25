@@ -26,7 +26,11 @@ def simulate():
 	try:
     		parent.execute_user_code()
 	except Exception as e: 
-    		parent.enc_simulation(-1, repr(e))
+		if "unexpected token 'x'" in repr(e):
+			parent.end_simulation(4)
+    		else:
+			parent.end_simulation(-1, repr(e))
+		return
 
 	if mixCoolantCalled:
 		if solutionCorrect is True:
