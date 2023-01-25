@@ -37,7 +37,7 @@ Transform:
   - {fileID: 204288943997960352}
   - {fileID: 88493111844973492}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1619971844948411950
 MonoBehaviour:
@@ -357,14 +357,6 @@ PrefabInstance:
     - target: {fileID: 756169415459113780, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144546411348696214, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
-      propertyPath: m_Padding.m_Top
-      value: -18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144546411348696214, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
-      propertyPath: m_Padding.m_Bottom
-      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 6002052771770373530, guid: 57e30264810c5e14a8d8434eff10358e, type: 3}
       propertyPath: m_Pivot.x
@@ -1038,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -821639536245467193, guid: e195bdf462d86db4cb3e91b133880fe4, type: 2}
+    - target: {fileID: 8257861479354287022, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f679d6de5613f0747b94dc972bf926a1, type: 3}
