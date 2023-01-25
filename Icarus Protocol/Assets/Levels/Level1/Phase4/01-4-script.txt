@@ -7,7 +7,7 @@ Parameters can be of any data type, but most functions expect certain types of d
 I should be able to vent heat from the system by calling 'VentHeat(amount, time)' where amount is how many degrees to vent per second and time is the number of seconds.
 
 The target temperature is 86 degrees, and the system is currently at 100 degrees. So I'll need to call 
-'VentHeat(amount, time)' 
+	VentHeat(amount, time)
 with the right information to lower the temperature by 14 degrees.
 
 ~I'll need to call VentHeat properly in order to do anything. For instance, to vent 1 degree a second for 5 seconds I'd program 'VentHeat(1, 5)'
@@ -18,7 +18,7 @@ with the right information to lower the temperature by 14 degrees.
 
 ~NameError("name is not defined")
 Although the function description is written as 'VentHeat(amount, time)', when I actually call the function I need to replace 'amount' and 'time' with data. For instance,
-'VentHeat(1,2)' 
+	VentHeat(1,2)
 would vent 1 heat per second for 2 seconds.
 
 ~TypeError('VentHeat() takes exactly two arguments')

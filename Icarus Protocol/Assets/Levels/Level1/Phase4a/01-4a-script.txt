@@ -1,7 +1,7 @@
 Heating vent "HV-67" is totally stuck. I'll need to surge power to it to break it open.
 
 To surge power I'll need to first isolate that vent by calling 
-IsolateVent(ventName)
+	IsolateVent(ventName)
 replacing 'ventName' with the target vent's name in quotes ("")
 
 Then I'll need to call SurgePower(num) with num being any number between 73 and 76.
@@ -14,8 +14,8 @@ So putting the algorithm together; Call IsolateVent(ventName) on vent "HV-67", a
 
 ~When I simulated the code a breaker tripped. I must have surged the wrong amount of power to the system.
 
-~I'm reading an error in the SurgePower function. I need to use a number with with no special characters or letters around it like
-SurgePower(100)
+~I'm reading an error in the SurgePower function. I need to use a number with with no special characters or letters around it like...
+	SurgePower(100)
 
 ~NameError("name 'HV' is not defined")
 The vent name "HV-67" is a 'string' word, not a variable. That means it has to be passed into the function in quotes ("")
