@@ -76,10 +76,10 @@ MonoBehaviour:
   CodeLoopDuration: 0.1
   FastTickSpeed: 0.05
   ExposedMembers:
-  - ThreatDistance
+  - threatDistance
   - ActivateShields
   FriendlyVariableNames:
-  - 'ThreatDistance() : num'
+  - threatDistance
   - ActivateShields()
   NextPhase: {fileID: 5242580343432159652}
   FillInBlank: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   - quantumStretch
   - outputPower
   FriendlyVariableNames:
-  - powerSwitching
+  - switchingPower
   - shieldStrain
   - quantumStretch
   - outputPower
@@ -196,11 +196,13 @@ MonoBehaviour:
   CodeLoopDuration: 0.1
   FastTickSpeed: 0.05
   ExposedMembers:
-  - Distance
+  - leftDistance
   - Activate
   - Deactivate
+  - rightDistance
   FriendlyVariableNames:
-  - Distance(direction)
+  - leftDistance
+  - rightDistance
   - Activate(direction)
   - Deactivate()
   NextPhase: {fileID: 983307773}

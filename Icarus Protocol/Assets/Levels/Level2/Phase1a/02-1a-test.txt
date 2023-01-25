@@ -42,8 +42,9 @@ def simulate():
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+    		parent.end_simulation(-1, repr(e))
+		return
 
 	if errorCode == 1:
 		parent.end_simulation(1)

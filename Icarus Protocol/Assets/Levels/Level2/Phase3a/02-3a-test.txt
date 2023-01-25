@@ -14,7 +14,9 @@ testCases = [
 [9,4,"white"],
 [11,3,"blue"],
 [10,2,"white"],
-[9,1,"magenta"],
+[1,6,"green"],
+[1,2,"magenta"],
+[1,1,"magenta"],
 ]
 
 def simulate():
@@ -32,14 +34,19 @@ def simulate():
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "unexpected token 'elif'" in repr(e):
+			parent.end_simulation(2)
+		else:
+    			parent.end_simulation(-1,repr(e))
+		return
 	
 	parent.pull_user_scope()
 
 	if color != correct:
 		parent.end_simulation(1)
-	
+		return
+
 	if len(testCases) == 0:
 		parent.end_simulation(0)
 

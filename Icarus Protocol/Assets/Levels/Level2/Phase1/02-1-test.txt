@@ -1,10 +1,7 @@
 distanceToThreat = 283
 shieldsActive = False
 shieldPower = 100
-
-def ThreatDistance():
-	global distanceToThreat
-	return distanceToThreat
+threatDistance = 0
 
 def ActivateShields():
 	global shieldsActive
@@ -16,11 +13,21 @@ def ActivateShields():
 def simulate():
 	global shieldsActive
 	global distanceToThreat
+	global threatDistance
+
+	threatDistance = distanceToThreat
+	parent.push_user_scope()	
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "unexpected token '<newline>'" in repr(e):
+			parent.end_simulation(2)
+		elif 'expected an indented block' in repr(e):
+			parent.end_simulation(3)
+    		else:
+			parent.end_simulation(-1,repr(e))
+		return
 
 	if distanceToThreat <= 0:
 		if shieldsActive:

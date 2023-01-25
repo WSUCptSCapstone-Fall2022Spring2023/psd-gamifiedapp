@@ -5,7 +5,8 @@ It looks like something is missing in the power inversion script.
 It's supposed to have a bit of logic here that makes the power switching faster. I'll have to replace it.
 
 The intended logic is something like... 
-"if switchingPower is True, set quantumStretch to 83. Else, set it to 49" followed by a seperate if else statement that reads...
+"if switchingPower is True, set quantumStretch to 83. Else, set it to 49" 
+followed by a seperate if else statement that reads...
 "if shieldStrain > 50, then set outputPower to quantumStretch * 11, else set outputPower to quantumStretch * 3"
 
 ~Something went wrong. I should review the algorithm, and make sure that I'm setting both quantumStretch and outputPower to the correct values.

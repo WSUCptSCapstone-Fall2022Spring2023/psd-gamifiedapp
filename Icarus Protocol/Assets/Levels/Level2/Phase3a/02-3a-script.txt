@@ -10,3 +10,7 @@ elif threatEnergy < 2, color should be "magenta"
 else color should be "white"
 
 ~The shield still isn't reacting properly. I should either check the if conditions, or make sure that the cases are in the correct order.
+
+~SyntaxError("unexpected token 'elif'")
+There's an elif where there shouldn't be one. I should make sure that all of my elif blocks are aligned with the 'if' and 'else' statements and that all 'elif's are between the 'if' and the 'else'
+If needed I can review these statments in the manual.

@@ -39,8 +39,16 @@ def simulate():
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "unexpected token 'else'" in repr(e):
+			parent.end_simulation(4)
+		elif "unexpected token '<newline>'" in repr(e):
+			parent.end_simulation(5)
+		elif "expected an indented block" in repr(e):
+			parent.end_simulation(6)
+    		else:
+			parent.end_simulation(-1,repr(e))
+		return
 
 	locked = False
 	if switches > 80:
