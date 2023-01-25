@@ -9,4 +9,6 @@ Prime()
 
 ~It looks like I'm not calling all the functions. I have to call each one once in a particular order to make the system work.
 
-~I'm calling five functions, but either I'm repeating some and missing others, or I'm still calling them in the wrong order.
+~The system shows that my code is calling more than five functions. Each function should only be called once, and all functions should be called.
+
+~I'm still not calling the functions in the right order. I can see how many my last run of the code got right, and I should adjust the order until all five functions are being called in the correct sequence.

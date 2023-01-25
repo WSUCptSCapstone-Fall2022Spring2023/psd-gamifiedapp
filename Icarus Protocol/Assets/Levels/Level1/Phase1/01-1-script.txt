@@ -11,3 +11,6 @@ I need to make sure not to put any type of quotes (''/"") around these keywords.
 
 ~NameError("name 'true' is not defined") 
 Make sure that when I set something to True, I use a capital 'T' in True. Keywords and variable names are case sensitive, so 'true' is not the same as 'True'
+
+~SyntaxError("can't assign to literal")
+The variable name active shouldn't be written with quotes around it when I'm using it in code, otherwise the code will see it as a different data type called a "string".

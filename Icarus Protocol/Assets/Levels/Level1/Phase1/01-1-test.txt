@@ -8,9 +8,11 @@ def simulate():
 	except Exception as e: 
 		if "'true' is not defined" in repr(e):
     			parent.end_simulation(2,repr(e))
+		elif "can't assign to literal" in repr(e):
+			parent.end_simulation(3, repr(e))
 		else:
 			parent.end_simulation(-1,repr(e))
-	return
+		return
 	
 	parent.pull_user_scope()
 
