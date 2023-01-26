@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0.7803922, b: 0.73333335, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -108,9 +108,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 3590399833729035859}
   - component: {fileID: 853427710369843798}
   - component: {fileID: 1817163199}
-  - component: {fileID: 481681365}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -219,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -258,9 +257,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: c89961e5701537640b9cb2183f0a9b96, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: c89961e5701537640b9cb2183f0a9b96, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: c89961e5701537640b9cb2183f0a9b96, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -298,51 +297,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UiHandler: {fileID: 0}
---- !u!114 &481681365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751932823362148208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1817163199}
-          m_TargetAssemblyTypeName: StartButtonBehavior, Assembly-CSharp
-          m_MethodName: OnHover
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1817163199}
-          m_TargetAssemblyTypeName: StartButtonBehavior, Assembly-CSharp
-          m_MethodName: OffHover
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &977921062316585822
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -833,7 +787,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0.7803922, b: 0.73333335, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -843,9 +797,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
