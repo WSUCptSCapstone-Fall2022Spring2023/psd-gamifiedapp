@@ -85,98 +85,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5810822746484006082}
     m_Modifications:
-    - target: {fileID: 1482109218487863065, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482109218487863065, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482109218487863065, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -654.37006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482109218487863065, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -109.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621939324249361647, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_Transition
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621939324249361647, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1621939324249361647, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_SelectedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1621939324249361647, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_HighlightedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1669646685631647117, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669646685631647117, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669646685631647117, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -654.37006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669646685631647117, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197.70001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795453968701991628, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_Transition
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795453968701991628, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1795453968701991628, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_SelectedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 1795453968701991628, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_HighlightedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
     - target: {fileID: 2091217200657517721, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 3208281898845825258, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 3900200698278618219, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 092ded7b8993c624fa54d4bf59627d17, type: 3}
-    - target: {fileID: 5463358533707064458, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5463358533707064458, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5463358533707064458, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -654.37006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5463358533707064458, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -21.859985
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 5628973906779607843, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -261,22 +181,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5822750686830003338, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_Transition
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822750686830003338, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 5822750686830003338, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_SelectedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
-    - target: {fileID: 5822750686830003338, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
-      propertyPath: m_SpriteState.m_HighlightedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 50edd850b65b5684e9f5ad9018a93dd4, type: 3}
     - target: {fileID: 7296939059114885372, guid: 2095589dafa7c4945a1242f64ce1b12e, type: 3}
       propertyPath: m_Name
       value: PauseMenuContainer

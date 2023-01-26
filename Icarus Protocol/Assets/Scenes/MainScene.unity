@@ -1239,6 +1239,10 @@ PrefabInstance:
       propertyPath: SaveAndLoader
       value: 
       objectReference: {fileID: 3673970615123932502}
+    - target: {fileID: 1487394234112906033, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 1619971844948411936, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: m_Name
       value: UILayoutHandler
@@ -1287,6 +1291,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2677157679598024514, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
+    - target: {fileID: 4576075056387718083, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 5515967428298326848, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: IPContainer
       value: 
@@ -1295,10 +1307,30 @@ PrefabInstance:
       propertyPath: SaveHandler
       value: 
       objectReference: {fileID: 3673970615123932502}
+    - target: {fileID: 5918076270393750542, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     - target: {fileID: 5925236649553255110, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: SaveAndLoader
       value: 
       objectReference: {fileID: 3673970615123932502}
+    - target: {fileID: 7179404756116918397, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
+    - target: {fileID: 7196305703600934601, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 795
+      objectReference: {fileID: 0}
+    - target: {fileID: 7196305703600934615, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea6c4d76ee6b4f24292937b0c2c89f06, type: 3}
+    - target: {fileID: 8720110356723965180, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22fd740c6701a344ac90989137289df, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
