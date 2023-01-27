@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 5940801196329176735}
   - component: {fileID: 5940801196329176736}
   - component: {fileID: 5940801196329176737}
+  - component: {fileID: 815206443}
   m_Layer: 5
   m_Name: ManualLevelContainer
   m_TagString: Untagged
@@ -103,8 +104,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 30
     m_Right: 0
-    m_Top: 40
-    m_Bottom: 85
+    m_Top: 60
+    m_Bottom: 10
   m_ChildAlignment: 0
   m_Spacing: 25
   m_ChildForceExpandWidth: 1
@@ -185,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manualEntryName: Operators
-  manualEntryDescription: {fileID: 4900000, guid: 286eed34c70f14d499a0e61438b1137d, type: 3}
+  manualEntryName: Math Operators
+  manualEntryDescription: {fileID: 4900000, guid: d0066aac6420ede44a83a3b1a4624b6d, type: 3}
   Prerequisite: {fileID: 0}
 --- !u!114 &5940801196329176732
 MonoBehaviour:
@@ -277,6 +278,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manualEntryName: While Loops
   manualEntryDescription: {fileID: 4900000, guid: a634e1ff72f77c4488efa16632c5194b, type: 3}
+  Prerequisite: {fileID: 0}
+--- !u!114 &815206443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097881538747623377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d85e95ca553fbb4ca44f33b7ca2a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualEntryName: Programming Operators
+  manualEntryDescription: {fileID: 4900000, guid: a9b8b25bbdecf20438d8fbb6e04d94aa, type: 3}
   Prerequisite: {fileID: 0}
 --- !u!1 &4097881539480462664
 GameObject:
@@ -371,6 +387,10 @@ PrefabInstance:
     - target: {fileID: 1790094505410326034, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598189379690956365, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -229.48
       objectReference: {fileID: 0}
     - target: {fileID: 6697249966062979928, guid: 66d53311be30bd2418448a97fd3041fb, type: 3}
       propertyPath: m_Pivot.x
