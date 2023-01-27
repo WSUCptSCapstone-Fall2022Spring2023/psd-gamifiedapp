@@ -1404,6 +1404,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetText: {fileID: 8582925323032362776}
+  IPContainer: {fileID: 0}
+  NumericColor: {r: 0.42207193, g: 0.7169812, b: 0.45103624, a: 1}
+  VariableColor: {r: 0, g: 1, b: 0.7717838, a: 0}
+  LoopColor: {r: 0.4260591, g: 0.7176663, b: 0.8301887, a: 1}
+  ConditionalColor: {r: 0.427451, g: 0.7176471, b: 0.8313726, a: 1}
+  BooleanColor: {r: 0.42352945, g: 0.7176471, b: 0.45098042, a: 1}
+  QuoteColor: {r: 0.42352945, g: 0.7176471, b: 0.45098042, a: 1}
 --- !u!1 &5568575588900635357
 GameObject:
   m_ObjectHideFlags: 0
