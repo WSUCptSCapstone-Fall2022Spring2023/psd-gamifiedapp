@@ -11,6 +11,9 @@ public class HoverBehavior : MonoBehaviour
     private TMP_Text text;
     private FontWeight startingWeight;
 
+    /// <summary>
+    /// Ths Start function that gets the text component and the beginning fontweight style
+    /// </summary>
     private void Start()
     {
         text = GetComponentInChildren<TMP_Text>();
@@ -18,12 +21,18 @@ public class HoverBehavior : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// On hover the color and font weight changes
+    /// </summary>
     public void OnHover()
     {
         text.color = Color.black;
         text.fontWeight = FontWeight.Bold;
     }
 
+    /// <summary>
+    /// Off hover the color and font weight changes to the original states
+    /// </summary>
     public void OffHover() 
     {
         text.color = Color.white;
