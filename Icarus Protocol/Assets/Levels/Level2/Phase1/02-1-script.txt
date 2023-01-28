@@ -1,0 +1,29 @@
+If I don't want the Helios exploding the first time we hit an asteroid field, I should get the forward shielding operational. The problem is that I'm running on emergency power. I need to make sure that I only use the shields 'if' they're needed.
+
+I can do this using an 'if statement', also sometimes called a 'conditional'. For instance, this conditional;
+	if variable < 5:
+		DoSomething() 
+means 'if variable is less than 5, then DoSomething()'. 
+
+I start by writing 'if', and then the if condition, a True or False statement often using special operators like '==' to check if two bits of data are equivalent, or '>' or '<' for greater or less than. 
+After the conditional, I must place a colon ":" to begin the if block.
+
+On the following lines, I 'TAB' in one time, and write the code that should only run if the condition is true. All the conditional code has to be 'TAB'-ed in one step, and the if-block ends when I stop tabbing lines in.
+(Ex.)
+	if True:
+		DoIfConditionIsTrue()
+	DoNextRegardless()
+
+So I need to set it up so that if 'threatDistance' is less than 25, the code calls 'ActivateShields()'. 
+Call it too early and I'll run out of power. Call it too late and the ship will be damaged.
+I can review what if statements look like in the manual.
+
+~An example of the conditional I'll need looks something like 
+	if threatDistance < 600:    
+		ActivateShields()
+
+~SyntaxError("unexpected token '<newline>'")
+This error likely means that I forgot to end my conditional with a colon (:) before the indented block.
+
+~SyntaxError('expected an indented block')
+After my if statement line, all of the code "inside" the block on the following lines must be 'indented' to the right. I can use TABs or spaces, all that matters is that the inner block is indented to the right, and that my indentation is consistent.

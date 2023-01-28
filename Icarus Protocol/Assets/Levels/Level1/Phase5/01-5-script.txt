@@ -1,0 +1,11 @@
+All systems are primed and ready, now to integrate life support with the rest of the ship. Once it's fully integrated there shouldn't be any more danger to the crew's cryopods.
+
+I'll need to route power from the emergency reserves to integrate the system. I can do this using the 'RoutePower(amount)' function.
+
+Some functions 'return' data that can be stored in variables. The 'amount' value I need to give to 'RoutePower(amount)' needs to be equal to 'GetPower()'
+
+I can store the return value of 'GetPower()' in a variable by setting the variable equal to the function call.
+	variable = GetPower()
+Since I'm making this variable name myself I can call it anything I want. Then I should call 'RoutePower(amount)' using the variable as the amount.
+
+~Something went wrong with routing the power. Once I've stored the value of 'GetPower()' in a variable with some name I need to call RoutePower(variableName) with the name I used.

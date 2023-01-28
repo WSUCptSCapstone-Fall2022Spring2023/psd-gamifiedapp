@@ -1,0 +1,10 @@
+Most of the shields activated fine in the simulation, but some of them say their shielding program is corrupted.
+
+This code is mostly correct, but some of the conditions are wrong.
+
+It is supposed to check first that the shields are active. Then, if they are, it is supposed to check if 'powerSupply > 70' before sending out a ShieldPulse().
+I need to figure out what's wrong with this code that's causing it not to work.
+
+~It still isn't working. It looks like the ShieldPulse() is sometimes getting called when it shouldn't.
+
+~It isn't quite right yet. Some of the tests which should trigger the shield aren't doing so.

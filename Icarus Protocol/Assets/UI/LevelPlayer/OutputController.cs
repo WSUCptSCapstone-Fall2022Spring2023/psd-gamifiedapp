@@ -71,4 +71,14 @@ public class OutputController : MonoBehaviour
         Text.GiveTypingJob(FailureResponses[exitCode - 1]);
         mShowingFailure = true;
     }
+
+    /// <summary>
+    /// Prints an arbitrary text to the screen. Used for printing unexpected or unhandled exceptions.
+    /// </summary>
+    /// <param name="message"></param>
+    public void PrintException(string message) 
+    {
+        Text.GiveTypingJob(message);
+        mShowingFailure = true;
+    }
 }
