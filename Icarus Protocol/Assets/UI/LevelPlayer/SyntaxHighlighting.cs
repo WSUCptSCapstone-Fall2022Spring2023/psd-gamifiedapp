@@ -68,7 +68,7 @@ public class SyntaxHighlighting : MonoBehaviour
     void Update()
     {
         //Colors numeric constants
-        string outputText = Regex.Replace(sourceText.text, @"[0-9]+", delegate (Match m) {
+        string outputText = Regex.Replace(sourceText.text, @"\b[0-9]+\b", delegate (Match m) {
             return $"<color=#{ColorUtility.ToHtmlStringRGB(NumericColor)}>{m.Value}</color>";
         });
 
