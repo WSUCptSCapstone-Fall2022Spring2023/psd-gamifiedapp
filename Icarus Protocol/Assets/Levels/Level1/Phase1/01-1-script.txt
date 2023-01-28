@@ -1,0 +1,16 @@
+Well I won't be able to fix anything else until the system is active. There is a 'variable' in the code that should let me turn it on. I think it was called... 'active'. 
+
+A variable is like a special keyword made by me or already made in the code. The keyword can be used to store data for later use.
+
+Variables can hold all sorts of data, but activating the life support means I'll need to set active equal to the special keyword True. 
+I can set a variable by writing its name, followed by an '=' sign, then the value I want to set it to. 
+
+~Hmmm... that didn't seem to work. I should only need one line of code I think... something like 
+	active = True
+I need to make sure not to put any type of quotes (''/"") around these keywords. Doing that makes them a different type of data called 'strings' instead.
+
+~NameError("name 'true' is not defined") 
+Make sure that when I set something to True, I use a capital 'T' in True. Keywords and variable names are case sensitive, so 'true' is not the same as 'True'
+
+~SyntaxError("can't assign to literal")
+The variable name active shouldn't be written with quotes around it when I'm using it in code, otherwise the code will see it as a different data type called a "string".

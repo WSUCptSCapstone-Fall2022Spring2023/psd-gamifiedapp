@@ -1,0 +1,37 @@
+oxygen = 0
+nitrogen = 0
+
+mixGasesCalled = False
+solutionCorrect = False
+
+def MixGases():
+	global mixGasesCalled
+	global solutionCorrect
+	global oxygen
+	global nitrogen
+
+	parent.pull_user_scope()
+	
+	mixGasesCalled = True
+	solutionCorrect = (oxygen == 22) and (nitrogen == 78)
+
+def simulate():
+	global mixGasesCalled
+	global solutionCorrect
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+    		parent.end_simulation(-1, repr(e))
+		return
+	
+	if mixGasesCalled:
+		if solutionCorrect:
+			parent.end_simulation(0)
+		else:
+			parent.end_simulation(2)
+	else:
+		parent.end_simulation(1)
+
+def simulate_tick():
+	return 0

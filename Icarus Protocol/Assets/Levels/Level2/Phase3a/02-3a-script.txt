@@ -1,0 +1,16 @@
+Shields are almost fully operational. They're activating on time, but they're not reacting correctly to threats. The shields can be set to resonate on several different frequencies called 'colors'.
+
+The shields are supposed to change color based on what kind of threat they're blocking, but they aren't reacting. That could cause trouble.
+
+To fix it I'll need to replace the color switching logic. There are four things I'll need to check for in a specific order.
+
+if threatEnergy > 10, color should be set to "blue"
+elif threatSize > 5, color should be "green"
+elif threatEnergy < 2, color should be "magenta"
+else color should be "white"
+
+~The shield still isn't reacting properly. I should either check the if conditions, or make sure that the cases are in the correct order.
+
+~SyntaxError("unexpected token 'elif'")
+There's an elif where there shouldn't be one. I should make sure that all of my elif blocks are aligned with the 'if' and 'else' statements and that all 'elif's are between the 'if' and the 'else'
+If needed I can review these statments in the manual.

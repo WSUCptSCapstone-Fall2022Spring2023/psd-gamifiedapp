@@ -1,0 +1,24 @@
+active = False
+
+def simulate():
+	global active
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+		if "'true' is not defined" in repr(e):
+    			parent.end_simulation(2,repr(e))
+		elif "can't assign to literal" in repr(e):
+			parent.end_simulation(3, repr(e))
+		else:
+			parent.end_simulation(-1,repr(e))
+		return
+	
+	parent.pull_user_scope()
+
+	if active is True:
+		parent.end_simulation(0)
+	else:
+		parent.end_simulation(1)
+def simulate_tick():
+	return 0
