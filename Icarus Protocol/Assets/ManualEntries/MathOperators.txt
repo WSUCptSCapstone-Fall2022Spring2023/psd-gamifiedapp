@@ -1,0 +1,24 @@
+Many operators are the same as the ones used in math but with a different symbols. Generally, these operators are used on numbers but there are some that are used with other variable types.
+
+Arithmetic:
+  -  num = 1 + 2 # num is an int
+     print(num) # prints 3
+     num = num * 3 num is an int
+     print(num) # prints 9
+     num = num / 4.0 # num is a float
+     print(num) # prints 2.5
+     num = num + 0.5 * 3 # num is a float
+     print(num) # prints 4.0
+
+Modulo:
+  -  # Modulo divides the numbers given and returns the remainder
+     remainder = 11 % 3
+     print(remainder) # prints 2
+
+Power:
+  -  # Power is how many times the number multiplies 
+       by itself
+     squared = 2 ** 2
+     print(squared) # prints 4
+     cubed = 2 ** 3
+     print(cubed) # prints 8
