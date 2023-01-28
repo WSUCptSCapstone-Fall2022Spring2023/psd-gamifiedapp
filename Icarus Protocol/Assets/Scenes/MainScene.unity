@@ -1299,14 +1299,6 @@ PrefabInstance:
       propertyPath: SaveAndLoader
       value: 
       objectReference: {fileID: 3673970615123932502}
-    - target: {fileID: 7691447626015962511, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: m_Padding.m_Top
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691447626015962511, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
-      propertyPath: m_Padding.m_Bottom
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}

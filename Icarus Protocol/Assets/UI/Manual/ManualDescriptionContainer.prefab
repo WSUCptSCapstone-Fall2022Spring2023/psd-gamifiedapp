@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextReference: {fileID: 1790094505410326034}
-  TextDelay: 0.01
+  TextDelay: 0
 --- !u!1 &2371748013190489858
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,13 @@ public class SequentialTyper : MonoBehaviour
     /// <param name="text"></param>
     public void GiveTypingJob(string text) 
     {
+        if (TextDelay == 0) 
+        { 
+            TextReference.text = text;
+            textQueue = string.Empty;
+            return;
+        }
+
         TextReference.text = "";
         textQueue = text;
     }
