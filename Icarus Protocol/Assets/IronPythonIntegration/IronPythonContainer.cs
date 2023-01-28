@@ -35,7 +35,7 @@ public class IronPythonContainer : MonoBehaviour
     /// <summary>
     /// Stores a private internal cache of the initialized level.
     /// </summary>
-    private PhaseDefinition mCachedLevel { get; set; }
+    public PhaseDefinition mCachedLevel { get; set; }
 
     /// <summary>
     /// Is true if user code is being simulated, false otherwise.
