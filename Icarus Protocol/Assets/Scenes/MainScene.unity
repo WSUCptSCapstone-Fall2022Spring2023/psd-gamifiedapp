@@ -1309,6 +1309,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3055598460077832299, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5515967428298326848, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: IPContainer
       value: 
