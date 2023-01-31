@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 01-1a-moreVariables
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 951138cfcb777144890f6b4d6d537195, type: 3}
   TestFile: {fileID: 4900000, guid: ab9454d8790a5444ea3e1e8cc80265d3, type: 3}
   ScriptFile: {fileID: 4900000, guid: e8583b15bfd6d334f84a4da071eeeca3, type: 3}
   ActionGroups: []

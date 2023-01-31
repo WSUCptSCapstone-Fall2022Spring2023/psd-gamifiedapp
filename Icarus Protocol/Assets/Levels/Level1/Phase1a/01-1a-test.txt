@@ -1,5 +1,5 @@
 heatingCoils = False
-systemID = ""
+systemID = "unknown"
 powerAmount = 0
 
 def simulate():

@@ -230,11 +230,11 @@ MonoBehaviour:
   ExposedMembers:
   - threatSize
   - threatEnergy
-  - color
+  - shieldColor
   FriendlyVariableNames:
   - threatSize
   - threatEnergy
-  - color
+  - shieldColor
   NextPhase: {fileID: 0}
   FillInBlank: 0
   starterCode: {fileID: 0}
