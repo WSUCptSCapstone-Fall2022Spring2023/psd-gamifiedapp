@@ -16,6 +16,16 @@ public class WatchNumber : MonoBehaviour
     public string MemberName;
 
     /// <summary>
+    /// The minimum value that the display should be able to show. Does not effect or limit underlying value.
+    /// </summary>
+    public float MinValue;
+
+    /// <summary>
+    /// The maximum value that the display should be able to show. Does not effect or limit underlying value.
+    /// </summary>
+    public float MaxValue;
+
+    /// <summary>
     /// Stores a ref to the controller to allow it to get necessary information
     /// </summary>
     private PhaseUIController mParent;
@@ -46,7 +56,7 @@ public class WatchNumber : MonoBehaviour
         }
         else
         {
-            mText.text = $"{(Mathf.Round((float)value * Mathf.Pow(10, DecimalPlaces)) / Mathf.Pow(10, DecimalPlaces)).ToString($"F{DecimalPlaces}")}";
+            mText.text = $"{Mathf.Min(MaxValue, Mathf.Max(MinValue, (Mathf.Round((float)value * Mathf.Pow(10, DecimalPlaces)) / Mathf.Pow(10, DecimalPlaces)))).ToString($"F{DecimalPlaces}")}";
         }
     }
 }
