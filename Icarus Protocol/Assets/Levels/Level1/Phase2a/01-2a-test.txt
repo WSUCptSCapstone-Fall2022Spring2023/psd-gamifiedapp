@@ -1,11 +1,18 @@
 hiddenValue = 0
 totalCalls = 0
+chainBroken = False
+remaining = 5
 
 def AdvanceValue(neededValue):
 	global hiddenValue
 	global totalCalls
-	if hiddenValue == neededValue:
+	global chainBroken
+	global remaining
+	if hiddenValue == neededValue and not chainBroken:
 		hiddenValue += 1
+		remaining -= 1
+	else:
+		chainBroken = true
 	totalCalls += 1
 
 def Compress():
