@@ -112,6 +112,7 @@ public class IronPythonContainer : MonoBehaviour
             mLevelScope = mEngine.CreateScope();
             mLevelScope.SetVariable("parent", this);
             mLevelScope.SetVariable("environment", level);
+            level.ResetGroup.Invoke();
             ScriptSource source = mEngine.CreateScriptSourceFromString(level.TestFile.text);
             source.Execute(mLevelScope);
 

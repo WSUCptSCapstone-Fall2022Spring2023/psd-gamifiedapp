@@ -11,6 +11,7 @@ def AdvanceValue(neededValue):
 	if hiddenValue == neededValue and not chainBroken:
 		hiddenValue += 1
 		remaining -= 1
+		environment.trigger_action_group(neededValue)
 	else:
 		chainBroken = true
 	totalCalls += 1

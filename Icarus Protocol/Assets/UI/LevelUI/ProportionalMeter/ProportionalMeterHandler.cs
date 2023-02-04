@@ -72,7 +72,7 @@ public class ProportionalMeterHandler : MonoBehaviour
     {
         float valueOne = (float)(phaseController?.IPContainer.GetPythonValue(ValueOneIdentifier));
         float valueTwo = (float)(phaseController?.IPContainer.GetPythonValue(ValueTwoIdentifier));
-        float targetWidth = Mathf.Max(0, Mathf.Min(MaxWidth, MaxWidth * (valueOne / (valueOne + valueTwo))));
+        float targetWidth = Mathf.Max(0, Mathf.Min(MaxWidth, MaxWidth * (valueOne / Mathf.Max(1, valueOne + valueTwo))));
         MeterReference.localScale += new Vector3((targetWidth - MeterReference.localScale.x) * Speed * Time.deltaTime, 0, 0);
         mTextRefOne.text = $"{(Mathf.Round((float)valueOne * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1)).ToString($"F1")}";
         mTextRefTwo.text = $"{(Mathf.Round((float)valueTwo * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1)).ToString($"F1")}";

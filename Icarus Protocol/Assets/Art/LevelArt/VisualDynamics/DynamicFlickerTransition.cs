@@ -53,6 +53,7 @@ public class DynamicFlickerTransition : MonoBehaviour
         {
             mImageRef.enabled = false;
             if (AlternateImage != null) AlternateImage.enabled = true;
+            this.enabled = false;
         }
     }
 }

@@ -37,6 +37,11 @@ public class PhaseDefinition : MonoBehaviour
     public List<UnityEvent> ActionGroups;
 
     /// <summary>
+    /// Functions exactly like an action group, but stores the actions required to reset this phase's effects to a ground state.
+    /// </summary>
+    public UnityEvent ResetGroup;
+
+    /// <summary>
     /// The delay between each time that the user's code is simulated.
     /// </summary>
     public float CodeLoopDuration;

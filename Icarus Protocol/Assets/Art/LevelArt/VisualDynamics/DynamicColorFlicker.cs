@@ -31,12 +31,18 @@ public class DynamicColorFlicker : MonoBehaviour
     private float mShortTimer;
 
     /// <summary>
+    /// The long timer for the overall effect.
+    /// </summary>
+    private float mLongTimer;
+
+    /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
         mImageRef = GetComponent<Image>();
         mBaseColor = mImageRef.color;
+        mLongTimer = TransitionTime;
     }
 
     /// <summary>
@@ -44,7 +50,7 @@ public class DynamicColorFlicker : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (TransitionTime > 0)
+        if (mLongTimer > 0)
         {
             if (mShortTimer <= 0)
             {
@@ -52,11 +58,20 @@ public class DynamicColorFlicker : MonoBehaviour
                 mShortTimer = Random.Range(0.01f, 0.2f);
             }
             mShortTimer -= Time.deltaTime;
-            TransitionTime -= Time.deltaTime;
+            mLongTimer -= Time.deltaTime;
         }
         else
         {
             mImageRef.color = AlternateColor;
+            this.enabled = false;
         }
+    }
+
+    /// <summary>
+    /// Triggers when the component is reenabled
+    /// </summary>
+    private void OnEnable()
+    {
+        mLongTimer = TransitionTime;
     }
 }

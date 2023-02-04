@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Allows a series of images to be shown in sequence
+/// </summary>
 public class DynamicProgression : MonoBehaviour
 {
     /// <summary>
