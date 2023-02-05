@@ -15,9 +15,11 @@ def Activate(direction):
 	if shieldPower > 0 and direction == "left":
 		leftActive = True
 		rightActive = False
+		environment.trigger_action_group(0)
 	elif shieldPower > 0 and direction == "right":
 		leftActive = False
 		rightActive = True
+		environment.trigger_action_group(1)
 
 def Deactivate():
 	global leftActive
@@ -25,6 +27,7 @@ def Deactivate():
 
 	leftActive = False
 	rightActive = False
+	environment.trigger_action_group(2)
 
 def simulate():
 	global leftActive
@@ -71,4 +74,5 @@ def simulate_tick():
 		if shieldPower <= 0:
 			leftActive = False
 			rightActive = False
+			environment.trigger_action_group(2)
 	return 0

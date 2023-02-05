@@ -64,4 +64,13 @@ public class DynamicProgression : MonoBehaviour
         }
         timer -= Time.deltaTime;
     }
+
+    /// <summary>
+    /// Activates when this component is enabled.
+    /// </summary>
+    private void OnEnable()
+    {
+        timer = Delay;
+        shownImage = 0;
+    }
 }

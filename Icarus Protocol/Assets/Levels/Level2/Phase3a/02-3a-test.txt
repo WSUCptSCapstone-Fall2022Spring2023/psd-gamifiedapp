@@ -43,6 +43,15 @@ def simulate():
 	
 	parent.pull_user_scope()
 
+	if shieldColor == "blue":
+		environment.trigger_action_group(0)
+	elif shieldColor == "green":
+		environment.trigger_action_group(1)
+	elif shieldColor == "magenta":
+		environment.trigger_action_group(2)
+	else:
+		environment.trigger_action_group(3)
+
 	if shieldColor != correct:
 		parent.end_simulation(1)
 		return

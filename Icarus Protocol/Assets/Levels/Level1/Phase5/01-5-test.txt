@@ -19,6 +19,7 @@ def simulate():
 		return
 
 	if solutionCorrect is True:
+		environment.trigger_action_group(0)
 		parent.end_simulation(0)
 	else:
 		parent.end_simulation(1)

@@ -1241,6 +1241,10 @@ PrefabInstance:
       propertyPath: SaveAndLoader
       value: 
       objectReference: {fileID: 3673970615123932502}
+    - target: {fileID: 1409870597159930340, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1619971844948411936, guid: 03c1654d9d190b548a28e8ad680ca414, type: 3}
       propertyPath: m_Name
       value: UILayoutHandler

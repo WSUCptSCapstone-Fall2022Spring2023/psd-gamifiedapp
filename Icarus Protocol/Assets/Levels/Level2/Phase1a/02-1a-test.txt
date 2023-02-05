@@ -36,6 +36,11 @@ def simulate():
 	shieldsActive = testCases[0][0]
 	powerSupply = testCases[0][1]
 
+	if shieldsActive:
+		environment.trigger_action_group(0)
+	else:
+		environment.trigger_action_group(1)
+
 	parent.push_user_scope()
 
 	testCases.pop(0)

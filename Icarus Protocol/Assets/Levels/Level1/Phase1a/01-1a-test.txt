@@ -14,6 +14,9 @@ def simulate():
 		return
 
 	parent.pull_user_scope()
+
+	if heatingCoils:
+		environment.trigger_action_group(0)
 	
 	if (heatingCoils is True) and (systemID == "LP1092") and (powerAmount == 81782):
 		parent.end_simulation(0)

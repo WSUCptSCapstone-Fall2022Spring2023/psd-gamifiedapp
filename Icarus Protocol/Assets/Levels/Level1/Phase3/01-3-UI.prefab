@@ -78,7 +78,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479855624689449955}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e890fb446760e044aa5ea4cf198d73a, type: 3}
   m_Name: 
@@ -88,7 +88,9 @@ MonoBehaviour:
   - {fileID: 2890434106335437241}
   - {fileID: 4827236441924174445}
   - {fileID: 3837333832615143531}
-  Delay: 0.5
+  - {fileID: 4499931260504172469}
+  Delay: 0.2
+  Looping: 0
 --- !u!1 &3467994130732977188
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +215,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IPContainer: {fileID: 0}
+  ActionGroups:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3430850303711583375}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4499931260504172469}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2890434106335437241}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4827236441924174445}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3837333832615143531}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4306740363410944787
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +525,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -46.5
       objectReference: {fileID: 0}
+    - target: {fileID: 320526314862247992, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 320526314862247992, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5456514
+      objectReference: {fileID: 0}
+    - target: {fileID: 320526314862247992, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2313297578503729022, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 56.6
@@ -480,6 +560,18 @@ PrefabInstance:
     - target: {fileID: 3468040445239351841, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445422603274891392, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9553557
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445422603274891392, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445422603274891392, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
+      propertyPath: m_Color.r
+      value: 0.22075468
       objectReference: {fileID: 0}
     - target: {fileID: 5706696401337073730, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
       propertyPath: m_SizeDelta.y
@@ -563,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6775163819774402368, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -74.4
+      value: -64.9
       objectReference: {fileID: 0}
     - target: {fileID: 6775163819774402368, guid: 6c9ed9ec70ce5d343a013e1e99778882, type: 3}
       propertyPath: m_AnchoredPosition.y

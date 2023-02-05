@@ -250,6 +250,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IPContainer: {fileID: 0}
+  ActionGroups:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 565357467689773593}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8878209302750243650}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8878209302750243650}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5216258966203130246
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +306,7 @@ GameObject:
   - component: {fileID: 2733526102610238827}
   - component: {fileID: 5798092037448253423}
   - component: {fileID: 565357467689773593}
+  - component: {fileID: 8878209302750243650}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -339,8 +384,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionTime: 2
-  AlternateColor: {r: 1, g: 1, b: 1, a: 1}
+  TransitionTime: 0.3
+  AlternateColor: {r: 0, g: 1, b: 0.88860226, a: 1}
+--- !u!114 &8878209302750243650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5216258966203130246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionTime: 0.3
+  AlternateColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &8710184516104952059
 GameObject:
   m_ObjectHideFlags: 0
