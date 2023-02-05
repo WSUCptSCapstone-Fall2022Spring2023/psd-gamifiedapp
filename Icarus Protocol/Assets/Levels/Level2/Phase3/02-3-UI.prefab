@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransitionTime: 0.5
-  AlternateColor: {r: 1, g: 1, b: 1, a: 1}
+  AlternateColor: {r: 0, g: 1, b: 0.8941177, a: 1}
 --- !u!114 &7482052895272030314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransitionTime: 0.5
-  AlternateColor: {r: 1, g: 1, b: 1, a: 1}
+  AlternateColor: {r: 0, g: 1, b: 0.7176471, a: 1}
 --- !u!114 &4336627360271297917
 MonoBehaviour:
   m_ObjectHideFlags: 0
