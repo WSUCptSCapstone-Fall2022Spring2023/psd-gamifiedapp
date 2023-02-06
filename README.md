@@ -52,11 +52,12 @@ There are no add-ons for either the developer or player.
 
 ## Functionality
 
-Currently, the protoype contains what we consider an "alpha" build of the game. The sounds, graphics, and UI still need polishing, and the game's content is in an incomplete 'shell' state, but it is all playable and reflects the major mechanics of the game with a variety of fully playable levels.
+Currently, the protoype contains what we consider an "beta" build of the game. The sounds, graphics, and UI still need polishing, and the game's content is in an incomplete 'shell' state, but it is all playable and reflects the major mechanics of the game with a variety of fully playable levels. Finished content is mostly available for Levels 1 & 2
 
 ## Known Problems
 
-There are currently no known problems.
+Infinite loops in the Python currently crash the game.
+Using Shift-Enter instead of enter will make your code not work until you remove the newline and replace it with an ordinary one.
 
 
 ## Contributing
@@ -73,6 +74,7 @@ There are currently no known problems.
   * [Sprint 1 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint1/Produce-Sprint-Report/Documentation/Sprint1-Report.md)
   * [Sprint 2 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint2/Produce-Sprint-2-Report/Sprint_Reports/Sprint2-Report.md)
   * [Sprint 3 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint3/ProduceSprint3Report/Sprint_Reports/Sprint3-Report.md)
+  * [Sprint 4 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint4/MVP-Doc/Sprint_Reports/Sprint4-Report.md) 
 
 ## License
 
