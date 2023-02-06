@@ -1,6 +1,6 @@
 threatSize = 0
 threatEnergy = 0
-color = ""
+shieldColor = ""
 
 testCases = [
 [11,6,"blue"],
@@ -22,7 +22,7 @@ testCases = [
 def simulate():
 	global threatSize
 	global threatEnergy
-	global color
+	global shieldColor
 
 	threatEnergy = testCases[0][0]
 	threatSize = testCases[0][1]
@@ -43,7 +43,16 @@ def simulate():
 	
 	parent.pull_user_scope()
 
-	if color != correct:
+	if shieldColor == "blue":
+		environment.trigger_action_group(0)
+	elif shieldColor == "green":
+		environment.trigger_action_group(1)
+	elif shieldColor == "magenta":
+		environment.trigger_action_group(2)
+	else:
+		environment.trigger_action_group(3)
+
+	if shieldColor != correct:
 		parent.end_simulation(1)
 		return
 

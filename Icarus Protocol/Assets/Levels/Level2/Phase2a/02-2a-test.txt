@@ -28,6 +28,11 @@ def simulate():
 	switchingPower = testCases[0][0]
 	shieldStrain = testCases[0][1]
 
+	if switchingPower:
+		environment.trigger_action_group(0)
+	else:
+		environment.trigger_action_group(1)	
+
 	parent.push_user_scope()
 
 	testCases.pop(0)

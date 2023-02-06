@@ -15,6 +15,11 @@ public class LevelPlayerController : MonoBehaviour
     public UILayoutHandler UIHandler;
 
     /// <summary>
+    /// A reference to the gameobject that all phaseUI is instantiated under
+    /// </summary>
+    public GameObject PhaseUIContainer;
+
+    /// <summary>
     /// Stores the PhaseDefinition for the current phase.
     /// </summary>
     public PhaseDefinition PhaseDefinition;
@@ -65,6 +70,11 @@ public class LevelPlayerController : MonoBehaviour
     private GameObject phaseUI;
 
     /// <summary>
+    /// A timer that delays phase-to-phase transitions to give time for animations to play.
+    /// </summary>
+    private float transitionTimer;
+
+    /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
@@ -74,6 +84,31 @@ public class LevelPlayerController : MonoBehaviour
 
         IPContainer.OnSimulationExit += SimulationExited;
         InitializePhase(PhaseDefinition);
+    }
+
+    /// <summary>
+    /// Update is called every frame
+    /// </summary>
+    private void Update()
+    {
+        bool transitionReady = false;
+        if (transitionTimer > 0) 
+        {
+            transitionReady = true;
+            transitionTimer -= Time.deltaTime;
+        }
+
+        if (transitionReady && transitionTimer <= 0) 
+        {
+            if (PhaseDefinition.NextPhase != null)
+            {
+                InitializePhase(PhaseDefinition.NextPhase);
+            }
+            else
+            {
+                UIHandler.TransitionToLevelSelect(0);
+            }
+        }
     }
 
     /// <summary>
@@ -103,7 +138,7 @@ public class LevelPlayerController : MonoBehaviour
         //Create new phase UI
         if (PhaseDefinition.PhaseUI != null) 
         {
-            phaseUI = Instantiate(PhaseDefinition.PhaseUI, this.transform);
+            phaseUI = Instantiate(PhaseDefinition.PhaseUI, PhaseUIContainer.transform);
         }
     }
 
@@ -126,16 +161,12 @@ public class LevelPlayerController : MonoBehaviour
         {
             ProgressRecord progressRecord = PhaseDefinition.GetComponent<LevelDescription>().LevelProgress;
             progressRecord.PhaseCompletion.First(e => e.PhaseID == PhaseDefinition.ID).PhaseComplete = true;
-            if (PhaseDefinition.NextPhase != null)
+            if (PhaseDefinition.NextPhase == null)
             {
-                InitializePhase(PhaseDefinition.NextPhase);
-            }
-            else
-            {
-                UIHandler.TransitionToLevelSelect(3);
                 progressRecord.LevelComplete = true;
             }
             SaveHandler.Save();
+            transitionTimer = 3;
             Instantiate(SuccessMessage, transform);
         }
     }

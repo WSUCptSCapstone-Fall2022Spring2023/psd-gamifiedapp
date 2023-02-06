@@ -45,4 +45,5 @@ def simulate_tick():
 		shieldPower -= 5
 		if shieldPower <= 0:
 			shieldsActive = False
+			environment.trigger_action_group(0)
 	return 0

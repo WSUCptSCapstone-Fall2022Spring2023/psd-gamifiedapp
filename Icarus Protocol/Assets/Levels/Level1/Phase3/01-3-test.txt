@@ -17,6 +17,7 @@ def MixCoolant():
 		parent.end_simulation(3)
 	mixCoolantCalled = True
 	solutionCorrect = liquid == (11 * hiddenCoolant)
+	environment.trigger_action_group(0)
 
 def simulate():
 	global mixCoolantCalled

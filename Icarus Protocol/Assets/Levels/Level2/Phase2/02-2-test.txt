@@ -15,8 +15,10 @@ def SetPositive():
 	if currentPolarity > 0:
 		parent.end_simulation(1)
 	else:
+		environment.trigger_action_group(0)
 		currentPolarity = 1
 		switches += 1
+		parent.push_user_scope()
 
 def SetNegative():
 	global currentPolarity
@@ -30,8 +32,10 @@ def SetNegative():
 	if currentPolarity < 0:
 		parent.end_simulation(1)
 	else:
+		environment.trigger_action_group(1)
 		currentPolarity = -1
 		switches += 1
+		parent.push_user_scope()
 
 def simulate():
 	global switches
