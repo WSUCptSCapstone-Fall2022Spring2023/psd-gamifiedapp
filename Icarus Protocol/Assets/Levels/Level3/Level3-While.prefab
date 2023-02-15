@@ -69,15 +69,18 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 6daac631041107541a41a42859015e10, type: 3}
   ScriptFile: {fileID: 4900000, guid: fa9686308231f7545b517ce3c98b64a2, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
   - ChargeUp
-  - ChargeAmount
+  - chargeAmount
   - Fire
   FriendlyVariableNames:
   - ChargeUp()
-  - ChargeAmount()
+  - chargeAmount
   - Fire()
   NextPhase: {fileID: -8911603416966535569}
   FillInBlank: 0
@@ -99,6 +102,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: bdf0ea239cb1df943a2cd52b68f7a57f, type: 3}
   ScriptFile: {fileID: 4900000, guid: eb879b2614e88d64daf5d19f1746f095, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 2
   FastTickSpeed: 0.1
   ExposedMembers:
