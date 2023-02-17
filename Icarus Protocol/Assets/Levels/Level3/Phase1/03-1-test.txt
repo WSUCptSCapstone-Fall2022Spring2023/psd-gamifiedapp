@@ -1,0 +1,58 @@
+chargeState = 0
+chargeAmount = 0
+successfulFirings = 0
+timer = 10
+
+def ChargeUp():
+	global chargeState
+	global chargeAmount
+
+	chargeState += 1
+	chargeAmount = chargeState
+	parent.push_user_scope()
+
+
+def Fire():
+	global chargeState
+	global successfulFirings
+
+	if chargeState > 95 and chargeState < 105:
+		successfulFirings += 1
+		chargeState = 0
+	else:
+		parent.end_simulation(1)
+
+def simulate():
+	global successfulFirings
+	global chargeAmount
+	global chargeState
+
+	chargeAmount = chargeState
+	parent.push_user_scope()
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+		if "unexpected token '<newline>'" in repr(e):
+			parent.end_simulation(4)
+		elif "expected an indented block" in repr(e):
+			parent.end_simulation(5)
+		else:
+    			parent.end_simulation(-1,repr(e))
+		return
+
+	if successfulFirings >= 8:
+		parent.end_simulation(0)
+
+def simulate_tick():
+	global timer
+	global chargeState
+
+	timer -= 0.1
+	if timer <= 0:
+		parent.end_simulation(2)	
+
+	if chargeState > 150:
+		parent.end_simulation(3)
+
+	return 0

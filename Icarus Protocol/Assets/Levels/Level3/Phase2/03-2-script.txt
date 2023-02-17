@@ -1,0 +1,15 @@
+Now to set up autotargeting and get these guns firing! The firing sequence seems to be corrupted. I'll need to set them up to fire 'while' there are any targets left on the field. 
+
+Additionally, I'll need to use ion beams for small, fast moving projectiles, and fusion bombs for bigger threats.
+
+The logic for the firing sequence is a little more complex than what I've tackled so far, but I should have the tools to fix it.
+
+I've got access to the functions 'ThreatsRemaining()' which gives me the number of threats left near the ship. 
+
+I'll need keep firing 'while' 'ThreatsRemaining()' is greater than (>) 0.  'if' 'ThreatSize()' is less than (<) 5 I'll need to call 'FireIonbeam()', 'else' I'll have to call 'FireFusionBomb()'
+
+~ I fired the weapons, but I appear to have used the wrong one for the threat size. Inside the 'while' loop, I'll need to use an 'if/else' statement to 'FireIronBeam()' if 'ThreatSize() < 5' and 'else' 'FireFusionBomb()'
+
+~My code cycled, but failed to eliminate all of the threats. I'll need to keep firing the weapons as long as 'ThreatsRemaining() > 0'
+
+~The threat detection system short circuited. I need to make sure that I'm not firing weapons or using the 'ThreatSize()' once 'ThreatsRemaining()' is 0

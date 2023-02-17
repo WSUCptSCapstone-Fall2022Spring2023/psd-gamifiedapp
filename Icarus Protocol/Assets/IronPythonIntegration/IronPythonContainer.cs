@@ -34,11 +34,6 @@ public class IronPythonContainer : MonoBehaviour
     private ScriptScope mUserScope { get; set; }
 
     /// <summary>
-    /// A secondary isolated copy of the user scope that is used for running infinite loop tests before simlating.
-    /// </summary>
-    private ScriptScope mTestScope { get; set; }
-
-    /// <summary>
     /// Stores a private internal cache of the initialized level.
     /// </summary>
     public PhaseDefinition mCachedLevel { get; set; }
@@ -130,9 +125,7 @@ public class IronPythonContainer : MonoBehaviour
 
             //Dynamically initialize player scope and test scope.
             mUserScope = mEngine.CreateScope();
-            mTestScope = mEngine.CreateScope();
             SyncScopes(mLevelScope, mUserScope);
-            SyncScopes(mLevelScope, mTestScope);
         }
     }
 
@@ -163,6 +156,8 @@ public class IronPythonContainer : MonoBehaviour
         else
         {
             codeExceedsRuntimeLimit = false;
+            //Reinitialize level so that there are no side effects to the loop test
+            InitializeLevel(mCachedLevel);
         }
 
         if (!codeExceedsRuntimeLimit)

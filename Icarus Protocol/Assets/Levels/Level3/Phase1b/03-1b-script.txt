@@ -1,0 +1,9 @@
+Now that fusion bombs are functional, I also need to activate the ion beams.
+
+They have a complex "self-balancing" algorithm, which seems mostly intact, but a small part of it is sending out errors.
+
+This nested while loop is correct, but its conditions are not quite right. it's supposed to call 'AdjustAlignment()' while 'alignmentDelta' is greater than 0, and that logic is supposed to be nested inside a while loop that runs while 'coresAligned' is less than 40 
+
+~The current logic appears to not be fully aligning the cores. The internal loop should 'AdjustAlignment()' while 'alignmentDelta > 0'
+
+~Not all of the cores on the ion beam got aligned. The outer loop needs to loop the alignment logic while 'coresAligned < 40'
