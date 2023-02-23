@@ -1,0 +1,11 @@
+Before I can process the cores, I need to correct an error cropping up in the scanning script. The scanning script is supposed to use a different amount of scanning power depending on the fullness of the cell.
+
+I can calculate the correct scanning power by calling CellFullness(cellID) for each cell between 1 and 986 and storing that number in a variable. Then I run the calculation
+	'scanningPower = cellFullnessVariable * 178 / 19 - 9'
+and call 'Scan(cellID, scanningPower)' using the result of that equation and the cellID I want to scan.
+
+~The system threw some kind of error. Looks like I tried to get the fullness of a cellID that doesn't exist. I need to make sure my for loop only loops in the range(1,987)
+
+~My code tried to Scan a cell with the wrong scanningPower. I should review how I'm computing the power to pass into the scan function.
+
+~I skipped over a cell without scanning it. I need to make sure I'm calculating the scan power and calling Scan(cellID, scanningPower) for every cellID in the range.

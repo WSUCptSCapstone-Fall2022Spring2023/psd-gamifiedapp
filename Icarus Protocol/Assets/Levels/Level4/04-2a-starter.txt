@@ -1,0 +1,6 @@
+#core frequencies
+for i in range(1, 821349201):
+	#fluctuator frequencies
+	for j in range(1, 821349201):
+		if Resonates(i, j):
+			EnergyPulse(j / i)

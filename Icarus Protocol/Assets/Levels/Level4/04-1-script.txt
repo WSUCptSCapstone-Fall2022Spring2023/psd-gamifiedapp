@@ -1,6 +1,9 @@
 Well, the crew and ship aren't likely to die any time soon, but the emergency generators are being pushed to their limit. To continue repairing the ship, I'll need to tackle the reactor core. 
 
-First things first, I'll need to expose all of the antimatter cells for scanning. The main reactor holds 986 of them. I can expose one of the cells by using 'ExposeCell(cellID)' and passing in the id of the cell (a number from 1-986) 
+I'll need to expose all of the antimatter cells for scanning. The main reactor holds 986 of them. I can expose one of the cells by using 'ExposeCell(cellID)' and passing in the id of the cell (a number from 1-986)
+In other words 
+	ExposeCell(57)
+would expose antimatter cell #57 
 
 Instead of doing that manually, I should just expose them using a 'for' loop. A 'for' loop can be used to loop a certain number of times, or to loop through each item in a list.
 
@@ -8,7 +11,7 @@ To loop a certain number of times, the syntax looks something like...
 for number in range(start, end):
 	DoSomething(number)
 
-I should replace 'start' with my first number and 'end' with one more than the last number (I need to add one because the end number isn't included in the range)
+I should replace 'start' with my first number and 'end' the last number plus one. (I need to add one because the end number isn't included in the range)
 
 The current number the loop is on is stored in the variable 'number' in the example. If I need to remind myself how a finished for loop looks, I can find it in the manual. 
 
