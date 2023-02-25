@@ -1,0 +1,30 @@
+Well, the crew and ship aren't likely to die any time soon, but the emergency generators are being pushed to their limit. To continue repairing the ship, I'll need to tackle the reactor core. 
+
+I'll need to expose all of the antimatter cells for scanning. The main reactor holds 986 of them. I can expose one of the cells by using 'ExposeCell(cellID)' and passing in the id of the cell (a number from 1-986)
+In other words 
+	ExposeCell(57)
+would expose antimatter cell #57 
+
+Instead of doing that manually, I should just expose them using a 'for' loop. A 'for' loop can be used to loop a certain number of times, or to loop through each item in a list.
+
+To loop a certain number of times, the syntax looks something like...
+for number in range(start, end):
+	DoSomething(number)
+
+I should replace 'start' with my first number and 'end' the last number plus one. (I need to add one because the end number isn't included in the range)
+
+The current number the loop is on is stored in the variable 'number' in the example. If I need to remind myself how a finished for loop looks, I can find it in the manual. 
+
+To to expose all the cells I'll need to loop 'for' each number in 'range(1,987)' and call 'ExposeCell(cellID)' with each number.
+
+~The system threw some kind of error. Looks like I tried to expose a cell that didn't exist. I need to make sure that my for loop only runs in the 'range(1,987)' (because of how range() works 987 won't be included)
+
+~The system threw some kind of error saying that I tried to expose the same cell multiple times. I should make sure that my loop is using the correct range and that I'm only calling 'ExposeCell(cellID)' once inside the loop.
+
+~That didn't seem to work properly. The system shows that some of the cells are still not exposed. I need to make sure that I'm covering all of them.
+
+~TypeError('ExposeCell() takes exactly 1 argument',)
+ExposeCell(cellID) needs to be told which cell to expose. In a for loop, the number or list item being looped over is stored in a variable. For instance, in the loop:
+	for number in range(start, end):
+		DoSomething()
+the currentNumber is stored in the variable 'number'.

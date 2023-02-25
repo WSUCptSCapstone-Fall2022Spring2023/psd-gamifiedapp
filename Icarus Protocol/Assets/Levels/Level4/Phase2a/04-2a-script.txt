@@ -1,0 +1,6 @@
+All the cores are sound and ready to fire. That means the only error left in the system is in the core itself. There's something wrong with a small portion of the core energy fluctuator. The algorithm is complex, but luckily there's only one small error somewhere in this subscript. 
+
+This section is intended to loop for each frequency in the fluctuator, and also for each frequency of the power core until it finds a frequency for which the cores resonate. Then it fires an energy pulse through the core using the core frequency divided by the fluctuator frequency as the power. The outer loop checks the core frequencies. The inner loop checks fluctuator frequencies.
+Most of the code is correct, but it contains one small error that needs to be fixed.
+
+~The code reports that I'm surging the wrong amount of power. I should make sure I didn't mix up my loop variables when calling EnergyPulse(strength)

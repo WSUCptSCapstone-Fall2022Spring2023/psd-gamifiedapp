@@ -1,0 +1,31 @@
+wrongPulse = False
+maxCoreFrequency = 100
+maxFluctuatorFrequency = 100
+
+def Resonates(freq1, freq2):
+	return freq1 == 54 and freq2 == 25
+
+def EnergyPulse(strength):
+	global wrongPulse
+
+	if strength != (54 / 25):
+		wrongPulse = True
+	
+
+def simulate():
+	global wrongPulse
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+    		parent.end_simulation(-1, repr(e) + "\nThis unexpected error probably means the fix I tried didn't work. I should reset the code and try something different.")
+		return
+
+	if wrongPulse:
+		parent.end_simulation(1)
+	else:
+		parent.end_simulation(0)
+	
+
+def simulate_tick():
+	return 0

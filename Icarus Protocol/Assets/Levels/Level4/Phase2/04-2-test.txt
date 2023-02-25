@@ -1,0 +1,48 @@
+damagedCells = [536, 429, 901, 1, 27, 615, 99, 842, 215, 886]
+emptyCells = [281, 609, 177, 547, 176]
+badDispose = False
+
+def CellFullness(cellID):
+	global emptyCells
+	if cellID in emptyCells:
+		return (cellID % 9) + 1
+	else:
+		return (cellID % 70) + 20
+
+def CellDamaged(cellID):
+	global damagedCells
+	return cellID in damagedCells
+
+def Dispose(cellID):
+	global badDispose
+	global damagedCells
+	global emptyCells
+
+	if cellID in damagedCells:
+		damagedCells.remove(cellID)
+	elif cellID in emptyCells:
+		emptyCells.remove(cellID) 
+	else:
+		badDispose = True
+
+def simulate():
+	global emptyCells
+	global damagedCells
+	global badDispose
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+    		parent.end_simulation(-1, repr(e))
+		return
+
+	if badDispose:
+		parent.end_simulation(1)
+	elif len(emptyCells) > 0 or len(damagedCells) > 0:
+		parent.end_simulation(2)
+	else:
+		parent.end_simulation(0)
+	
+
+def simulate_tick():
+	return 0
