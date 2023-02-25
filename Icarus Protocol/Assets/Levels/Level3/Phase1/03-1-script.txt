@@ -1,0 +1,23 @@
+It's good that shields are operational, but they won't hold forever. When the ship is fully operational it relies on being able to shoot larger hazards to break them up and deflect them. 
+
+We should have just enough power to activate the artillery systems to begin autotargeting. It looks like the firing sequence is corrupted, however.
+
+I'll need to call the 'ChargeUp()' function repeatedly until the gun is 100% charged, and then call 'Fire()' 
+I could just call the 'ChargeUp()' function manually a few hundred times, but it's easiest to just use a 'while' loop.
+
+A 'while' statement runs the code block tabbed beneath it over and over as long as its condition is true.
+Ex.
+	while Condition():
+		RunCode()
+
+I can review examples in the manual if I need to. To solve this problem I'll need to call 'ChargeUp()' while 'chargeAmount < 100' and then outside of the repeating code block (i.e. after the while loop and not tabbed in) I'll need to call 'Fire()'
+
+~It looks like the cannon dry-fired. That means that I must have called 'Fire()' without calling 'ChargeUp()' enough times. 
+
+~Hmmm... the cannon isn't firing, or it isn't firing fast enough. I need to make sure that every time my code is run it charges the cannon fully using a 'while' loop and fires it once.
+
+~Phew that was close. I almost overloaded the cannon. I have to make sure that the code exits the while loop and calls 'Fire()' once 'ChargeAmount()' is greater than 100. 
+
+~ Just like with 'if statments' I need to make sure to put a ':' after the true or false condition of the while loop. I can review the code in the manual for details.
+
+~ Similar to 'if statements', the code that runs within a 'while' loop needs to be indented in. I can review what that looks like in the manual. 

@@ -1,0 +1,4 @@
+while coresAligned < :
+	while alignmentDelta < 0:
+		AdjustAlignment()
+	NextCore()

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 6636767413296342602}
   - component: {fileID: -6341351023651436294}
   - component: {fileID: 4961718171917905431}
+  - component: {fileID: 2390561674646231918}
   - component: {fileID: 5896399983947259785}
+  - component: {fileID: 1949935136350187120}
   m_Layer: 0
   m_Name: Level4-For
   m_TagString: Level
@@ -65,15 +67,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 04-1-for
   PhaseUI: {fileID: 0}
-  TestFile: {fileID: 4900000, guid: 2c911ac28e3e4654ca56de3419b2b59e, type: 3}
-  ScriptFile: {fileID: 4900000, guid: fd8124b8b77e0e840999c0a084d0dc9b, type: 3}
+  TestFile: {fileID: 4900000, guid: 5079ab0b8c5a7df4c8947b4ea1ce87c9, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 1d4d3fe3a42799f4883530c3eb689fdb, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
   - ExposeCell
   FriendlyVariableNames:
   - ExposeCell(cellID)
+  NextPhase: {fileID: 2390561674646231918}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &2390561674646231918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 04-1a-moreFor
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 06649f115b46760469092d5b0ca96508, type: 3}
+  ScriptFile: {fileID: 4900000, guid: c0fa04d327b26544ca8c1cc355c118e3, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - CellFullness
+  - Scan
+  FriendlyVariableNames:
+  - CellFullness(cellID)
+  - Scan(cellID, scanPower)
   NextPhase: {fileID: 5896399983947259785}
   FillInBlank: 0
   starterCode: {fileID: 0}
@@ -91,9 +127,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 04-2-forif
   PhaseUI: {fileID: 0}
-  TestFile: {fileID: 4900000, guid: 2e7df3a5f99b4ad4da714a14aad2ed2a, type: 3}
-  ScriptFile: {fileID: 4900000, guid: 273ccefa52181d94d8d7928572074304, type: 3}
+  TestFile: {fileID: 4900000, guid: f3678e4130763e9439247598a64578d2, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 344a72ffee49db74fb771e91342f3d49, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -104,6 +143,41 @@ MonoBehaviour:
   - CellFullness(cellID)
   - CellDamaged(cellID)
   - Dispose(cellID)
-  NextPhase: {fileID: 0}
+  NextPhase: {fileID: 1949935136350187120}
   FillInBlank: 0
   starterCode: {fileID: 0}
+--- !u!114 &1949935136350187120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 04-2a-nestedFor
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 2a60a09c5a5e5eb4bb9440c1ed17184b, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 76ff1e9c6356db9459f406f16be6a1c2, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0
+  FastTickSpeed: 0
+  ExposedMembers:
+  - Resonates
+  - EnergyPulse
+  - maxFluctuatorFrequency
+  - maxCoreFrequency
+  FriendlyVariableNames:
+  - Resonates(coreFreq, fluctFreq)
+  - EnergyPulse(strength)
+  - maxFluctuatorFrequency
+  - maxCoreFrequency
+  NextPhase: {fileID: 0}
+  FillInBlank: 0
+  starterCode: {fileID: 4900000, guid: c3b130f4ca746834da342e3b80099c1b, type: 3}

@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 6636767413296342602}
   - component: {fileID: -6341351023651436294}
   - component: {fileID: 4961718171917905431}
+  - component: {fileID: 4444470669453815777}
+  - component: {fileID: 2877978652110872294}
   - component: {fileID: -8911603416966535569}
+  - component: {fileID: 6288016323992791358}
   m_Layer: 0
   m_Name: Level3-While
   m_TagString: Level
@@ -32,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-6341351023651436294
 MonoBehaviour:
@@ -69,19 +72,92 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 6daac631041107541a41a42859015e10, type: 3}
   ScriptFile: {fileID: 4900000, guid: fa9686308231f7545b517ce3c98b64a2, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
   - ChargeUp
-  - ChargeAmount
+  - chargeAmount
   - Fire
   FriendlyVariableNames:
   - ChargeUp()
-  - ChargeAmount()
+  - chargeAmount
   - Fire()
-  NextPhase: {fileID: -8911603416966535569}
+  NextPhase: {fileID: 4444470669453815777}
   FillInBlank: 0
   starterCode: {fileID: 0}
+--- !u!114 &4444470669453815777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 03-1a-multiWhile
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 277feba7609d1324ba0fbabccb618d94, type: 3}
+  ScriptFile: {fileID: 4900000, guid: a62a6833838e09a4ab9f4a0aaf135d67, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - fillPercent
+  - residue
+  - FlushResidue
+  - InjectAntimatter
+  FriendlyVariableNames:
+  - fillPercent
+  - residue
+  - FlushResidue()
+  - InjectAntimatter()
+  NextPhase: {fileID: 2877978652110872294}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &2877978652110872294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 03-1b-nestedWhile
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 79a83470f77db2149bb5a845771deaa5, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 60aa0a930fcf0724496ad6f5f0043622, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - coresAligned
+  - alignmentDelta
+  - AdjustAlignment
+  - NextCore
+  FriendlyVariableNames:
+  - coresAligned
+  - alignmentDelta
+  - AdjustAlignment()
+  - NextCore()
+  NextPhase: {fileID: -8911603416966535569}
+  FillInBlank: 0
+  starterCode: {fileID: 4900000, guid: 0ca29e7dd1e831a44a9312307dfcbecb, type: 3}
 --- !u!114 &-8911603416966535569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +175,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: bdf0ea239cb1df943a2cd52b68f7a57f, type: 3}
   ScriptFile: {fileID: 4900000, guid: eb879b2614e88d64daf5d19f1746f095, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 2
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -107,10 +186,43 @@ MonoBehaviour:
   - FireIonBeam
   - FireFusionBomb
   FriendlyVariableNames:
-  - ThreatsRemaining()
-  - ThreatSize()
+  - 'ThreatsRemaining() : num'
+  - 'ThreatSize() : num'
   - FireIonBeam()
   - FireFusionBomb()
+  NextPhase: {fileID: 6288016323992791358}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &6288016323992791358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 03-2a-whileFunctions
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 4db47ecacf3189e4fb2f81bed3fb5e34, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 3df7ae1d2e083fa41bc8dc2cba750a8a, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - threatsPresent
+  - GetTarget
+  - SetTarget
+  FriendlyVariableNames:
+  - threatsPresent
+  - 'GetTarget() : num'
+  - SetTarget(num)
   NextPhase: {fileID: 0}
   FillInBlank: 0
   starterCode: {fileID: 0}

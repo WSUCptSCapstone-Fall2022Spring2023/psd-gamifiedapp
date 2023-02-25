@@ -1,0 +1,57 @@
+residue = True
+fillPercent = 0
+
+residueBacking = 100
+fillPercentBacking = 0
+
+errorCode = 0
+
+def FlushResidue():
+	global residueBacking
+	global residue
+
+	residueBacking -= 1.34
+	if residueBacking <= 0:
+		residue = False
+	parent.push_user_scope()
+
+def InjectAntimatter():
+	global fillPercentBacking
+	global residueBacking
+	global fillPercent
+	global errorCode
+
+	if residueBacking > 0:
+		errorCode = 1
+	fillPercentBacking += 2.34
+	fillPercent = fillPercentBacking
+	parent.push_user_scope()
+
+def simulate():
+	global errorCode
+	global fillPercentBacking
+	global residueBacking
+	global fillPercent
+	global residue
+	
+	residue = residueBacking
+	fillPercent = fillPercentBacking
+	parent.push_user_scope()
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+    		parent.end_simulation(-1,repr(e))
+		return
+
+	if errorCode == 1:
+		parent.end_simulation(1)
+	elif fillPercentBacking < 90:
+		parent.end_simulation(2)
+	elif fillPercentBacking > 100:
+		parent.end_simulation(3)
+	else:
+		parent.end_simulation(0)
+
+def simulate_tick():
+	return 0

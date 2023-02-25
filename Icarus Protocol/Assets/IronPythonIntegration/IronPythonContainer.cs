@@ -3,6 +3,7 @@ using Microsoft.Scripting.Hosting;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 /// <summary>
@@ -41,6 +42,11 @@ public class IronPythonContainer : MonoBehaviour
     /// Is true if user code is being simulated, false otherwise.
     /// </summary>
     private bool mSimulating { get; set; }
+
+    /// <summary>
+    /// A flag used to indicate if the code passed or failed the "infinite loop" test before simulating.
+    /// </summary>
+    private bool codeExceedsRuntimeLimit { get; set; }
 
     /// <summary>
     /// The timer variable used to time how often user code is simulated.
@@ -87,6 +93,7 @@ public class IronPythonContainer : MonoBehaviour
             if (mCodeLoopTimer <= 0)
             {
                 mCodeLoopTimer = mCachedLevel.CodeLoopDuration;
+
                 mEngine.Execute("simulate()", mLevelScope);
             }
             else
@@ -116,7 +123,7 @@ public class IronPythonContainer : MonoBehaviour
             ScriptSource source = mEngine.CreateScriptSourceFromString(level.TestFile.text);
             source.Execute(mLevelScope);
 
-            //Dynamically initialize player scope
+            //Dynamically initialize player scope and test scope.
             mUserScope = mEngine.CreateScope();
             SyncScopes(mLevelScope, mUserScope);
         }
@@ -130,7 +137,33 @@ public class IronPythonContainer : MonoBehaviour
         mCachedUserCode = userCode;
         if (mCachedLevel == null) return;
         InitializeLevel(mCachedLevel);
-        mSimulating = true;
+
+        //Test for infinite loops in the test scope by running user's code isolated to a separate thread
+        //It runs in a different scope as well so it doesn't interfere with level logic in any way, just tests for runtime exceeded.
+        Thread testThread = new Thread(() => execute_user_code());
+        testThread.Start();
+        DateTime startTime = DateTime.Now;
+        while (!testThread.ThreadState.HasFlag(ThreadState.Stopped) && DateTime.Now < startTime.AddMilliseconds(500))
+        {
+            Thread.Sleep(10);
+        }
+        if (!testThread.ThreadState.HasFlag(ThreadState.Stopped))
+        {
+            codeExceedsRuntimeLimit = true;
+            testThread.Abort();
+            OnSimulationExit(this, (-1, "This code locks up longer than it should. The most likely culprit is an infinite loop somewhere in the logic."));
+        }
+        else
+        {
+            codeExceedsRuntimeLimit = false;
+            //Reinitialize level so that there are no side effects to the loop test
+            InitializeLevel(mCachedLevel);
+        }
+
+        if (!codeExceedsRuntimeLimit)
+        {
+            mSimulating = true;
+        }
     }
 
     /// <summary>

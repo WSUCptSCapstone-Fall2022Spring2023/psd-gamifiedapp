@@ -27,4 +27,16 @@ public class SimulateButtonScript : MonoBehaviour
         IPContainer.InitializeLevel(PhaseDefinition);
         IPContainer.Simulate(IDE.GetPlayerCode());
     }
+
+
+    /// <summary>
+    /// Called every frame
+    /// </summary>
+    public void Update()
+    {
+        if ((Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.S))) 
+        {
+            Execute();
+        }
+    }
 }

@@ -1,0 +1,13 @@
+I'm only getting one more error from the artillery system. It says that some of the code is missing from the targeting sequence.
+
+The missing bit of logic here is supposed to help feed targeting data to the guns. It's supposed to  call 'GetTarget()' to get the target coordinates. It should store that value in a variable, and then pass that variable into 'SetTarget(position)'. It needs to keep doing this while 'threatsPresent' is True
+
+~There are still threats around the ship when my simulation finishes. I need to make sure that I'm doing the logic as long as 'threatsPresent == True'
+*HINT: You can actually pass the return value of one function directly into another without a variable like:
+	SetTarget(GetTarget())*
+
+~I called 'SetTarget()' but didn't pass it the correct coordinates. I need to make sure to call 'GetTarget' each time and pass that number into 'SetTarget'
+*HINT: You can actually pass the return value of one function directly into another without a variable like:
+	SetTarget(GetTarget())*
+
+~'GetTarget()' threw an error. I need to make sure I exit the loops and stop calling it once 'threatPresent' isn't True

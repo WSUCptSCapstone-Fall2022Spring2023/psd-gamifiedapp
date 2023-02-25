@@ -1,0 +1,9 @@
+I'm detecting another issue with the artillery, this time in the Fusion Bomb Loaders. They're responsible for loading antimatter into the fusion bombs to destroy large threats.
+
+Loading fusion bombs is a two step process. While 'residue' is true, it should call 'FlushResidue()' then while the 'fillPercent' is less than 90, it should call 'InjectAntimatter'. My approach for this challenge should involve two separate 'while' loops
+
+~I started loading antimatter before clearing out all of the residue. I'll need to completely flush the system each time before calling 'InjectAntimatter' 
+
+~That last fusion bomb didn't completely fill. I need to make sure I'm calling InjectAntimatter as long as 'fillPercent' is less than (<) 90.
+
+~The antimatter injector just threw an error. I must have overfilled a bomb casing. I should make sure I'm only filling the shell while 'fillPercent' is less than (<) 90

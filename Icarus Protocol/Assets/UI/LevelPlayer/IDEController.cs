@@ -55,7 +55,7 @@ public class IDEController : MonoBehaviour
         }
         else 
         {
-            return RawInputField.text;
+            return RawInputField.text.Replace("\v", "");
         }      
     }
 
