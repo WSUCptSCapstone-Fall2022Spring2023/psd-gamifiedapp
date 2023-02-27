@@ -10,6 +10,11 @@ using UnityEngine;
 public class LevelPlayerController : MonoBehaviour
 {
     /// <summary>
+    /// Stores a reference to the playtest logger for adding log values
+    /// </summary>
+    public PlaytestLogger LoggerRef;
+
+    /// <summary>
     /// Handles general UI layout transitions.
     /// </summary>
     public UILayoutHandler UIHandler;
@@ -106,7 +111,7 @@ public class LevelPlayerController : MonoBehaviour
             }
             else
             {
-                UIHandler.TransitionToLevelSelect(0);
+                UIHandler.TransitionToLevelSelect(0);             
             }
         }
     }
@@ -151,11 +156,17 @@ public class LevelPlayerController : MonoBehaviour
         {
             OutputController.PrintFailureResponse(info.Item1);
             Instantiate(FailureMessage, transform);
+
+            //Logs the failure, the phase ID, and the exit code
+            LoggerRef.CreateLog(LogTypes.PHASE_FAILURE, $"{PhaseDefinition.ID}, {info.Item1}");
         }
         else if (info.Item1 == -1) 
         {
             OutputController.PrintException(info.Item2);
             Instantiate(FailureMessage, transform);
+
+            //Logs the failure, the phase ID, the exit code and the exception message.
+            LoggerRef.CreateLog(LogTypes.PHASE_FAILURE, $"{PhaseDefinition.ID}, {info.Item1}, {info.Item2.Replace(",", ";")}");
         }
         else
         {
@@ -168,6 +179,9 @@ public class LevelPlayerController : MonoBehaviour
             SaveHandler.Save();
             transitionTimer = 3;
             Instantiate(SuccessMessage, transform);
+
+            //Logs the success, and the phase ID
+            LoggerRef.CreateLog(LogTypes.PHASE_SUCCESS, $"{PhaseDefinition.ID}");
         }
     }
 

@@ -75,6 +75,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: a2d4aa8cc856e6c479b311678123fcd2, type: 3}
   ScriptFile: {fileID: 4900000, guid: 67b4a15cfec959c4ba25d05f1def0a09, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 2
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -101,6 +104,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: ab9454d8790a5444ea3e1e8cc80265d3, type: 3}
   ScriptFile: {fileID: 4900000, guid: e8583b15bfd6d334f84a4da071eeeca3, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -131,6 +137,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 2368f87a80411ab47b9067fcf3f7450f, type: 3}
   ScriptFile: {fileID: 4900000, guid: fbb81e0fa54e2bd40986c2d2b3aa71f8, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 3
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -161,6 +170,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 9f2c91bea2d05584ca0f31c1c9e3d234, type: 3}
   ScriptFile: {fileID: 4900000, guid: 03b07cbf572dfda4383e22eaf8a61389, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 1
   ExposedMembers:
@@ -190,11 +202,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 01-2-useVariable
+  ID: 01-3-useVariable
   PhaseUI: {fileID: 3780883625501654787, guid: f34c7423a77e38343b7f881eaaa36f3f, type: 3}
   TestFile: {fileID: 4900000, guid: cfb71a47b44749341b3c92f81db7d606, type: 3}
   ScriptFile: {fileID: 4900000, guid: ddb4b7249f099e640b6bdc35b044074b, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 2
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -225,6 +240,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 61cbbf516f818504a8d0ef6340038cbb, type: 3}
   ScriptFile: {fileID: 4900000, guid: 29a4be58e99258d4bb384fbccfc1b6e1, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 100
   FastTickSpeed: 0.05
   ExposedMembers:
@@ -251,6 +269,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 71b952a17bd9ec9429c12f49a64ef61e, type: 3}
   ScriptFile: {fileID: 4900000, guid: 3fd0db1339c11ae43a24fe9a5bd9e732, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 0.1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -279,6 +300,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 94f52db37da04424cb8059de8eb4c773, type: 3}
   ScriptFile: {fileID: 4900000, guid: 85d299910a497574d8b0df035527a0b5, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
