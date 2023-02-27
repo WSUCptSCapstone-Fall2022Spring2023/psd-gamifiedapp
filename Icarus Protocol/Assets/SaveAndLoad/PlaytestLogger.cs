@@ -20,6 +20,11 @@ public enum LogTypes {
 public class PlaytestLogger : MonoBehaviour
 {
     /// <summary>
+    /// Checked on in the inspector if logging is enabled, false otherwise.
+    /// </summary>
+    public bool loggingEnabled;
+
+    /// <summary>
     /// Caches the path to the logfile
     /// </summary>
     private string logPath { get; set; }
@@ -29,9 +34,11 @@ public class PlaytestLogger : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        string savePath = Application.persistentDataPath + $"/logs";
-        Directory.CreateDirectory(savePath);
-        logPath = savePath + $"/{DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss")}-log.csv";
+        if (loggingEnabled) {
+            string savePath = Application.persistentDataPath + $"/logs";
+            Directory.CreateDirectory(savePath);
+            logPath = savePath + $"/{DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss")}-log.csv";
+        }
     }
 
     /// <summary>
@@ -39,7 +46,9 @@ public class PlaytestLogger : MonoBehaviour
     /// </summary>
     public void CreateLog(LogTypes type, string context)
     {
-        File.AppendAllText(logPath, $"{type}, {Time.realtimeSinceStartup}, {context}\n");
-        Debug.Log($"Added log entry to {logPath}");
+        if (loggingEnabled) {
+            File.AppendAllText(logPath, $"{type}, {Time.realtimeSinceStartup}, {context}\n");
+            Debug.Log($"Added log entry to {logPath}");
+        }
     }
 }
