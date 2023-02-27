@@ -50,6 +50,7 @@ MonoBehaviour:
   levelDescription: The reactor is running, but only at about 83.4% capacity. I should
     be able to improve that by improving how it surges its cells.
   Prerequisites: []
+  Music: 0
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +68,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 6400fd466343100429bb389c13d41f32, type: 3}
   ScriptFile: {fileID: 4900000, guid: 617f4b4cd3614484186084cd45b1fa85, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:

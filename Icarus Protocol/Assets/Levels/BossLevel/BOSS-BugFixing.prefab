@@ -51,6 +51,7 @@ MonoBehaviour:
   levelName: DAEDALUS
   levelDescription: ERROR ERROR ERROR
   Prerequisites: []
+  Music: 2
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +69,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 2a096d62af1402244a897a981815a727, type: 3}
   ScriptFile: {fileID: 4900000, guid: baa7253bc94e7a64f926adb908fb175b, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -98,6 +102,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: ef99d5046f91b6c43be07a7d929d827d, type: 3}
   ScriptFile: {fileID: 4900000, guid: e6606dcdae8a44049ad7587f7a6d1b85, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
@@ -126,6 +133,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 1890f946bdf4de54f921143bbddd9e59, type: 3}
   ScriptFile: {fileID: 4900000, guid: 3aa81bcea739bcc41bb7687c2e143fb8, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 0
   FastTickSpeed: 0
   ExposedMembers:
