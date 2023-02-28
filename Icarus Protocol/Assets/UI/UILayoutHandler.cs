@@ -80,6 +80,8 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private TransitionType queuedTransition = TransitionType.NONE;
 
+    public AudioHandlerBehavior AudioHandlerBehavior;
+
     /// <summary>
     /// Transitions from the level select to the level player.
     /// </summary>
@@ -184,6 +186,7 @@ public class UILayoutHandler : MonoBehaviour
         ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_PLAYER;
+        AudioHandlerBehavior.SwitchMusic(targetPhase.GetComponent<LevelDescription>().Music);
         LoggerRef.CreateLog(LogTypes.LEVEL_START, targetPhase.name);
     }
 
@@ -204,6 +207,8 @@ public class UILayoutHandler : MonoBehaviour
         ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_SELECT;
+
+        AudioHandlerBehavior.SwitchMusic(AudioHandlerBehavior.MusicType.Lofi);
     }
 
     /// <summary>
@@ -222,6 +227,8 @@ public class UILayoutHandler : MonoBehaviour
         ManualButton.SetActive(false);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.START_MENU;
+
+        AudioHandlerBehavior.SwitchMusic(AudioHandlerBehavior.MusicType.Epic);
     }
 
     /// <summary>

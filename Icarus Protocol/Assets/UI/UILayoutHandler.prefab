@@ -59,6 +59,7 @@ MonoBehaviour:
   ManualButton: {fileID: 1409870597159930340}
   CurrentState: 0
   CurrentOverlay: 0
+  AudioHandlerBehavior: {fileID: 8972692891744292584, guid: a187c698d483a2d48bea85700cf1d84d, type: 3}
 --- !u!114 &711152561
 MonoBehaviour:
   m_ObjectHideFlags: 0

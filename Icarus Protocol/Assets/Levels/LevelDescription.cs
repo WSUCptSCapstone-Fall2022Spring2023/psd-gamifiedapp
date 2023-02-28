@@ -34,4 +34,9 @@ public class LevelDescription: MonoBehaviour
     /// The progress record representing progress on this level.
     /// </summary>
     public ProgressRecord LevelProgress = new ProgressRecord();
+
+    /// <summary>
+    /// The type of music to be played for this level
+    /// </summary>
+    public AudioHandlerBehavior.MusicType Music;
 }
