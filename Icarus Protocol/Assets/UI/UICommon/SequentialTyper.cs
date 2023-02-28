@@ -19,6 +19,16 @@ public class SequentialTyper : MonoBehaviour
     public float TextDelay;
 
     /// <summary>
+    /// Stores a reference to the sound to play when each letter is printed. No sound is played if null.
+    /// </summary>
+    public AudioSource TextSound;
+
+    /// <summary>
+    /// Because playing text audio every letter is too intense, this interval indicates how many letters to print in between each playing of the sound.
+    /// </summary>
+    public int TextSoundInterval = 1;
+
+    /// <summary>
     /// The private queue of characters to write sequentially.
     /// </summary>
     private string textQueue = "";
@@ -27,6 +37,11 @@ public class SequentialTyper : MonoBehaviour
     /// The time since last character was printed.
     /// </summary>
     private float textTimer;
+
+    /// <summary>
+    /// The number of characters printed in this job;
+    /// </summary>
+    private int currentTextIndex;
 
     /// <summary>
     /// Stars a new typing job, which will clear text and begin typing given text sequentially.
@@ -43,6 +58,7 @@ public class SequentialTyper : MonoBehaviour
 
         TextReference.text = "";
         textQueue = text;
+        currentTextIndex = 0;
     }
 
     /// <summary>
@@ -55,9 +71,11 @@ public class SequentialTyper : MonoBehaviour
             textTimer += Time.deltaTime;
             if (textTimer > TextDelay) 
             {
-                textTimer = 0;
+                currentTextIndex++;
+                if (TextSound != null && currentTextIndex % TextSoundInterval == 0 && !char.IsWhiteSpace(textQueue[0])) TextSound.Play();
+                textTimer = char.IsWhiteSpace(textQueue[0]) ? -TextDelay : 0;
                 TextReference.text += textQueue[0];
-                textQueue = textQueue[1..];
+                textQueue = textQueue[1..];   
             }
         }
     }
