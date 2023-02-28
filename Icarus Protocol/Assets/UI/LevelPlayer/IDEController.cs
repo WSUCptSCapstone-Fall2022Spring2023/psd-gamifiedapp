@@ -39,6 +39,16 @@ public class IDEController : MonoBehaviour
     private List<GenericSegment> segments = new List<GenericSegment>();
 
     /// <summary>
+    /// Stores the text from the last initialization
+    /// </summary>
+    private string cachedText = "";
+
+    /// <summary>
+    /// Stores the fill in the blank flag from the last initialization 
+    /// </summary>
+    private bool cachedFillInBlank = false;
+
+    /// <summary>
     /// Packages and returns the player code string from the current active code source.
     /// </summary>
     /// <returns></returns>
@@ -66,6 +76,8 @@ public class IDEController : MonoBehaviour
     /// <param name="fillInBlank"></param>
     public void InitializeStarterCode(string text, bool fillInBlank)
     {
+        cachedText = text.Replace("\r","");
+        cachedFillInBlank = fillInBlank;
         fillInBlankMode = fillInBlank;
         StaticText.text = "";
         RawInputField.text = "";
@@ -86,8 +98,16 @@ public class IDEController : MonoBehaviour
         else 
         {
             RawInputField.enabled = true;
-            RawInputField.text = text;
+            RawInputField.text = text.Replace("\r", "");
         }
+    }
+
+    /// <summary>
+    /// Reinitializes the starter code from the cached values.
+    /// </summary>
+    public void ReinitStarterCode() 
+    {
+        InitializeStarterCode(cachedText, cachedFillInBlank);
     }
 
     /// <summary>

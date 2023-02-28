@@ -15,6 +15,11 @@ public class OutputController : MonoBehaviour
     public SequentialTyper Text;
 
     /// <summary>
+    /// Exposes whether or not it's possible to advance further to outside components.
+    /// </summary>
+    public bool CanAdvanceFurther { get { return mShowingFailure || mScriptIndex < ScriptPrompts.Count; } }
+
+    /// <summary>
     /// The prompts that are run through when the phase loads
     /// </summary>
     private List<string> ScriptPrompts { get; set; } = new List<string>();

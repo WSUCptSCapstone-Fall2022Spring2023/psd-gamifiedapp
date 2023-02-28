@@ -22,6 +22,11 @@ public enum TransitionType
 public class UILayoutHandler : MonoBehaviour
 {
     /// <summary>
+    /// Stores a reference to the logger for playtest logging.
+    /// </summary>
+    public PlaytestLogger LoggerRef;
+    
+    /// <summary>
     /// A reference to the level select UI
     /// </summary>
     public GameObject LevelSelectUI;
@@ -181,8 +186,8 @@ public class UILayoutHandler : MonoBehaviour
         ManualButton.SetActive(true);
         queuedTransition = TransitionType.NONE;
         CurrentState = TransitionType.LEVEL_PLAYER;
-
         AudioHandlerBehavior.SwitchMusic(targetPhase.GetComponent<LevelDescription>().Music);
+        LoggerRef.CreateLog(LogTypes.LEVEL_START, targetPhase.name);
     }
 
     /// <summary>
@@ -190,6 +195,10 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void LevelSelectTransition()
     {
+        if (CurrentState == TransitionType.LEVEL_PLAYER) 
+        {
+            LoggerRef.CreateLog(LogTypes.LEVEL_EXIT, "");
+        }
 
         DisableAllLayouts();
 
@@ -207,6 +216,11 @@ public class UILayoutHandler : MonoBehaviour
     /// </summary>
     private void StartMenuTransition()
     {
+        if (CurrentState == TransitionType.LEVEL_PLAYER)
+        {
+            LoggerRef.CreateLog(LogTypes.LEVEL_EXIT, "");
+        }
+
         DisableAllLayouts();
 
         StartMenuUI.SetActive(true);
@@ -259,11 +273,13 @@ public class UILayoutHandler : MonoBehaviour
         {
             ManualUI.SetActive(true);
             CurrentOverlay = TransitionType.MANUAL;
+            LoggerRef.CreateLog(LogTypes.MANUAL_ACCESS, "");
         }
         else 
         {
             ManualUI.SetActive(false);
             CurrentOverlay = TransitionType.NONE;
+            LoggerRef.CreateLog(LogTypes.MANUAL_EXIT, "");
         }
         queuedTransition = TransitionType.NONE;
     }
