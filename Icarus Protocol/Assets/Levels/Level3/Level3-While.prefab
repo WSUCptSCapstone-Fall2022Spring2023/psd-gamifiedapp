@@ -55,6 +55,7 @@ MonoBehaviour:
     will need to be broken up by the artillery first. I'll need to get that operational
     before turning my attention to the reactor core.
   Prerequisites: []
+  Music: 0
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 03-1a-multiWhile
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: a8bc0fe19d5afcf4397283d3253d97b8, type: 3}
   TestFile: {fileID: 4900000, guid: 277feba7609d1324ba0fbabccb618d94, type: 3}
   ScriptFile: {fileID: 4900000, guid: a62a6833838e09a4ab9f4a0aaf135d67, type: 3}
   ActionGroups: []
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 03-1b-nestedWhile
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 5566bde45b580d848a627a3705224f45, type: 3}
   TestFile: {fileID: 4900000, guid: 79a83470f77db2149bb5a845771deaa5, type: 3}
   ScriptFile: {fileID: 4900000, guid: 60aa0a930fcf0724496ad6f5f0043622, type: 3}
   ActionGroups: []
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 03-2a-whileFunctions
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 5d0cba5e616e75e4fb3b7b5d23decd14, type: 3}
   TestFile: {fileID: 4900000, guid: 4db47ecacf3189e4fb2f81bed3fb5e34, type: 3}
   ScriptFile: {fileID: 4900000, guid: 3df7ae1d2e083fa41bc8dc2cba750a8a, type: 3}
   ActionGroups: []
