@@ -70,6 +70,11 @@ public class LevelPlayerController : MonoBehaviour
     public SaveAndLoad SaveHandler;
 
     /// <summary>
+    /// The audio source to play when returning to the level select screen after completing a level.
+    /// </summary>
+    public AudioSource LevelCompleteAudio;
+
+    /// <summary>
     /// Caches a reference to the currently extant phase UI
     /// </summary>
     private GameObject phaseUI;
@@ -179,6 +184,8 @@ public class LevelPlayerController : MonoBehaviour
             SaveHandler.Save();
             transitionTimer = 3;
             Instantiate(SuccessMessage, transform);
+
+            if (PhaseDefinition.NextPhase == null) LevelCompleteAudio.PlayDelayed(2);
 
             //Logs the success, and the phase ID
             LoggerRef.CreateLog(LogTypes.PHASE_SUCCESS, $"{PhaseDefinition.ID}");

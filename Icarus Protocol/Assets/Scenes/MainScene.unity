@@ -446,6 +446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextReference: {fileID: 3580254908024591104}
   TextDelay: 0.2
+  TextSound: {fileID: 0}
+  TextSoundInterval: 1
 --- !u!4 &602129091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6636767413296342602, guid: 2022886d4aee3dc4ba63c368e8dd7a70, type: 3}

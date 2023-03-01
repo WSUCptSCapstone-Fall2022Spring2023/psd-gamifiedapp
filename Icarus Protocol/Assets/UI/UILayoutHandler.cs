@@ -65,6 +65,12 @@ public class UILayoutHandler : MonoBehaviour
     /// Stores the Over and Under layouts
     /// </summary>
     public TransitionType CurrentOverlay;
+
+    /// <summary>
+    /// The audio to play during UI transitions;
+    /// </summary>
+    public AudioSource TransitionAudio;
+
     /// <summary>
     /// Timer used to delay UI transitions
     /// </summary>
@@ -145,6 +151,7 @@ public class UILayoutHandler : MonoBehaviour
         {
             if (timer <= 0)
             {
+                TransitionAudio.Play();
                 switch (queuedTransition) 
                 {
                     case TransitionType.LEVEL_PLAYER:
