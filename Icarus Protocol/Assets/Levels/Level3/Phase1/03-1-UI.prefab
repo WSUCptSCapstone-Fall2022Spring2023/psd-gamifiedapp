@@ -140,7 +140,7 @@ Transform:
   - {fileID: 3585835145223565321}
   - {fileID: 818450761476858531}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8620014527978431350
 MonoBehaviour:
@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: MemberName
       value: timer
       objectReference: {fileID: 0}
+    - target: {fileID: 3002634710338692234, guid: b12a11b341d940f489348d67e41536a3, type: 3}
+      propertyPath: m_text
+      value: 10.00
+      objectReference: {fileID: 0}
     - target: {fileID: 4095528475742960006, guid: b12a11b341d940f489348d67e41536a3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -367,6 +371,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205763778546615538, guid: 770504aa48a5d8d4f8d5d4c4780ca5c8, type: 3}
       propertyPath: DecimalPlaces
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002634710338692234, guid: 770504aa48a5d8d4f8d5d4c4780ca5c8, type: 3}
+      propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4095528475742960006, guid: 770504aa48a5d8d4f8d5d4c4780ca5c8, type: 3}
