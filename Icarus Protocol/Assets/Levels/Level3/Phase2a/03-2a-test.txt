@@ -2,6 +2,7 @@ threatsPresent = True
 
 threats = [5,1,6,8,2,4,6,7,2,67,5,154,5,5,51,5,65,7527,725,2,4]
 errorCode = 0
+hasSetTarget = False
 
 def GetTarget():
 	global threats
@@ -17,12 +18,14 @@ def SetTarget(number):
 	global threatsPresent
 	global errorCode
 	global threats
+	global hasSetTarget
 	
 	if len(threats) > 0:
 		if threats[0] != number:
 			errorCode = 1
 			return
 		threats = threats[1 : ]
+		hasSetTarget = True
 		if len(threats) == 0:
 			threatsPresent = False
 			parent.push_user_scope()
@@ -30,12 +33,16 @@ def SetTarget(number):
 def simulate():
 	global errorCode
 	global threats
+	global hasSetTarget
 
 	try:
     		parent.execute_user_code()
 	except Exception as e:
 		parent.end_simulation(-1, repr(e))
 		return 
+
+	if hasSetTarget:
+		environment.trigger_action_group(0)
 
 	if errorCode == 2:
 		parent.end_simulation(3)
@@ -44,6 +51,7 @@ def simulate():
 	elif len(threats) != 0:
 		parent.end_simulation(1)
 	else:
+		environment.trigger_action_group(1)
 		parent.end_simulation(0)
 
 def simulate_tick():

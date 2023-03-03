@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionTime: 0.3
+  TransitionTime: 1
   AlternateColor: {r: 1, g: 0.9960785, b: 0, a: 1}
 --- !u!114 &4183742946002695697
 MonoBehaviour:
@@ -193,6 +193,8 @@ GameObject:
   - component: {fileID: 4769460047324684140}
   - component: {fileID: 1023029537769446414}
   - component: {fileID: 556589429253297991}
+  - component: {fileID: 4487953882249790088}
+  - component: {fileID: 6882163650756399129}
   m_Layer: 0
   m_Name: Charge
   m_TagString: Untagged
@@ -241,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.49003887, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.49003887, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -258,6 +260,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4487953882249790088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715968108644072932}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionTime: 0.5
+  AlternateColor: {r: 1, g: 0.4901961, b: 0, a: 1}
+--- !u!114 &6882163650756399129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715968108644072932}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionTime: 0
+  AlternateColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3780883625501654787
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +366,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4487953882249790088}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   ResetGroup:
     m_PersistentCalls:
       m_Calls:
@@ -352,6 +394,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4183742946002695697}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6882163650756399129}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -453,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d126018d18e09cc46bf6b526778a7651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionTime: 0.3
+  TransitionTime: 1
   AlternateColor: {r: 0.427451, g: 0.34509805, b: 0.27450982, a: 0}
 --- !u!114 &7422015078865782235
 MonoBehaviour:
