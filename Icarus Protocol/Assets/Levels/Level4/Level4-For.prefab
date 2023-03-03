@@ -53,6 +53,7 @@ MonoBehaviour:
   levelDescription: Now that the ship is generally safe, it's time to reactivate
     the reactor core. I'll need it online to accomplish any other repairs.
   Prerequisites: []
+  Music: 0
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 04-1-for
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 6b4b5e330303d294f9a566c9a1ddbc26, type: 3}
   TestFile: {fileID: 4900000, guid: 5079ab0b8c5a7df4c8947b4ea1ce87c9, type: 3}
   ScriptFile: {fileID: 4900000, guid: 1d4d3fe3a42799f4883530c3eb689fdb, type: 3}
   ActionGroups: []
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 04-1a-moreFor
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 00d3976aa860b3d47a0bf3a925af50cf, type: 3}
   TestFile: {fileID: 4900000, guid: 06649f115b46760469092d5b0ca96508, type: 3}
   ScriptFile: {fileID: 4900000, guid: c0fa04d327b26544ca8c1cc355c118e3, type: 3}
   ActionGroups: []
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 04-2-forif
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 766ac7d5093e6a6479fb4bce99c0fb9b, type: 3}
   TestFile: {fileID: 4900000, guid: f3678e4130763e9439247598a64578d2, type: 3}
   ScriptFile: {fileID: 4900000, guid: 344a72ffee49db74fb771e91342f3d49, type: 3}
   ActionGroups: []
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 04-2a-nestedFor
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: d2a2389bdda1ee243ad9c085c1e5b483, type: 3}
   TestFile: {fileID: 4900000, guid: 2a60a09c5a5e5eb4bb9440c1ed17184b, type: 3}
   ScriptFile: {fileID: 4900000, guid: 76ff1e9c6356db9459f406f16be6a1c2, type: 3}
   ActionGroups: []

@@ -24,6 +24,7 @@ def simulate():
 	if wrongPulse:
 		parent.end_simulation(1)
 	else:
+		environment.trigger_action_group(0)
 		parent.end_simulation(0)
 	
 

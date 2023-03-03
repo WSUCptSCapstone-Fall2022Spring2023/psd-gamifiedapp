@@ -1,8 +1,12 @@
 cellTotal = 0
+cellsProcessed = 0
 
 def ExposeCell(cellID):
 	global cellTotal
-	cellTotal += cellID 
+	global cellsProcessed
+
+	cellTotal += cellID
+	cellsProcessed += 1
 
 
 def simulate():
@@ -18,6 +22,7 @@ def simulate():
 		return
 
 	if cellTotal == 486591:
+		environment.trigger_action_group(0)
 		parent.end_simulation(0)
 	elif cellTotal > 486591:
 		parent.end_simulation(2)

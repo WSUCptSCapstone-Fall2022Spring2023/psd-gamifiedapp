@@ -37,6 +37,9 @@ def simulate():
     		parent.end_simulation(-1, repr(e))
 		return
 	
+	if lastScan > 0:
+		environment.trigger_action_group(0)
+
 	if skippedCell:
 		parent.end_simulation(3)
 	elif lastScan != 986:
@@ -46,6 +49,7 @@ def simulate():
 	elif badScan:
 		parent.end_simulation(2)
 	else:
+		environment.trigger_action_group(1)
 		parent.end_simulation(0)
 	
 

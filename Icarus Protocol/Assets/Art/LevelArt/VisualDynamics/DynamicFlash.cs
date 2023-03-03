@@ -56,6 +56,8 @@ public class DynamicFlash : MonoBehaviour
             yield return null;
         }
 
+        mImageRef.color = AlternateColor;
+        yield return null;
         timer = 0;
 
         while (mImageRef.color != mBaseColor)
@@ -65,5 +67,7 @@ public class DynamicFlash : MonoBehaviour
             mImageRef.color = (mBaseColor * (timer / TransitionTime)) + (AlternateColor * (1 - (timer / TransitionTime)));
             yield return null;
         }
+
+        mImageRef.color = mBaseColor;
     }
 }
