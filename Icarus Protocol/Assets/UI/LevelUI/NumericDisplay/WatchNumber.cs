@@ -26,6 +26,11 @@ public class WatchNumber : MonoBehaviour
     public float MaxValue;
 
     /// <summary>
+    /// The delay coefficient to apply to the value to smooth numeric transitions.
+    /// </summary>
+    public float Delay;
+
+    /// <summary>
     /// Stores a ref to the controller to allow it to get necessary information
     /// </summary>
     private PhaseUIController mParent;
@@ -34,6 +39,11 @@ public class WatchNumber : MonoBehaviour
     /// Stores a ref to the text that the script targets, should be placed on the same object.
     /// </summary>
     private TMP_Text mText;
+
+    /// <summary>
+    /// The value being actively displayed. Only out of sync with the real backing value if numeric output has delay
+    /// </summary>
+    private float displayValue;
 
     /// <summary>
     /// Start is called before the first frame update
@@ -50,13 +60,23 @@ public class WatchNumber : MonoBehaviour
     void Update()
     {
         dynamic value = mParent?.IPContainer.GetPythonValue(MemberName);
+
         if (value == null) 
         {
             mText.text = 0.ToString($"F{DecimalPlaces}");
         }
         else
         {
-            mText.text = $"{Mathf.Min(MaxValue, Mathf.Max(MinValue, (Mathf.Round((float)value * Mathf.Pow(10, DecimalPlaces)) / Mathf.Pow(10, DecimalPlaces)))).ToString($"F{DecimalPlaces}")}";
+            if (Delay == 0)
+            {
+                displayValue = (float)value;
+            }
+            else 
+            {
+                displayValue += ((float)value - displayValue) * (1/Delay);
+            }
+
+            mText.text = $"{Mathf.Min(MaxValue, Mathf.Max(MinValue, (Mathf.Round(displayValue * Mathf.Pow(10, DecimalPlaces)) / Mathf.Pow(10, DecimalPlaces)))).ToString($"F{DecimalPlaces}")}";
         }
     }
 }

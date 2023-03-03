@@ -44,6 +44,11 @@ def simulate():
     		parent.end_simulation(-1,repr(e))
 		return
 
+	if residueBacking <= 0:
+		environment.trigger_action_group(0)
+		if fillPercent >= 90:
+			environment.trigger_action_group(1)
+
 	if errorCode == 1:
 		parent.end_simulation(1)
 	elif fillPercentBacking < 90:
