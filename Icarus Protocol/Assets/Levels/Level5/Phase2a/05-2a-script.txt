@@ -1,0 +1,13 @@
+I've almost finished programming the navigation system. There appears to be some data missing from the path planner.
+
+In order to program it I'll need to send a list containing the numbers [5,1,9,7,5,0,17,94,6] into the function 'Initialize(data)'
+I can store the list in a variable and pass it into the function like I have with other variables, or I can pass the function a list directly like:
+	Initialize([1,2,3])
+
+~I didn't call 'Initialize(data)'. In order to fire up the navigation I'll need to call the function and pass in the required list.
+
+~I called 'Initialize(data)', but the data recieved by the path planner wasn't correct. I need to make sure that I'm passing the function a list containing all of the correct values.
+
+~TypeError('Initialize() takes exactly 1 argument',)
+When I pass a list into a functon, I still need to enclose the list items in square brackets '[]' like:
+	FunctionCall([1,2,3,4])

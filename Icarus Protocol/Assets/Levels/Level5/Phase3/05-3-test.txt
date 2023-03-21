@@ -12,8 +12,12 @@ def simulate():
 
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e: 
+		if "unexpected token ']'" in repr(e):
+			parent.end_simulation(2)
+    		else:
+			parent.end_simulation(-1, repr(e))
+		return
 
 	if returnSteps == hiddenNavSteps:
 		parent.end_simulation(0)

@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 6636767413296342602}
   - component: {fileID: -6341351023651436294}
   - component: {fileID: 4961718171917905431}
+  - component: {fileID: -7288649148450082005}
   - component: {fileID: 911267730187269812}
+  - component: {fileID: 1076567811131227473}
   - component: {fileID: 3670747942093865404}
+  - component: {fileID: 5961950218862775360}
   m_Layer: 0
   m_Name: Level5-Arrays
   m_TagString: Level
@@ -53,6 +56,7 @@ MonoBehaviour:
     essential systems. As it stands the ship isn't going anywhere. If I can get navigation
     running I should be able to get us back on course.
   Prerequisites: []
+  Music: 0
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,14 +74,46 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 2156d55452eafce469064f07b37c400b, type: 3}
   ScriptFile: {fileID: 4900000, guid: 2ff9be34b8aaa1e44ac538118c2c558e, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
   - coords
   - destination
   FriendlyVariableNames:
-  - coords
+  - coords[]
   - destination
+  NextPhase: {fileID: -7288649148450082005}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &-7288649148450082005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 05-1a-set
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 5a36357246e96b044b30890fd16094e4, type: 3}
+  ScriptFile: {fileID: 4900000, guid: e24e1c21fdeb3e5449ef47d5e514b115, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - probes
+  FriendlyVariableNames:
+  - probes[]
   NextPhase: {fileID: 911267730187269812}
   FillInBlank: 0
   starterCode: {fileID: 0}
@@ -98,12 +134,44 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: ca4a42e27b4414d4c918fc7c3a33d87e, type: 3}
   ScriptFile: {fileID: 4900000, guid: 4afd0db562453e944b15eb4fcf25eb15, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
   - targetCoords
   FriendlyVariableNames:
-  - targetCoords
+  - targetCoords[]
+  NextPhase: {fileID: 1076567811131227473}
+  FillInBlank: 0
+  starterCode: {fileID: 0}
+--- !u!114 &1076567811131227473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 05-2a-functionArg
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: 26ac27e57d93b0f47b0cce2209a0822b, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 1e586ffa33bb4fa4f9b8fcf41daef557, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - Initialize
+  FriendlyVariableNames:
+  - Initialize(data)
   NextPhase: {fileID: 3670747942093865404}
   FillInBlank: 0
   starterCode: {fileID: 0}
@@ -124,14 +192,48 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: 80743460f9c8f9246b35890b71c8c91c, type: 3}
   ScriptFile: {fileID: 4900000, guid: 585b9ffccb4745c4a98fbf52ec052e45, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 0
   FastTickSpeed: 0
   ExposedMembers:
   - PlanStep
   - navSteps
   FriendlyVariableNames:
-  - navSteps
+  - navSteps[]
   - PlanStep(step)
-  NextPhase: {fileID: 0}
+  NextPhase: {fileID: 5961950218862775360}
   FillInBlank: 0
   starterCode: {fileID: 0}
+--- !u!114 &5961950218862775360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305999128055833320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 05-3a-bugFixing
+  PhaseUI: {fileID: 0}
+  TestFile: {fileID: 4900000, guid: ec94a8cc7871be543b36ac154b052173, type: 3}
+  ScriptFile: {fileID: 4900000, guid: 4714cf4b0664d2145a1c390e717798df, type: 3}
+  ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
+  CodeLoopDuration: 0.1
+  FastTickSpeed: 0.1
+  ExposedMembers:
+  - dataBuffer
+  - hyperBuffer
+  FriendlyVariableNames:
+  - dataBuffer[]
+  - hyperBuffer[]
+  NextPhase: {fileID: 0}
+  FillInBlank: 0
+  starterCode: {fileID: 4900000, guid: ceb218ab9976e5b46ba816ba6dc49e95, type: 3}

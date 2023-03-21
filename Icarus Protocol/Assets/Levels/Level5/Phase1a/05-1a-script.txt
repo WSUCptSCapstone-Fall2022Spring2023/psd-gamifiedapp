@@ -1,0 +1,20 @@
+Now that I have my target coordinates, I can triangulate the ship's motion path by activating the navigation probes.
+
+In order to send data to the probes, I need to place data into the 'probes[]' list.
+
+I can set change the values in a list in a similar way to how I copied data out of the list. For instance, in order to set the first item in a list to be equal to 'True', I could write:
+	myList[0] = True
+
+To activate the correct navigation probes, I'll need to place a 'True' value into positions 0, 5, and 9, of the 'probes[]' list.
+
+~It looks like I didn't activate any of the probes. To activate one of the probes I need to set it's position in the 'probes[]' list to True like:
+	probes[1] = True
+
+~I activated some of the probes, but not three of them. In order to triangulate the position I'll need to activate the probes in position 0,5, and 9
+
+~I activated too many of the probes. Activating any of them other than the probes in positions 0, 5, and 9 will confuse the navigation routines.
+
+~I activated three probes, but not the right three. I need to make sure that the probes at index 0, 5, and 9 are the ones that I turn on.
+
+~IndexError('index out of range',)
+I must have referenced an index that was outside of the list. Python allows negative indexes to reference items starting from the end of the list, but if my index is too large it will throw an error.

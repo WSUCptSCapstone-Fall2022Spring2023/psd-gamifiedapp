@@ -1,0 +1,34 @@
+expected = [5,1,9,7,5,0,17,94,6]
+actual = []
+initCalled = False
+
+def Initialize(list):
+	global actual
+	global initCalled
+	initCalled = True
+	actual = list
+
+def simulate():
+	global expected
+	global actual
+	global initCalled
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+		if 'takes exactly 1 argument' in repr(e):
+			parent.end_simulation(3)
+		else:
+			parent.end_simulation(-1, repr(e))
+    		return
+	
+	if expected == actual:
+		parent.end_simulation(0)
+	elif initCalled is False:
+		parent.end_simulation(1)
+	else:
+		parent.end_simulation(2)
+	return
+
+def simulate_tick():
+	return 0
