@@ -1,0 +1,27 @@
+calledSignal = False
+
+def Signal(data):
+	global calledSignal
+	calledSignal = (data == "Ether Flux")
+
+def simulate():
+	global calledSignal
+	try:
+    		parent.execute_user_code()
+	except Exception as e:
+		if 'SyntaxError("unexpected token \'=\'"' in repr(e):
+			parent.end_simulation(2)
+		elif 'SyntaxError("unexpected token \'<newline>\'"' in repr(e):
+			parent.end_simulation(3)
+		else:
+			parent.end_simulation(-1, repr(e)) 
+    		return
+
+	if calledSignal is True:
+		parent.end_simulation(0)
+	else:
+		parent.end_simulation(1)
+
+
+def simulate_tick():
+	return 0

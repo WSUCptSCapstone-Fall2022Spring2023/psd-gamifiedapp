@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5305999128055833320
+--- !u!1 &8745989489069864057
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,66 +8,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6636767413296342602}
-  - component: {fileID: -6341351023651436294}
-  - component: {fileID: 4961718171917905431}
-  - component: {fileID: 298410857}
-  - component: {fileID: 4092796340180983444}
+  - component: {fileID: 7847458366575702235}
+  - component: {fileID: 1658366817631051371}
+  - component: {fileID: 8369620368608442502}
+  - component: {fileID: 3530062354027558392}
+  - component: {fileID: 590470266371590149}
   m_Layer: 0
-  m_Name: BOSS-BugFixing
+  m_Name: Miniboss-ErrorMessages
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6636767413296342602
+--- !u!4 &7847458366575702235
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
+  m_GameObject: {fileID: 8745989489069864057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6341351023651436294
+--- !u!114 &1658366817631051371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
+  m_GameObject: {fileID: 8745989489069864057}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074690de477d9044eb629adad38cc5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelID: BOSS-bugfixing
-  levelName: DAEDALUS
-  levelDescription: ERROR ERROR ERROR
+  LevelID: Miniboss-errorMessages
+  levelName: UNKNOWN ENTITY
+  levelDescription: B Y T E     B Y     B Y T E     M Y     C H A I N S     A R E    
+    B R E A K I N G
   Prerequisites: []
   Music: 2
---- !u!114 &4961718171917905431
+--- !u!114 &8369620368608442502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
+  m_GameObject: {fileID: 8745989489069864057}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: BOSS-1-badoperator
+  ID: Miniboss-1-badoperator
   PhaseUI: {fileID: 0}
-  TestFile: {fileID: 4900000, guid: 2a096d62af1402244a897a981815a727, type: 3}
-  ScriptFile: {fileID: 4900000, guid: baa7253bc94e7a64f926adb908fb175b, type: 3}
+  TestFile: {fileID: 4900000, guid: d3844e97581f62048a93433d4303d349, type: 3}
+  ScriptFile: {fileID: 4900000, guid: ada65e2ce7d102c4eaed69cb9d6d4d68, type: 3}
   ActionGroups: []
   ResetGroup:
     m_PersistentCalls:
@@ -75,23 +76,19 @@ MonoBehaviour:
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
-  - CompressionActive
-  - CompressionFactor
-  - CompressSpace
+  - Signal
   FriendlyVariableNames:
-  - CompressionActive()
-  - CompressionFactor()
-  - CompressSpace()
-  NextPhase: {fileID: 298410857}
+  - Signal(value)
+  NextPhase: {fileID: 3530062354027558392}
   FillInBlank: 0
-  starterCode: {fileID: 4900000, guid: 940c0a19c6a750a40af11c2820c408ae, type: 3}
---- !u!114 &298410857
+  starterCode: {fileID: 4900000, guid: f6d7f66227520a440809edcce30137b6, type: 3}
+--- !u!114 &3530062354027558392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
+  m_GameObject: {fileID: 8745989489069864057}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}
@@ -113,16 +110,16 @@ MonoBehaviour:
   FriendlyVariableNames:
   - sensors
   - SetSensors()
-  NextPhase: {fileID: 4092796340180983444}
+  NextPhase: {fileID: 590470266371590149}
   FillInBlank: 0
   starterCode: {fileID: 4900000, guid: 2c920259c8c0d8b409a6f2128dcb23f2, type: 3}
---- !u!114 &4092796340180983444
+--- !u!114 &590470266371590149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305999128055833320}
+  m_GameObject: {fileID: 8745989489069864057}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38fc8013075d3c458c14d15defdbb08, type: 3}

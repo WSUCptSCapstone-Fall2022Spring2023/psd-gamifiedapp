@@ -14,12 +14,13 @@ def CompressSpace():
 def simulate():
 	try:
     		parent.execute_user_code()
-	except Exception: 
-    		pass
+	except Exception as e:
+		parent.end_simulation(-1, repr(e)) 
+    		return
 
 	if compression >= 100 and compression < 105:
 		parent.end_simulation(0)
-	elif compression < 100:
+	else:
 		parent.end_simulation(1)
 
 

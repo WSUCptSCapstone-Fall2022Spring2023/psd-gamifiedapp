@@ -1,3 +1,0 @@
-if CompressionActive():
-	while CompressionFactor() > 100:
-		CompressSpace()
