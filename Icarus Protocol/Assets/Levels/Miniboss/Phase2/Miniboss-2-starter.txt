@@ -1,0 +1,4 @@
+if motionAmount > 10:
+	Send('alarm')
+else
+Send('clear')

@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-6341351023651436294
 MonoBehaviour:
@@ -72,7 +72,7 @@ MonoBehaviour:
   ResetGroup:
     m_PersistentCalls:
       m_Calls: []
-  CodeLoopDuration: 1
+  CodeLoopDuration: 0.1
   FastTickSpeed: 0.1
   ExposedMembers:
   - CompressionActive
@@ -105,7 +105,7 @@ MonoBehaviour:
   ResetGroup:
     m_PersistentCalls:
       m_Calls: []
-  CodeLoopDuration: 1
+  CodeLoopDuration: 0.1
   FastTickSpeed: 0.1
   ExposedMembers:
   - sensors

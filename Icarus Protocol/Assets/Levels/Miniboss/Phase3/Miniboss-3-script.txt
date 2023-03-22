@@ -1,0 +1,12 @@
+T H E   H E L I O S   M U S T   N O T   R E A C H   A L E T H E R I A L   P R I M E
+
+Whoever this is, I think I found the error in the antivirus program that's allowing them to make these changes. There are just a few more syntax errors in this corrupted code, but fixing them should put a stop to this.
+
+~Something about the logic of the function got changed while I was fixing syntax errors. I need to fix the bugs, but not change anything else in the process.
+
+~SyntaxError("unexpected token '='", (None, 5, 18, '\telif threatType = "logic bomb":\n'))
+This error likely means I used a single '=' when I should be using a double equals '=='
+
+~SyntaxError("can't assign to literal", (None, 8, 3, '\t\t694 = countermeasure'))
+This error means that I tried to assign a value to a piece of data like it was a variable. In variable assignments, the variable name must always be on the left like:
+	variable = "value"

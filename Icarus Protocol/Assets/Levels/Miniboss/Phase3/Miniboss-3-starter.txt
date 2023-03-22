@@ -1,0 +1,8 @@
+if threatsPresent:
+	threatType = IdentifyThreat()
+	if threatType == "trojan":
+		countermeasure = 283
+	elif threatType = "logic bomb":
+		countermeasure = 91
+	elif threatType == "malicious agent":
+		694 = countermeasure
