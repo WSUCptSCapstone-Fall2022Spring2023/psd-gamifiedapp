@@ -1,11 +1,12 @@
 expected = [5,1,9,7,5,0,17,94,6]
-actual = []
+actual = [0,0,0,0,0,0,0,0,0]
 initCalled = False
 
 def Initialize(list):
 	global actual
 	global initCalled
 	initCalled = True
+
 	actual = list
 
 def simulate():

@@ -1,5 +1,5 @@
 coords = [5039, 8277, 1009]
-targetCoords = []
+targetCoords = [0,0,0]
 
 def simulate():
 	global coords

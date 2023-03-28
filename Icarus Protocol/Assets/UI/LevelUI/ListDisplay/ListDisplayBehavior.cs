@@ -43,13 +43,24 @@ public class ListDisplayBehavior : MonoBehaviour
     void Update()
     {
         dynamic value = mParent?.IPContainer.GetPythonValue(MemberName);
-        if (value == null)
+        if (value is IronPython.Runtime.List listValue)
         {
             mText.text = "";
+            foreach (var item in listValue) 
+            {
+                mText.text += $"{item.ToString()}\n";
+            }
+            for (int i = listValue.Count; i < MaxCount; i++)
+            {
+                mText.text += "<null>\n";
+            }
         }
         else
         {
-            mText.text = $"{value}";
+            mText.text = "";
+            for (int i = 0; i < MaxCount; i++) {
+                mText.text += "<null>\n";
+            }
         }
     }
 }
