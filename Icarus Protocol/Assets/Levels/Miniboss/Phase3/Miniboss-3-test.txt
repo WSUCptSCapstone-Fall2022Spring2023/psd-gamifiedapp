@@ -25,6 +25,7 @@ def simulate():
     		return
 	
 	if threatsPresent and identifyCalled and countermeasure == 694:
+		environment.trigger_action_group(0)
 		parent.end_simulation(0)
 	else:
 		parent.end_simulation(1)
