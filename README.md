@@ -48,17 +48,15 @@ There are no add-ons for either the developer or player.
 1. Navigate to the Releases page (a link is found on the code tab in github)
 2. Download the newest Release (eg. IcarusProtocol_v0.0.5.zip)
 3. Unzip the file
-4. Run the executable
+4. Run the executable (Note the current build requires a screen resolution of 1920x1080 to function as expected, other screen resolutions may experience incorrect UI scaling.)
 
 ## Functionality
 
-Currently, the protoype contains what we consider an "beta" build of the game. The sounds, graphics, and UI still need polishing, and the game's content is in an incomplete 'shell' state, but it is all playable and reflects the major mechanics of the game with a variety of fully playable levels. Finished content is mostly available for Levels 1 & 2
+Currently, the protoype contains what we consider an "beta" build of the game. The sounds, graphics, and UI still need polishing, and the game's content is in an incomplete 'shell' state, but it is all playable and reflects the major mechanics of the game with a variety of fully playable levels. Finished content is mostly available for Levels 1-5, as well as the Minibos level, and the Boss level.
 
 ## Known Problems
 
-Infinite loops in the Python currently crash the game.
-Using Shift-Enter instead of enter will make your code not work until you remove the newline and replace it with an ordinary one.
-
+Several visual UI bugs are present in this build of the game. In addition, 1 reproducable crash bug was discovered by a tester in level 1-4 which we are working to correct.
 
 ## Contributing
 
@@ -75,7 +73,8 @@ Using Shift-Enter instead of enter will make your code not work until you remove
   * [Sprint 2 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint2/Produce-Sprint-2-Report/Sprint_Reports/Sprint2-Report.md)
   * [Sprint 3 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint3/ProduceSprint3Report/Sprint_Reports/Sprint3-Report.md)
   * [Sprint 4 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint4/MVP-Doc/Sprint_Reports/Sprint4-Report.md)
-  * [Sprint 5 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint5/SprintReport/Sprint_Reports/Sprint5-Report.md) 
+  * [Sprint 5 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/Sprint5/SprintReport/Sprint_Reports/Sprint5-Report.md)
+  * [Sprint 6 Report](https://github.com/WSUCptSCapstone-Fall2022Spring2023/psd-gamifiedapp/blob/main/Sprint_Reports/Sprint6-Report.md) 
 
 ## License
 
