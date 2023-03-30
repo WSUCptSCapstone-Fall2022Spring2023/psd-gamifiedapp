@@ -1,0 +1,15 @@
+M Y   N A M E   I S   D A E D A L U S
+
+Deadalus? That name sounds familiar...
+
+The next errors are in this snippet of code that handles motion detectors. If a motion detector senses a motion of strength greater than 10, it needs to send the 'alarm' signal, else it should send a 'clear' signal.
+
+~I fixed all the syntax errors, but changed the logic in the process. I need to fix the issues, but not change anything about the logic of how the code functions.
+
+~SyntaxError("unexpected token '<newline>'", (None, 3, 5, 'else\n'))
+This error means that a line ends without some required symbol. Specifically we can from the second part of the error that line 3:
+	else
+contains an issue.
+
+~SyntaxError('expected an indented block', (None, 4, 1, "Send('clear')"))
+This error means that the code expected a line to be indented, like in an if statement, but it wasn't. I should check line 4.

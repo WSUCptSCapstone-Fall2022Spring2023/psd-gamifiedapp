@@ -1,8 +1,0 @@
-Y O U  C A N N O T  U N D E R S T A N D
-
-Here's my chance. I found the hole in the security protocol that that entity is using. If I can patch it, I can lock him out.
-
-I'll be on my own for this one, whoever it is has scrubbed my documentation on how this is supposed to work. As long as I can read the code I should be okay.
-
-~System is still detecting malicious data flow, potentially through an unsecured port?
-

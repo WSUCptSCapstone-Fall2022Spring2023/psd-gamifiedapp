@@ -1,6 +1,0 @@
-for port in accessPorts:
-	portSecure = CheckPortSecurity(port)
-	if not portSecure:
-		SecurePort(port)
-	if port == 13:
-		UnsecurePort(port)

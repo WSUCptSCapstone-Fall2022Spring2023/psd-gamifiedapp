@@ -1,0 +1,12 @@
+The path is planned, now there's just one more error cropping up in the hyperdrive calibration protocol. The code used to transfer data from the path planner to the hyperdrive appears to be corrupted. Most of it is intact, but there's some kind of issue with the logic of it.
+
+The logic of this function is supposed to loop over each item in the 'dataBuffer', and for each it loops over each item in the 'hyperBuffer' multiplying the items together and storing the result back in the 'hyperBuffer'. Then it loops over each item in the 'hyperBuffer' subtracting 10 from each item.
+Something is wrong with this logic, however, and so it isn't accomplishing this. I think that all of the loops are correct, but I should review the logic inside the loops.
+
+~Something is still wrong with the logic. It appears that I haven't changed what was wrong. I should make sure that the first nested loop is multiplying 'i * j' and storing the values in the correct index of the 'hyperBuffer'
+
+~I seem to have fixed the issue in the first loop, but not the second loop. The second loop is supposed to subtract 10 from each item in the hyperBuffer.
+
+~I fixed the issue in the second loop, but there's still an issue in the first loop. I think that the nested loops themselves are correct, but the inner logic is supposed to be multiplying 'i * j' and placing the values back into the hyperBuffer
+
+~Something new is wrong in the logic. The change that I made probably wasn't the right fix. I should reset and try something else.

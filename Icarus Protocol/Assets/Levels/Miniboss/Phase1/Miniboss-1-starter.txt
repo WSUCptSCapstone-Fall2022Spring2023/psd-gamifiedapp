@@ -1,0 +1,2 @@
+if 190192 >== 1047
+	Signal("Ether Flux")

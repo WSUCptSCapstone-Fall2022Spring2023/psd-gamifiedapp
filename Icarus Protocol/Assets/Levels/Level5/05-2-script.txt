@@ -1,7 +1,0 @@
-Coordinates registered! The system is reading 3 astral coordinates. 5039, 8277, and 1009. I'll need to set the variable 'targetCoords' to the correct coordinates. To set the ship's destination.
-
-I can make a list of numbers like...
-variable = [1,2,3]
-I'll need to set 'targetCoords' equal to a list of 5039, 8277, 1009, in that order.
-
-~That didn't seem to work right. It's important that I put the numbers in order, inside of '[]' square brackets, separated by commas.

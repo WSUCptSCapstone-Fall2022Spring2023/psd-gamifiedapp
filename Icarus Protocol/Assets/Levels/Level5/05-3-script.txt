@@ -1,9 +1,0 @@
-Coordinates registered, and programmed into the system. Now to plan the route in the navigation system itself.
-
-Navigation steps are stored in a list called 'navSteps'. The list is long (~5000 units long) but has no set length.
-
-Luckily I can use a feature of the 'for' loop to scan through the list. Instead of saying 'for number in range(x,y)' I can say 'for item in listVariable:' to loop through a list. The current item in the list is stored in the variable 'item'
-
-So I'll need to loop 'for i in navSteps' and call the function 'PlanStep(step)' for each one, plugging in the item as the 'step' parameter.
-
-~The planned path doesn't seem to lead to the correct place. I'll need to make sure I'm looping through the navSteps list and calling PlanStep(step) on each item.

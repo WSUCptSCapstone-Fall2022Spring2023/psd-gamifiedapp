@@ -1,0 +1,26 @@
+accessPorts = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+hiddenAccessPorts = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+returnList = []
+
+def CheckPortSecurity(value):
+	return False
+
+def SecurePort(value):
+	global returnList
+	returnList.append(value)
+
+def simulate():
+	try:
+    		parent.execute_user_code()
+	except Exception as e:
+		parent.end_simulation(-1, repr(e)) 
+    		return
+
+	if hiddenAccessPorts == returnList:
+		parent.end_simulation(0)
+	else:
+		parent.end_simulation(1)
+
+
+def simulate_tick():
+	return 0

@@ -1,0 +1,4 @@
+for port in accessPorts:
+	portSecure == CheckPortSecurity(port)
+	if not portSecure:
+		SecurePort()

@@ -1,7 +1,0 @@
-Y O U  A R E  T H E  I N F E R I O R 
-
-Who is that? They've made another change to the code!
-
-This snippet is supposed to fetch the fifth value from a list of sensor data and perform a bunch of mathematical operations on it. The math is fine, but something else is still wrong with this code.
-
-~All the math checks out, but it seems like the code is fetching the wrong value from the list somehow.

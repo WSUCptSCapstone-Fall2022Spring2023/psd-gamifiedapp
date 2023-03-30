@@ -1,0 +1,33 @@
+dataBuffer = [1,2,3]
+hyperBuffer = [1,2,3]
+expected = [-4,2,8]
+error1 = [0,0,0]
+error2 = [0,1,1]
+error3 = [-1,-1,-1]
+
+def simulate():
+	global expected
+	global hyperBuffer
+	global error1
+	global error2
+	global error3
+
+	try:
+    		parent.execute_user_code()
+	except Exception as e: 
+    		parent.end_simulation(-1, repr(e))
+		return
+
+	if hyperBuffer == expected:
+		parent.end_simulation(0)
+	elif hyperBuffer == error1:
+		parent.end_simulation(1)
+	elif hyperBuffer == error2:
+		parent.end_simulation(2)
+	elif hyperBuffer == error3:
+		parent.end_simulation(3)
+	else:
+		parent.end_simulation(4)
+
+def simulate_tick():
+	return 0

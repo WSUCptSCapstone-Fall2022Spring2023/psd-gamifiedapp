@@ -1,0 +1,10 @@
+for i in dataBuffer:
+	index = 0
+	for j in hyperBuffer:
+		hyperBuffer[index] = i * i
+		index += 1
+
+index = 0
+for j in hyperBuffer:
+	hyperBuffer[index] /= 10
+	index += 1

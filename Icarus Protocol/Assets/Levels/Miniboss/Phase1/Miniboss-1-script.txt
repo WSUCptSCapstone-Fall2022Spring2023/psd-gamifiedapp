@@ -1,0 +1,17 @@
+A second user is moving in the code...
+
+They're making changes! Adding bugs to functions! I need to put a stop to this.
+
+It looks like they're not changing any of the logic, only adding syntax errors. If I can read the error messages, I should be able to fix these problems before they become too dangerous.
+
+~I changed something about the logic while fixing the syntax errors. I should reset and fix the syntax errors without altering anything else.
+
+~SyntaxError("unexpected token '='", (None, 1, 13, 'if 190192 >== 1047\n'))
+Let's see... This syntax error is telling me that there is an '=' sign somewhere that there shouldn't be. Looking at the second half of the error I can see info about where it is. 
+Looks like the error is on line 1, character 13, and the line with the error reads
+	if 190192 >== 1047
+
+~SyntaxError("unexpected token '<newline>'", (None, 1, 18, 'if 190192 >= 1047\n'))
+Let's see... This syntax error is telling me that there is a newline somewhere that there shouldn't be, likely because I moved to the next line without ending the previous line correctly. Looking at the second half of the error I can see info about where it is. 
+Looks like the error is on line 1, character 18, and the line with the error reads
+	if 190192 >= 1047
