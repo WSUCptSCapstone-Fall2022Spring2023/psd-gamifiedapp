@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Miniboss-1-badoperator
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: eb865257814a006428acfe8fa43d232c, type: 3}
   TestFile: {fileID: 4900000, guid: d3844e97581f62048a93433d4303d349, type: 3}
   ScriptFile: {fileID: 4900000, guid: ada65e2ce7d102c4eaed69cb9d6d4d68, type: 3}
   ActionGroups: []
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Miniboss-2-ifElse
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: b7e80ba57da52d647a1d140b7c1d7841, type: 3}
   TestFile: {fileID: 4900000, guid: 5b795a0d75228e2408ecc2ee9e9e8625, type: 3}
   ScriptFile: {fileID: 4900000, guid: 1ef884b385186ef4e822212fa64efb5b, type: 3}
   ActionGroups: []
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Minboss-3-security
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: f54b3ac709477984f9bb6414eee769da, type: 3}
   TestFile: {fileID: 4900000, guid: e61ba178021188647926f41f1228da70, type: 3}
   ScriptFile: {fileID: 4900000, guid: 1d51dc1a36f7151428497c22ac0350fb, type: 3}
   ActionGroups: []

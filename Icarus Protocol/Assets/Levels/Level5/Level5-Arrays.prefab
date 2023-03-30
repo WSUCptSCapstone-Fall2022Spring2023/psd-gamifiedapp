@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 05-1a-set
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 40bc66db64e29f54ebe3a1f8735dd328, type: 3}
   TestFile: {fileID: 4900000, guid: 5a36357246e96b044b30890fd16094e4, type: 3}
   ScriptFile: {fileID: 4900000, guid: e24e1c21fdeb3e5449ef47d5e514b115, type: 3}
   ActionGroups: []
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 05-2-write
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 140e535b542f6ba45bf2a4c3cb1faa56, type: 3}
   TestFile: {fileID: 4900000, guid: ca4a42e27b4414d4c918fc7c3a33d87e, type: 3}
   ScriptFile: {fileID: 4900000, guid: 4afd0db562453e944b15eb4fcf25eb15, type: 3}
   ActionGroups: []
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 05-2a-functionArg
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 4856fd34207a6434f8ea779c2a2dd7bf, type: 3}
   TestFile: {fileID: 4900000, guid: 26ac27e57d93b0f47b0cce2209a0822b, type: 3}
   ScriptFile: {fileID: 4900000, guid: 1e586ffa33bb4fa4f9b8fcf41daef557, type: 3}
   ActionGroups: []
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 05-3-foreach
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 4457cf2404bad0b4b9c78cd2f5ea4a57, type: 3}
   TestFile: {fileID: 4900000, guid: 80743460f9c8f9246b35890b71c8c91c, type: 3}
   ScriptFile: {fileID: 4900000, guid: 585b9ffccb4745c4a98fbf52ec052e45, type: 3}
   ActionGroups: []
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 05-3a-bugFixing
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 14425f0916b38004487619c6f530a876, type: 3}
   TestFile: {fileID: 4900000, guid: ec94a8cc7871be543b36ac154b052173, type: 3}
   ScriptFile: {fileID: 4900000, guid: 4714cf4b0664d2145a1c390e717798df, type: 3}
   ActionGroups: []
