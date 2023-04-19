@@ -2,11 +2,17 @@ It looks like some of the data that the comms unit is reading is corrupted. I sh
 
 Decryption protocol 8371555 appears to be the issue. I'll need to fix the decryption function to receive working data.
 
-To decrypt data I'll first need to 'Receive()' while 'Remaining()' is greater than 0.
+To decrypt data I'll first need to call 
+	Receive()
+while 
+	Remaining() 
+is greater than 0.
 
 Once I've received all the data, I can use 'GetData()' to get the encrypted data value and store it in a variable of some kind.
 
-The decryption function is 'decrypted = encrypted + 2973 * 7119374 / 81738 % 1836' I can assign the decrypted value to the variable 'decrypted' to set it.
+The decryption function is 
+	decrypted = encrypted + 2973 * 7119374 / 81738 % 1836 
+I should assign my final value to the variable 'decrypted' to finish the function.
 
 ~It looks like I didn't process the data before trying to decrypt it. I won't be able to pull the correct data if I don't have the whole package.
 
