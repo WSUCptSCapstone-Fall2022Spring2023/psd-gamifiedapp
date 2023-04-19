@@ -2,14 +2,14 @@ I got the reactor working before, but residual damage has still left it a little
 
 It would appear that the core cycling subroutine is damaged.
 
-I have a list of 'cores' that each have a different level of ion buildup. So if 'cores[0] == 4' then the first core has 4 ion buildup. 
+I have a list of 'cores' that each have a different level of ion buildup. So if 
+	cores[0] == 4 
+then the first core has 4 ion buildup. 
 
-The reactor will be the most efficient if I always use the core with the lowest ion buildup. I'll need to use some kind of loop to search through the 'cores' list, and then call 'SurgeCore(core)' on the core with the lowest buildup.
-
-Note that 'SurgeCore(core)' takes in the core itself, not the index of the core. If 'core[0]' has the lowest buildup I need to call 'SurgeCore(core[0])', not 'SurgeCore(0)'
-
-~It would appear that I passed in the index of the cell instead of its value. 
+The reactor will be the most efficient if I always use the core with the lowest ion buildup. I'll need to use some kind of loop to search through the 'cores' list, and then call 
+	SurgeCore(core) 
+on the index of the core with the lowest buildup (and only that core). I should be able to use a 'while' loop or a 'for' and rely on the fact that the cores list is always exactly 14 units long.
 
 ~The system is showing that I didn't call 'SurgeCore(core)' or I ran into an error before calling it.
 
-~I called 'SurgeCore(core)', but I seem to have called it on the wrong cell. I need to make sure to locate the smallest amoung of ion buildup, store it in a variable, and after checking all cells surge the lowest one.
+~I called 'SurgeCore(core)', but I seem to have called it on the wrong cell. I need to make sure to locate the smallest amoung of ion buildup, store the index of that cell in a variable, and after checking all cells surge the lowest one.
