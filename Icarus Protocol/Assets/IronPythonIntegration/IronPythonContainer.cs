@@ -198,9 +198,6 @@ public class IronPythonContainer : MonoBehaviour
     {
         mSimulating = false;
         OnSimulationExit(this, (exitCode, optionalMessage));
-
-        //TODO: Remove Debug
-        Debug.Log(optionalMessage == "" ? $"Simulation exited with code: {exitCode}": $"Simulation exited with message {optionalMessage}");
     }
 
     /// <summary>
