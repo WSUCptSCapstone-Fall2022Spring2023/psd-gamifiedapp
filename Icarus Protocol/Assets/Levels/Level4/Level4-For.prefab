@@ -54,6 +54,7 @@ MonoBehaviour:
     the reactor core. I'll need it online to accomplish any other repairs.
   Prerequisites: []
   Music: 0
+  LevelIndex: 5
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0

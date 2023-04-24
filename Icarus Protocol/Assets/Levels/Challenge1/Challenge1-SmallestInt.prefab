@@ -51,6 +51,7 @@ MonoBehaviour:
     be able to improve that by improving how it surges its cells.
   Prerequisites: []
   Music: 0
+  LevelIndex: 7
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0

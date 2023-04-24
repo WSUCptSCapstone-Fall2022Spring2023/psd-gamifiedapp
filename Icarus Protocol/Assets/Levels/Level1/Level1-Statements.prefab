@@ -58,6 +58,8 @@ MonoBehaviour:
     support. It is of vital importance that it be restored as quickly as possible,
     before the ship has to start deactivating cryo-pods.
   Prerequisites: []
+  Music: 0
+  LevelIndex: 0
 --- !u!114 &2912201126658286558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,14 +180,10 @@ MonoBehaviour:
   ExposedMembers:
   - Compress
   - Deploy
-  - Inject
-  - Defer
   - Prime
   FriendlyVariableNames:
   - Compress()
   - Deploy()
-  - Inject()
-  - Defer()
   - Prime()
   NextPhase: {fileID: 1210150213513290939}
   FillInBlank: 0

@@ -3,26 +3,17 @@ hiddenCoolant = 5.8172153
 liquid = 0
 
 mixCoolantCalled = False
-solutionCorrect = False
 
 def MixCoolant():
 	global mixCoolantCalled
-	global solutionCorrect
+
+	mixCoolantCalled = True
+	
+def simulate():
+	global mixCoolantCalled
 	global coolant
 	global hiddenCoolant
 	global liquid
-	
-	parent.pull_user_scope()
-	if coolant != 5.8172153:
-		parent.end_simulation(3)
-	mixCoolantCalled = True
-	solutionCorrect = liquid == (11 * hiddenCoolant)
-	environment.trigger_action_group(0)
-
-def simulate():
-	global mixCoolantCalled
-	global solutionCorrect
-	global coolant
 
 	try:
     		parent.execute_user_code()
@@ -33,8 +24,13 @@ def simulate():
 			parent.end_simulation(-1, repr(e))
 		return
 
+	parent.pull_user_scope()
+
 	if mixCoolantCalled:
-		if solutionCorrect is True:
+		environment.trigger_action_group(0)
+		if coolant != hiddenCoolant:
+			parent.end_simulation(3)
+		elif liquid == 11 * hiddenCoolant:
 			parent.end_simulation(0)
 		else:
 			parent.end_simulation(2)
