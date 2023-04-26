@@ -57,6 +57,7 @@ MonoBehaviour:
     running I should be able to get us back on course.
   Prerequisites: []
   Music: 0
+  LevelIndex: 6
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -371,7 +371,7 @@ Transform:
   - {fileID: 4016227896759409308}
   - {fileID: 4214515767103945986}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8620014527978431350
 MonoBehaviour:
@@ -401,8 +401,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 7901814235466526395}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -443,8 +441,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 1460976877254500786}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled

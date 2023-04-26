@@ -56,6 +56,8 @@ MonoBehaviour:
     down. It's only a matter of time before the Helios strikes space debris. It's
     critical that the shield generators be functional.
   Prerequisites: []
+  Music: 0
+  LevelIndex: 1
 --- !u!114 &6586402662025411057
 MonoBehaviour:
   m_ObjectHideFlags: 0
