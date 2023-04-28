@@ -10,7 +10,8 @@ is greater than 0.
 
 Once I've received all the data, I can use 'GetData()' to get the encrypted data value and store it in a variable of some kind.
 
-So I need to receive data while there is data remaining, store GetData() in a variable (called something like encrypted), and finally decrypt it using this function.
+So use a while loop to 'Receive()' while 'Remaining() == True'
+Then store GetData() in a variable (called something like encrypted), and finally decrypt it using this function.
 	decrypted = encrypted + 2973 * 7119374 / 81738 % 1836 
 I should assign my final value to the variable 'decrypted' to finish the function.
 

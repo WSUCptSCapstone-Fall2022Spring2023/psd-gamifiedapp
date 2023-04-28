@@ -65,14 +65,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: challenge2-1-decryption
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: c58640e3c14bcc241bec81ac097f4f96, type: 3}
   TestFile: {fileID: 4900000, guid: abd1382d8f9f9fa4ab86214dca0ae798, type: 3}
   ScriptFile: {fileID: 4900000, guid: e4fd6536890440842b6a88a711da454a, type: 3}
   ActionGroups: []
   ResetGroup:
     m_PersistentCalls:
       m_Calls: []
-  CodeLoopDuration: 1
+  CodeLoopDuration: 0.1
   FastTickSpeed: 0.1
   ExposedMembers:
   - decrypted
