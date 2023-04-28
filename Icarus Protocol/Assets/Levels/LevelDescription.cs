@@ -39,4 +39,9 @@ public class LevelDescription: MonoBehaviour
     /// The type of music to be played for this level
     /// </summary>
     public AudioHandlerBehavior.MusicType Music;
+
+    /// <summary>
+    /// The index to be used for forcing particular level ordering
+    /// </summary>
+    public int LevelIndex;
 }

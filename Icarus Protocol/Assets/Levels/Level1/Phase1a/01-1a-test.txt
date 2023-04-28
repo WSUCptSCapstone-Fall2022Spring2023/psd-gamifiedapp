@@ -10,7 +10,12 @@ def simulate():
 	try:
     		parent.execute_user_code()
 	except Exception as e: 
-    		parent.end_simulation(-1,repr(e))
+		if "unexpected token 'equals'" in e:
+			parent.end_simulation(5)
+		elif "name 'LP1092' is not defined" in e:
+			parent.end_simulation(6)
+    		else:
+			parent.end_simulation(-1,repr(e))
 		return
 
 	parent.pull_user_scope()

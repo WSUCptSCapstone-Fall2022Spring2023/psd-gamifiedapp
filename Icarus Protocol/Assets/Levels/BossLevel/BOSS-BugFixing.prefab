@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-6341351023651436294
 MonoBehaviour:
@@ -52,6 +52,7 @@ MonoBehaviour:
   levelDescription: ERROR ERROR ERROR
   Prerequisites: []
   Music: 2
+  LevelIndex: 8
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0

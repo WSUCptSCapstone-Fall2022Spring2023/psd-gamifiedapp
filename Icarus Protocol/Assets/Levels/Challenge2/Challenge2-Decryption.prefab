@@ -50,6 +50,8 @@ MonoBehaviour:
   levelDescription: The comms units are recording corrupted data. That means that
     one of my decryption algorithms must be busted.
   Prerequisites: []
+  Music: 0
+  LevelIndex: 4
 --- !u!114 &4961718171917905431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +69,9 @@ MonoBehaviour:
   TestFile: {fileID: 4900000, guid: abd1382d8f9f9fa4ab86214dca0ae798, type: 3}
   ScriptFile: {fileID: 4900000, guid: e4fd6536890440842b6a88a711da454a, type: 3}
   ActionGroups: []
+  ResetGroup:
+    m_PersistentCalls:
+      m_Calls: []
   CodeLoopDuration: 1
   FastTickSpeed: 0.1
   ExposedMembers:
