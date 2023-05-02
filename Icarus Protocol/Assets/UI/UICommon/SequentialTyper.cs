@@ -29,6 +29,11 @@ public class SequentialTyper : MonoBehaviour
     public int TextSoundInterval = 1;
 
     /// <summary>
+    /// If this is set to true, the printer will print line by line instead of by character
+    /// </summary>
+    public bool PrintByLine = false;
+
+    /// <summary>
     /// The private queue of characters to write sequentially.
     /// </summary>
     private string textQueue = "";
@@ -56,8 +61,27 @@ public class SequentialTyper : MonoBehaviour
             return;
         }
 
+        textTimer = TextDelay;
         TextReference.text = "";
         textQueue = text;
+        currentTextIndex = 0;
+    }
+
+    /// <summary>
+    /// Stars a new typing job, which will clear text and begin typing given text sequentially.
+    /// </summary>
+    /// <param name="text"></param>
+    public void AppendTypingJob(string text)
+    {
+        if (TextDelay == 0)
+        {
+            TextReference.text += text;
+            textQueue = string.Empty;
+            return;
+        }
+
+        textTimer = TextDelay;
+        textQueue += text;
         currentTextIndex = 0;
     }
 
@@ -71,11 +95,28 @@ public class SequentialTyper : MonoBehaviour
             textTimer += Time.deltaTime;
             if (textTimer > TextDelay) 
             {
-                currentTextIndex++;
-                if (TextSound != null && currentTextIndex % TextSoundInterval == 0 && !char.IsWhiteSpace(textQueue[0])) TextSound.Play();
-                textTimer = char.IsWhiteSpace(textQueue[0]) ? -TextDelay : 0;
-                TextReference.text += textQueue[0];
-                textQueue = textQueue[1..];   
+                if (!PrintByLine)
+                {
+                    currentTextIndex++;
+                    if (TextSound != null && currentTextIndex % TextSoundInterval == 0 && !char.IsWhiteSpace(textQueue[0])) TextSound.Play();
+                    textTimer = char.IsWhiteSpace(textQueue[0]) ? -TextDelay : 0;
+                    TextReference.text += textQueue[0];
+                    textQueue = textQueue[1..];
+                }
+                else {
+                    if (TextSound != null) TextSound.Play();
+                    textTimer = 0;
+
+                    while (textQueue.Length > 0 && textQueue[0] != '\n') {
+                        TextReference.text += textQueue[0];
+                        textQueue = textQueue[1..];
+                    }
+
+                    if (textQueue.Length > 0) {
+                        TextReference.text += textQueue[0];
+                        textQueue = textQueue[1..];
+                    }
+                }
             }
         }
     }

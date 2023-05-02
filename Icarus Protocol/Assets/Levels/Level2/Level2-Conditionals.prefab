@@ -89,6 +89,7 @@ MonoBehaviour:
   NextPhase: {fileID: 5242580343432159652}
   FillInBlank: 0
   starterCode: {fileID: 0}
+  PlayCutsceneOnFirstCompletion: 
 --- !u!114 &5242580343432159652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +123,7 @@ MonoBehaviour:
   NextPhase: {fileID: 7386728271457419864}
   FillInBlank: 0
   starterCode: {fileID: 4900000, guid: db516f36f4774fb4b94ba4bf61885354, type: 3}
+  PlayCutsceneOnFirstCompletion: 
 --- !u!114 &7386728271457419864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +157,7 @@ MonoBehaviour:
   NextPhase: {fileID: 7395913527780468506}
   FillInBlank: 0
   starterCode: {fileID: 0}
+  PlayCutsceneOnFirstCompletion: 
 --- !u!114 &7395913527780468506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +193,7 @@ MonoBehaviour:
   NextPhase: {fileID: 6562199472908240978}
   FillInBlank: 0
   starterCode: {fileID: 0}
+  PlayCutsceneOnFirstCompletion: 
 --- !u!114 &6562199472908240978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +229,7 @@ MonoBehaviour:
   NextPhase: {fileID: 983307773}
   FillInBlank: 0
   starterCode: {fileID: 0}
+  PlayCutsceneOnFirstCompletion: 
 --- !u!114 &983307773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,3 +263,4 @@ MonoBehaviour:
   NextPhase: {fileID: 0}
   FillInBlank: 0
   starterCode: {fileID: 0}
+  PlayCutsceneOnFirstCompletion: miniboss-scene

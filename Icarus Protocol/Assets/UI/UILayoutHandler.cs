@@ -52,6 +52,11 @@ public class UILayoutHandler : MonoBehaviour
     public GameObject ManualUI;
 
     /// <summary>
+    /// A reference to the CutsceneUI
+    /// </summary>
+    public GameObject CutsceneUI;
+
+    /// <summary>
     /// A reference to the manual button to show and hide it in certain states.
     /// </summary>
     public GameObject ManualButton;
@@ -140,6 +145,36 @@ public class UILayoutHandler : MonoBehaviour
     {
         timer = delay;
         queuedTransition = TransitionType.MANUAL;
+    }
+
+    /// <summary>
+    /// Opens the cutscene UI and plays a particular cutsene id.
+    /// </summary>
+    /// <param name="sceneID">The scene ID to play when opening the cutscene UI</param>
+    public void PlayCutscene(string sceneID, float delay = 0) {
+        StartCoroutine(CutsceneDelay(sceneID, delay));
+    }
+
+    /// <summary>
+    /// Runs a coroutine to delay the triggering of the cutscene
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator CutsceneDelay(string sceneID, float delay = 0) {
+        float timer = 0;
+        while (timer < delay) {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        CutsceneUI.GetComponent<CutsceneController>().Initialize();
+        CutsceneUI.SetActive(true);
+        CutsceneUI.GetComponent<CutsceneController>().PlayCutscene(sceneID);
+    }
+
+    /// <summary>
+    /// Closes the cutscene UI, if it is open
+    /// </summary>
+    public void CloseCutsceneUI() {
+        CutsceneUI.SetActive(false);
     }
 
     /// <summary>
@@ -271,6 +306,7 @@ public class UILayoutHandler : MonoBehaviour
         ManualButton.SetActive(false);
     }
 
+    /// <summary>
     /// Transitions to manual.
     /// </summary>
     private void ManualTransition()

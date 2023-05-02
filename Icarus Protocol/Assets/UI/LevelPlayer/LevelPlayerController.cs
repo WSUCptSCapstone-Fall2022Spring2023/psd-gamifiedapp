@@ -189,6 +189,8 @@ public class LevelPlayerController : MonoBehaviour
 
             //Logs the success, and the phase ID
             LoggerRef.CreateLog(LogTypes.PHASE_SUCCESS, $"{PhaseDefinition.ID}");
+
+            if (PhaseDefinition.PlayCutsceneOnFirstCompletion != "") UIHandler.PlayCutscene(PhaseDefinition.PlayCutsceneOnFirstCompletion, 2);
         }
     }
 
