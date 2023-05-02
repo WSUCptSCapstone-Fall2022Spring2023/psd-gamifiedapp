@@ -24,5 +24,6 @@ public class StartButtonBehavior : MonoBehaviour
     public void OnClick()
     {
         UiHandler.TransitionToLevelSelect(0);
+        UiHandler.PlayCutscene("intro-scene");
     }
 }

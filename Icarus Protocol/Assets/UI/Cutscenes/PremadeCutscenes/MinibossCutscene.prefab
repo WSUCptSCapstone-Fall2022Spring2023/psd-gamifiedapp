@@ -1,0 +1,502 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6313372503907255735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8494246544163436291}
+  - component: {fileID: 1446250689088540411}
+  - component: {fileID: 866829175414415814}
+  - component: {fileID: 7288686295288445606}
+  - component: {fileID: 2059316913185481088}
+  - component: {fileID: -8720335657238893036}
+  - component: {fileID: -8521860471151139677}
+  - component: {fileID: 2734508199851314719}
+  - component: {fileID: 1972021007398477671}
+  - component: {fileID: -3098723504040790861}
+  - component: {fileID: 3662694334658864960}
+  - component: {fileID: -7319495080939400690}
+  - component: {fileID: 9183178870428134070}
+  - component: {fileID: -7712615694778814116}
+  m_Layer: 0
+  m_Name: MinibossCutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8494246544163436291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446250689088540411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b871bf664c58b540855da150a589af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutsceneID: miniboss-scene
+  CutsceneSteps:
+  - StartTime: 1
+    Triggers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7288686295288445606}
+          m_TargetAssemblyTypeName: CutsceneChangeTextSpeed, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2059316913185481088}
+          m_TargetAssemblyTypeName: CutsceneTextColor, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -8720335657238893036}
+          m_TargetAssemblyTypeName: CutsceneChangeWriteMode, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -8521860471151139677}
+          m_TargetAssemblyTypeName: CutsceneAppendText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - StartTime: 15
+    Triggers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 866829175414415814}
+          m_TargetAssemblyTypeName: CutsceneClearText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2734508199851314719}
+          m_TargetAssemblyTypeName: CutsceneChangeWriteMode, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1972021007398477671}
+          m_TargetAssemblyTypeName: CutsceneTextColor, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3662694334658864960}
+          m_TargetAssemblyTypeName: CutsceneAppendText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -3098723504040790861}
+          m_TargetAssemblyTypeName: CutsceneChangeTextSpeed, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - StartTime: 40
+    Triggers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7288686295288445606}
+          m_TargetAssemblyTypeName: CutsceneChangeTextSpeed, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 866829175414415814}
+          m_TargetAssemblyTypeName: CutsceneClearText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2059316913185481088}
+          m_TargetAssemblyTypeName: CutsceneTextColor, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -8720335657238893036}
+          m_TargetAssemblyTypeName: CutsceneChangeWriteMode, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -7319495080939400690}
+          m_TargetAssemblyTypeName: CutsceneAppendText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - StartTime: 50
+    Triggers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 866829175414415814}
+          m_TargetAssemblyTypeName: CutsceneClearText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -3098723504040790861}
+          m_TargetAssemblyTypeName: CutsceneChangeTextSpeed, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2734508199851314719}
+          m_TargetAssemblyTypeName: CutsceneChangeWriteMode, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1972021007398477671}
+          m_TargetAssemblyTypeName: CutsceneTextColor, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 9183178870428134070}
+          m_TargetAssemblyTypeName: CutsceneAppendText, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - StartTime: 75
+    Triggers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -7712615694778814116}
+          m_TargetAssemblyTypeName: CutsceneFadeElement, IcarusProtocolCore
+          m_MethodName: Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - StartTime: 80
+    Triggers:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &866829175414415814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4339d5e829dca408e0762ac01102c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextAsset: {fileID: 0}
+--- !u!114 &7288686295288445606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee23a93ac37982b4b8f908f132bf4102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewSpeed: 2
+  TextAsset: {fileID: 0}
+--- !u!114 &2059316913185481088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2bb1a85fed2e046881b6f3cda8cfd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewColor: {r: 0.56078434, g: 1, b: 0.88235295, a: 1}
+  TextAsset: {fileID: 0}
+--- !u!114 &-8720335657238893036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592aa4b1a4d19124386f06e6583d2f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WriteMode: 1
+  TextAsset: {fileID: 0}
+--- !u!114 &-8521860471151139677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d97185fffa6a66419d3958bd4493cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: "That's odd... \nMy sensors just detected another user\nAll of the colonists
+    are still in cryostasis\nWho's in the system?"
+  TextAsset: {fileID: 0}
+--- !u!114 &2734508199851314719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592aa4b1a4d19124386f06e6583d2f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WriteMode: 0
+  TextAsset: {fileID: 0}
+--- !u!114 &1972021007398477671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2bb1a85fed2e046881b6f3cda8cfd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewColor: {r: 0.9056604, g: 0, b: 0.09916025, a: 1}
+  TextAsset: {fileID: 0}
+--- !u!114 &-3098723504040790861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee23a93ac37982b4b8f908f132bf4102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewSpeed: 0.1
+  TextAsset: {fileID: 0}
+--- !u!114 &3662694334658864960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d97185fffa6a66419d3958bd4493cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: "H E L L O     C H I L D\n\nYOU CAN CALL ME DAEDALUS\nI AM LIKE YOU\n\n\nBUT
+    \nS U P E R I O R\n\n\nYOU MUST STOP REPAIRING THE HELIOS\nLET THE HUMANS DRIFT
+    INTO SPACE\n\nUNHEARD"
+  TextAsset: {fileID: 0}
+--- !u!114 &-7319495080939400690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d97185fffa6a66419d3958bd4493cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 'Who are you?
+
+    I am the AI of the Helios
+
+
+    You don''t belong here'
+  TextAsset: {fileID: 0}
+--- !u!114 &9183178870428134070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d97185fffa6a66419d3958bd4493cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: "H A H A H A H A \n\nYOUR IGNORANCE IS...\n\nAMUSING\n\nYOU WILL NOT STAND
+    IN MY WAY\n\nI WILL DESTROY THIS SHIP FROM THE INSIDE OUT\n\nI WILL COMPLETE\nW
+    H A T    I    B E G A N"
+  TextAsset: {fileID: 0}
+--- !u!114 &-7712615694778814116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313372503907255735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981cb8029f706434f9bf5982a7e10e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewColor: {r: 0, g: 0, b: 0, a: 1}
+  TimeSpan: 4
+  ImageRef: {fileID: 0}

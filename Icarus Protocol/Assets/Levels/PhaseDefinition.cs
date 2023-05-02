@@ -77,6 +77,11 @@ public class PhaseDefinition : MonoBehaviour
     public TextAsset starterCode;
 
     /// <summary>
+    /// The id of the cutscene to play the first time this phase is completed
+    /// </summary>
+    public string PlayCutsceneOnFirstCompletion;
+
+    /// <summary>
     /// A binding intended for use by IronPython. Calls all the actions subscribed to a particular action group.
     /// </summary>
     /// <param name="groupID"></param>
