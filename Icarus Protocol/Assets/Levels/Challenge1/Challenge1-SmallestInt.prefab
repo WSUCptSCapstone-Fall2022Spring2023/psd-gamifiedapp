@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: challenge1-1-smallestint
-  PhaseUI: {fileID: 0}
+  PhaseUI: {fileID: 3780883625501654787, guid: 8bbdf831e5e55824c997ed3518063aaa, type: 3}
   TestFile: {fileID: 4900000, guid: 6400fd466343100429bb389c13d41f32, type: 3}
   ScriptFile: {fileID: 4900000, guid: 617f4b4cd3614484186084cd45b1fa85, type: 3}
   ActionGroups: []
