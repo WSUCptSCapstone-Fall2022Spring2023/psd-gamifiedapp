@@ -1,6 +1,6 @@
 # Sprint 7 Report (4/02/2023 - 5/02/2023)
 
-Demo Video Link: 
+Demo Video Link: https://youtu.be/L9rcCdaCeHw
 
 ## What's New (User Facing)
 
@@ -38,6 +38,19 @@ Here are links to the issues that we completed in this sprint:
 Please review the following code files, which were actively developed during this sprint, for quality:
 
 - ListDisplayBehavior.cs: controls the behavior of displaying a list in a phase UI element
+- CutsceneAppendText: A modular cutscene action that appends text to the main writer
+- CutsceneChangeTextColor: A modular cutscene action that changes the color of the main writer
+- CutsceneChangeTextSpeed: A modular cutscene action that changes the speed of the text writer
+- CutsceneChangeWriteMode: A modular cutscene action that can alter the text writer from print-by-line mode to character print mode.
+- CutsceneClearText: A modular cutscene action that clears the text in the main window
+- CutsceneFadeElement: A modular cutscene action that can fade in an image element
+- CutsceneController: The main file that controls and manages the playing and timing of cutscenes
+- CutsceneData: A file that represents the series of actions and timings belonging to a single cutscene
+- LevelPlayerController: Changed to trigger cutscenes at the end of phases that identify a cutscene to play
+- StartButtonBehavior: Changed to trigger the intro cutscene when pressed
+- PhaseDefinition: Changed to allow phases to record a cutscene to play when the phase ends.
+- SequentialTyper: Changed to allow it to print by line, as well as to allow code to append text without replacing the text already in the typing window.
+- UILayoutHandler: Changed to open and close the new cutscene UI
 
 *Temporary scripts and behaviors made only for UI testing and demo purposes are omitted for brevity, and since they'll be deleted once they are no longer useful. Additionally, files that contain art assets have been omitted.* 
 
